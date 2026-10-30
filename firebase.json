@@ -6,11 +6,7 @@
       "**/.*",
       "**/node_modules/**",
       "*.md",
-      "*.json",
-      "*.jfif",
-      "commercial-6.html",
-      "residential-7.html",
-      "bluecube_cover_exact_layout.html"
+      "*.json"
     ],
     "redirects": [
       { "source": "/index.html", "destination": "/", "type": 301 },
@@ -35,8 +31,8 @@
       { "source": "/containers.html", "destination": "/projects/containers/", "type": 301 },
       { "source": "/container-architecture.html", "destination": "/projects/containers/", "type": 301 },
       { "source": "/contact.html", "destination": "/contact/", "type": 301 },
-      { "source": "/commercial.html", "destination": "/projects/architecture/#commercial", "type": 301 },
-      { "source": "/residential.html", "destination": "/projects/architecture/#residences", "type": 301 }
+      { "source": "/commercial.html", "destination": "/projects/commercial/", "type": 301 },
+      { "source": "/residential.html", "destination": "/projects/residential/", "type": 301 }
     ],
     "cleanUrls": true
   }

@@ -955,12 +955,13 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   THREE-WAY PROJECT PORTALS (Home)
+   PROJECT PORTALS (Disciplines - 4 Columns)
    ========================================================================== */
 
-.three-way-portals {
+.three-way-portals,
+.four-way-portals {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border-top: 1px solid var(--stone-deep);
   border-bottom: 1px solid var(--stone-deep);
@@ -980,7 +981,7 @@ textarea:focus-visible {
 }
 
 .portal-image-frame {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background-color: var(--stone-light);
 }
@@ -998,10 +999,11 @@ textarea:focus-visible {
 }
 
 .portal-meta {
-  padding: 24px 20px;
+  padding: 20px 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
   border-top: 1px solid var(--stone-deep);
   background-color: var(--stone);
 }
@@ -1013,12 +1015,13 @@ textarea:focus-visible {
 
 .portal-title {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
-  letter-spacing: 0.12rem;
+  font-size: clamp(1.02rem, 1.12vw, 1.25rem);
+  letter-spacing: 0.08rem;
   text-transform: uppercase;
   font-weight: 500;
   position: relative;
   display: inline-block;
+  line-height: 1.25;
 }
 
 .portal-title::after {
@@ -1043,8 +1046,10 @@ textarea:focus-visible {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--bark-medium);
-  transform: translateX(-8px);
+  transform: translateX(-6px);
   opacity: 0.8;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: transform var(--dur-fast) var(--ease-out), opacity var(--dur-fast) var(--ease-out), color var(--dur-fast);
 }
 
@@ -1757,18 +1762,22 @@ textarea:focus-visible {
    ========================================================================== */
 
 @media (max-width: 1024px) {
-  .three-way-portals {
-    grid-template-columns: 1fr;
+  .three-way-portals,
+  .four-way-portals {
+    grid-template-columns: repeat(2, 1fr);
   }
   .portal-cell {
-    border-right: none;
+    border-right: 1px solid var(--stone-deep);
     border-bottom: 1px solid var(--stone-deep);
   }
-  .portal-cell:last-child {
+  .portal-cell:nth-child(2n) {
+    border-right: none;
+  }
+  .portal-cell:nth-last-child(-n+2) {
     border-bottom: none;
   }
   .portal-image-frame {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
   }
   .brands-roster-grid,
   .trusted-logos-grid {
@@ -1941,6 +1950,23 @@ textarea:focus-visible {
 @media (max-width: 520px) {
   :root {
     --gutter: 16px;
+  }
+  .three-way-portals,
+  .four-way-portals {
+    grid-template-columns: 1fr;
+  }
+  .portal-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--stone-deep);
+  }
+  .portal-cell:nth-child(2n) {
+    border-right: none;
+  }
+  .portal-cell:last-child {
+    border-bottom: none;
+  }
+  .portal-image-frame {
+    aspect-ratio: 16 / 10;
   }
   .nav-layout {
     padding: 0 12px;
