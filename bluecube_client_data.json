@@ -1,0 +1,1841 @@
+{
+  "company": {
+    "name": "Blue Cube Architects",
+    "short_name": "Blue Cube",
+    "legal_name": "Bluecube Architects & Interior Designers",
+    "taglines": [
+      "Everything you can imagine is real",
+      "We turn your ideas into works of art"
+    ],
+    "founded": "Established at the wake of the Millennium (Over 2 decades of excellence)",
+    "headquarters": "Chennai, Tamil Nadu, India",
+    "principal_architect": {
+      "name": "Mr. G. Harish",
+      "title": "Principal Architect & Founder"
+    },
+    "summary": "Established at the wake of the Millennium, Blue Cube is a two-decade-old premier Architecture and Interior Design firm headquartered in Chennai. Headed by Principal Architect Mr. G. Harish along with a dedicated team of specialist designers, Blue Cube creates unique, solution-oriented bespoke spaces that amalgamate functionality, aesthetic elegance, and client-centric vision."
+  },
+  "vision_and_philosophy": {
+    "vision_statement": "Everything you imagine is real.",
+    "vision_philosophy": "Our imagination is as true as the medium of reality and so is the world beyond our minds. Everything manmade had to be imagined before it could be built, leaving the realm of thought to be born into the physical world. At Blue Cube, we make dreams come true with architectural proportion, intricate design detail, and relentless innovation.",
+    "core_values": [
+      "Evolution of good design from spark of thought to physical reality",
+      "Bespoke, solution-oriented architecture tailored to client needs",
+      "Client-centric methodology in every phase",
+      "Constant innovation and design excellence",
+      "Meticulous attention to detail and execution quality"
+    ]
+  },
+  "unique_selling_propositions": {
+    "concept_of_flow": "We believe in the concept of flow — flow in design and flow in the process.",
+    "six_in_house_teams": [
+      {
+        "team": "Drafting",
+        "description": "Precise architectural working drawings, plans, and technical specifications."
+      },
+      {
+        "team": "Design",
+        "description": "Creative concept development, spatial planning, and aesthetic styling."
+      },
+      {
+        "team": "Development",
+        "description": "Engineering coordination, structural alignment, and facility studies."
+      },
+      {
+        "team": "Execution",
+        "description": "On-ground site implementation and contractor coordination."
+      },
+      {
+        "team": "3D Visualization",
+        "description": "Photorealistic 3D renders, CGI modeling, and walkthroughs."
+      },
+      {
+        "team": "Quality Control",
+        "description": "Rigorous quality inspection, material verification, and standards compliance."
+      }
+    ],
+    "key_differentiators": [
+      {
+        "title": "In-House Expertise with a Single Point of Contact (POC)",
+        "description": "From 3D visualizers to lighting designers and site engineers, all specialists work in-house in real-time collaboration. This eliminates delays, ensures accountability, and guarantees a cohesive vision delivered through one designated POC."
+      },
+      {
+        "title": "On-Site Quality Management",
+        "description": "Dedicated site engineers ensure contractors adhere strictly to material and design specifications, conducting periodic review meetings and providing ongoing progress updates to clients."
+      }
+    ]
+  },
+  "services": [
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "headline": "Innovative and Comprehensive Architectural Solutions",
+      "description": "We specialize in comprehensive architectural design solutions blending functionality with aesthetics. We begin with facility studies and progress through engineering and working drawings to complete execution.",
+      "typologies": [
+        "Bespoke Residences & Luxury Villas",
+        "Apartment Complexes & Multi-Family Housing",
+        "Commercial Buildings & Showrooms",
+        "Educational Institutions & Colleges",
+        "Hotels, Resorts & Hospitality Townships",
+        "Healthcare Facilities & Specialty Hospitals",
+        "Industrial Buildings, Factories & Warehouses"
+      ]
+    },
+    {
+      "id": "interior_design",
+      "name": "Interior Design",
+      "headline": "Crafting Exceptional, Immersive Interior Spaces",
+      "description": "We craft bespoke interior spaces tailored to diverse environments, creating refined, harmonious settings that elevate how people work, live, heal, and unwind.",
+      "typologies": [
+        "Corporate Offices & Tech Workspaces",
+        "Luxury Residences, Penthouses & Apartments",
+        "Specialized Hospital, Clinical & Healthcare Interiors",
+        "Fine Dining Restaurants & Cafes",
+        "Lounge Bars, Nightclubs & Wellness Spas",
+        "Boutiques, Retail Stores & Brand Showrooms"
+      ]
+    },
+    {
+      "id": "container_architecture",
+      "name": "Container Architecture & Modular Spaces",
+      "headline": "Dynamic, Sustainable & Stylish Modular Environments",
+      "description": "Specialized design and fabrication using repurposed shipping containers. We transform modular boxes into chic, highly efficient, and transportable commercial, office, and living spaces."
+    },
+    {
+      "id": "project_management",
+      "name": "Project Management Consulting (PMC)",
+      "headline": "Precision Project Flow from Blueprint to Handover",
+      "description": "Expert project management consulting for architecture and interior projects. From defining project milestones, budgeting, and scheduling to coordinating consultants and vendors, ensuring seamless, hassle-free execution."
+    }
+  ],
+  "clientele": {
+    "celebrity_and_prominent_individuals": [
+      {
+        "name": "Mr. Maniratnam",
+        "designation": "Acclaimed Film Director"
+      },
+      {
+        "name": "Mrs. Suhasini Maniratnam",
+        "designation": "Celebrated Actor & Director"
+      },
+      {
+        "name": "Mr. Rajiv Menon",
+        "designation": "Renowned Film Director & Cinematographer"
+      },
+      {
+        "name": "Mr. S. Ravi Varman",
+        "designation": "Award-Winning Cinematographer"
+      },
+      {
+        "name": "Mr. P.C. Duraisamy",
+        "designation": "Managing Director, Sakthi Masala"
+      },
+      {
+        "name": "Dr. Renita Rajan",
+        "designation": "Celebrity Dermatologist & Founder, Render Clinic"
+      },
+      {
+        "name": "Mr. Radhakrishnan",
+        "designation": "Managing Director, News J"
+      },
+      {
+        "name": "Mrs. E. Carolin Praba Reddy",
+        "designation": "Managing Director, V-Care"
+      }
+    ],
+    "corporate_and_commercial_brands": [
+      {
+        "brand": "KIA Motors",
+        "category": "Automotive"
+      },
+      {
+        "brand": "NPSH",
+        "category": "Healthcare / Hospitals"
+      },
+      {
+        "brand": "Ayla Luxe Dermatology",
+        "category": "Aesthetic Clinic & Skincare"
+      },
+      {
+        "brand": "Armoraa",
+        "category": "Aesthetic Clinic & Dermatology"
+      },
+      {
+        "brand": "VGN",
+        "category": "Real Estate & Housing"
+      }
+    ]
+  },
+  "portfolio": {
+    "architecture": {
+      "apartments": {
+        "title": "Apartments",
+        "page_url": "https://www.bluecube.co.in/architecture-apartments.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/npsh.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/vgn.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/2.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/06a.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/08c.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/09d.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Apartment/10e.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "residences": {
+        "title": "Bespoke Residences",
+        "page_url": "https://www.bluecube.co.in/architecture-residences.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/29.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/28.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/27.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/26.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/25.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/24.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/sumitha.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/2.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/8.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/9.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/10.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/11.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/12.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/15.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/16.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/17.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/18.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/19.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/20.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/21.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Residence/22.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "commercial": {
+        "title": "Commercial Buildings",
+        "page_url": "https://www.bluecube.co.in/architecture-commercial.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/24.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/23.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/22.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/21.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/20.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/19.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/18.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/12.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/07.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/08.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/09.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Commercial/010.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "institutions": {
+        "title": "Institutional Projects (Colleges & Schools)",
+        "page_url": "https://www.bluecube.co.in/architecture-institutions.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/19.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/16.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/14.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/13.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/12.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/11.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Institution/9.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "hospitality": {
+        "title": "Hospitality & Resorts",
+        "page_url": "https://www.bluecube.co.in/architecture-hospitality.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Hospitality/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Hospitality/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Hospitality/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Hospitality/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Hospitality/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Hospitality/9.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Hospitality/10.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/19.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/20.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/22.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "healthcare": {
+        "title": "Healthcare Facilities & Hospitals",
+        "page_url": "https://www.bluecube.co.in/architecture-healthcare.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/healthcare/3.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "industries": {
+        "title": "Industrial & Warehousing",
+        "page_url": "https://www.bluecube.co.in/architecture-industries.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/8.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/2.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Architecture-1/Industries/6.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      }
+    },
+    "interior_design": {
+      "healthcare": {
+        "title": "Healthcare & Clinics",
+        "page_url": "https://www.bluecube.co.in/interior-healthcare.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/91.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/90.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/89.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/88.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/87.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/86.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/83.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/82.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/81.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/80.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/79.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/66.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/78.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/77.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/76.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/75.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/74.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/73.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/72.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/71.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/70.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/69.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/68.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/67.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/65.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/63.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/64.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/2.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/8.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/9.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/10.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/11.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/12.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/13.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/14.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/15.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/16.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/17.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/18.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/19.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/20.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/21.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/22.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/24.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/26.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/28.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/30.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/35.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/39.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/40.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/41.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/42.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/43.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/47.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/48.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/51.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/52.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/53.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/54.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/55.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/56.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/57.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/58.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/59.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/60.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Healthcare/61.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "corporate_office": {
+        "title": "Corporate Offices",
+        "page_url": "https://www.bluecube.co.in/interior-corporate-office.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/29.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/28.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/27.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/26.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/25.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/24.png",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/23.png",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/22.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/30.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/31.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/32.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/33.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/34.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/35.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/8.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/11.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/15.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/18.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Corporate-office/20.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "residences": {
+        "title": "Residential Interiors",
+        "page_url": "https://www.bluecube.co.in/interior-residences.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/84.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/83.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/82.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/81.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/80.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/79.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/78.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/77.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/76.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/75.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/74.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/73.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/72.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/71.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/70.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/69.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/68.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/67.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/66.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/65.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/63.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/62.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/61.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/60.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/54.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/57.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/56.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/58.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/55.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/49.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/50.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/51.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/52.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/48.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/8.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/9.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/12.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/16.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/22.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/26.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/29.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/30.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/31.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/32.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/39.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/41.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/42a.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/43.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/44.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/45.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/46.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Residence/47.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "restaurants": {
+        "title": "Restaurants & Dining",
+        "page_url": "https://www.bluecube.co.in/interior-restaurants.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/2.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/8.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/9.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/10.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/11.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/12.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/13.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/14.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/15.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/16.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/17.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/18.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/19.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/20.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Restaurant/21.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "bar_and_spa": {
+        "title": "Bars, Lounges & Spas",
+        "page_url": "https://www.bluecube.co.in/interior-bar.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/2.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/4.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/8.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/9.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/10.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/11.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/12.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/13.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/14.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/23.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/24.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/25.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/26.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/27.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/28.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Bar/29.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      },
+      "boutiques": {
+        "title": "Boutiques & Retail Showrooms",
+        "page_url": "https://www.bluecube.co.in/interior-boutiques.html",
+        "images": [
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/1.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/2.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/3.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/5.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/6.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/7.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/13.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/14.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/15.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/16.jpg",
+            "alt": "",
+            "title": ""
+          },
+          {
+            "src": "https://www.bluecube.co.in/img/Projects/Interior/Boutique/17.jpg",
+            "alt": "",
+            "title": ""
+          }
+        ]
+      }
+    },
+    "container_architecture": {
+      "title": "Portable & Modular Container Architecture",
+      "page_url": "https://www.bluecube.co.in/containers.html",
+      "description": "Specialized interior and exterior design solutions using container architecture, transforming modular cargo containers into modern, functional, and eco-friendly spaces for offices, retail, and living environments.",
+      "images": [
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/1.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/3.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/4.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/5.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/6.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/7.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/8.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/9.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/10.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/11.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/12.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/13.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/15.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/16.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/17.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/18.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/19.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/20.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/21.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/22.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/23.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/24.jpg",
+          "alt": "",
+          "title": ""
+        },
+        {
+          "src": "https://www.bluecube.co.in/img/Projects/Containers/25.jpg",
+          "alt": "",
+          "title": ""
+        }
+      ]
+    }
+  },
+  "contact_information": {
+    "address": {
+      "street": "K-95, 16th Street, Anna Nagar East",
+      "city": "Chennai",
+      "postal_code": "600102",
+      "state": "Tamil Nadu",
+      "country": "India"
+    },
+    "phones": [
+      "+91 99621 08988",
+      "+91 99629 08988"
+    ],
+    "whatsapp": {
+      "number": "+91 99621 08988",
+      "link": "https://wa.me/9962108988"
+    },
+    "emails": {
+      "design_inquiries": "design@bluecube.co.in",
+      "careers": "career@bluecube.co.in"
+    },
+    "social_media": {
+      "facebook": "https://www.facebook.com/bluecube.id/",
+      "instagram": "https://instagram.com/bluecube.architects"
+    },
+    "website": "https://www.bluecube.co.in/"
+  }
+}

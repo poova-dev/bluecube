@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="4" fill="#CAC5BA"/>
+  <!-- Isometric architectural cube -->
+  <!-- Top Face -->
+  <polygon points="16,5 26,11 16,17 6,11" fill="#FFFFFF" fill-opacity="0.4" stroke="#1F3A5F" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Left Face -->
+  <polygon points="6,11 16,17 16,27 6,21" fill="#1F3A5F" fill-opacity="0.15" stroke="#1F3A5F" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Right Face -->
+  <polygon points="16,17 26,11 26,21 16,27" fill="#1F3A5F" fill-opacity="0.3" stroke="#1F3A5F" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>
+

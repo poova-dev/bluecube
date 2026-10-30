@@ -1,0 +1,26 @@
+# 301 Permanent Redirects from legacy Blue Cube URLs to clean modern routes
+/index.html                     /                                    301
+/about-us.html                  /about/                              301
+/about.html                     /about/                              301
+/architecture.html              /projects/architecture/              301
+/architecture-apartments.html   /projects/architecture/#apartments   301
+/architecture-residences.html   /projects/architecture/#residences   301
+/architecture-commercial.html   /projects/architecture/#commercial   301
+/architecture-institutions.html /projects/architecture/#institutions 301
+/architecture-hospitality.html  /projects/architecture/#hospitality  301
+/architecture-healthcare.html   /projects/architecture/#healthcare   301
+/architecture-industries.html   /projects/architecture/#industries   301
+/interior.html                  /projects/interior/                  301
+/interior-healthcare.html       /projects/interior/#healthcare       301
+/interior-corporate-office.html /projects/interior/#corporate        301
+/interior-residences.html       /projects/interior/#residences       301
+/interior-restaurants.html      /projects/interior/#restaurants      301
+/interior-bar.html              /projects/interior/#bars-spas        301
+/interior-boutiques.html        /projects/interior/#boutiques        301
+/interiors.html                 /projects/interior/                  301
+/containers.html                /projects/containers/                301
+/container-architecture.html    /projects/containers/                301
+/contact.html                   /contact/                            301
+/commercial.html                /projects/architecture/#commercial   301
+/residential.html               /projects/architecture/#residences   301
+

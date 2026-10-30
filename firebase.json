@@ -1,0 +1,44 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "*.md",
+      "*.json",
+      "*.jfif",
+      "commercial-6.html",
+      "residential-7.html",
+      "bluecube_cover_exact_layout.html"
+    ],
+    "redirects": [
+      { "source": "/index.html", "destination": "/", "type": 301 },
+      { "source": "/about-us.html", "destination": "/about/", "type": 301 },
+      { "source": "/about.html", "destination": "/about/", "type": 301 },
+      { "source": "/architecture.html", "destination": "/projects/architecture/", "type": 301 },
+      { "source": "/architecture-apartments.html", "destination": "/projects/architecture/#apartments", "type": 301 },
+      { "source": "/architecture-residences.html", "destination": "/projects/architecture/#residences", "type": 301 },
+      { "source": "/architecture-commercial.html", "destination": "/projects/architecture/#commercial", "type": 301 },
+      { "source": "/architecture-institutions.html", "destination": "/projects/architecture/#institutions", "type": 301 },
+      { "source": "/architecture-hospitality.html", "destination": "/projects/architecture/#hospitality", "type": 301 },
+      { "source": "/architecture-healthcare.html", "destination": "/projects/architecture/#healthcare", "type": 301 },
+      { "source": "/architecture-industries.html", "destination": "/projects/architecture/#industries", "type": 301 },
+      { "source": "/interior.html", "destination": "/projects/interior/", "type": 301 },
+      { "source": "/interior-healthcare.html", "destination": "/projects/interior/#healthcare", "type": 301 },
+      { "source": "/interior-corporate-office.html", "destination": "/projects/interior/#corporate", "type": 301 },
+      { "source": "/interior-residences.html", "destination": "/projects/interior/#residences", "type": 301 },
+      { "source": "/interior-restaurants.html", "destination": "/projects/interior/#restaurants", "type": 301 },
+      { "source": "/interior-bar.html", "destination": "/projects/interior/#bars-spas", "type": 301 },
+      { "source": "/interior-boutiques.html", "destination": "/projects/interior/#boutiques", "type": 301 },
+      { "source": "/interiors.html", "destination": "/projects/interior/", "type": 301 },
+      { "source": "/containers.html", "destination": "/projects/containers/", "type": 301 },
+      { "source": "/container-architecture.html", "destination": "/projects/containers/", "type": 301 },
+      { "source": "/contact.html", "destination": "/contact/", "type": 301 },
+      { "source": "/commercial.html", "destination": "/projects/architecture/#commercial", "type": 301 },
+      { "source": "/residential.html", "destination": "/projects/architecture/#residences", "type": 301 }
+    ],
+    "cleanUrls": true
+  }
+}
+
