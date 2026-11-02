@@ -1,0 +1,992 @@
+{
+  "clients/vgn-trans.png": {
+    "public_id": "bluecube/clients/vgn-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596519/bluecube/clients/vgn-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/vgn-trans.png",
+    "bytes": 2944,
+    "format": "png",
+    "width": 378,
+    "height": 101
+  },
+  "clients/npsh-trans.png": {
+    "public_id": "bluecube/clients/npsh-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596520/bluecube/clients/npsh-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/npsh-trans.png",
+    "bytes": 15125,
+    "format": "png",
+    "width": 444,
+    "height": 148
+  },
+  "clients/casagrand-trans.png": {
+    "public_id": "bluecube/clients/casagrand-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596519/bluecube/clients/casagrand-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/casagrand-trans.png",
+    "bytes": 11638,
+    "format": "png",
+    "width": 399,
+    "height": 94
+  },
+  "clients/mgm-healthcare-trans.png": {
+    "public_id": "bluecube/clients/mgm-healthcare-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596520/bluecube/clients/mgm-healthcare-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/mgm-healthcare-trans.png",
+    "bytes": 52555,
+    "format": "png",
+    "width": 372,
+    "height": 224
+  },
+  "clients/shikshaa-trans.png": {
+    "public_id": "bluecube/clients/shikshaa-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596521/bluecube/clients/shikshaa-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/shikshaa-trans.png",
+    "bytes": 184866,
+    "format": "png",
+    "width": 368,
+    "height": 368
+  },
+  "clients/ayla-luxe-trans.png": {
+    "public_id": "bluecube/clients/ayla-luxe-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596521/bluecube/clients/ayla-luxe-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/ayla-luxe-trans.png",
+    "bytes": 40906,
+    "format": "png",
+    "width": 491,
+    "height": 513
+  },
+  "clients/kia-trans.png": {
+    "public_id": "bluecube/clients/kia-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596522/bluecube/clients/kia-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/kia-trans.png",
+    "bytes": 4270,
+    "format": "png",
+    "width": 480,
+    "height": 160
+  },
+  "clients/croyez-trans.png": {
+    "public_id": "bluecube/clients/croyez-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596522/bluecube/clients/croyez-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/croyez-trans.png",
+    "bytes": 137433,
+    "format": "png",
+    "width": 314,
+    "height": 360
+  },
+  "disciplines/container-architecture.jpg": {
+    "public_id": "bluecube/disciplines/container-architecture",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596523/bluecube/disciplines/container-architecture.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/disciplines/container-architecture.jpg",
+    "bytes": 145041,
+    "format": "jpg",
+    "width": 810,
+    "height": 741
+  },
+  "disciplines/interiors.jpg": {
+    "public_id": "bluecube/disciplines/interiors",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596523/bluecube/disciplines/interiors.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/disciplines/interiors.jpg",
+    "bytes": 164227,
+    "format": "jpg",
+    "width": 810,
+    "height": 741
+  },
+  "disciplines/commercial.jpg": {
+    "public_id": "bluecube/disciplines/commercial",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596523/bluecube/disciplines/commercial.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/disciplines/commercial.jpg",
+    "bytes": 97814,
+    "format": "jpg",
+    "width": 807,
+    "height": 741
+  },
+  "brand/logo-dark.png": {
+    "public_id": "bluecube/brand/logo-dark",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596243/bluecube/brand/logo-dark.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/brand/logo-dark.png",
+    "bytes": 5428,
+    "format": "png",
+    "width": 320,
+    "height": 50
+  },
+  "brand/logo-white.png": {
+    "public_id": "bluecube/brand/logo-white",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596525/bluecube/brand/logo-white.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/brand/logo-white.png",
+    "bytes": 5382,
+    "format": "png",
+    "width": 320,
+    "height": 50
+  },
+  "brand/share-card.jpg": {
+    "public_id": "bluecube/brand/share-card",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596526/bluecube/brand/share-card.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/brand/share-card.jpg",
+    "bytes": 113797,
+    "format": "jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "brand/cover_reference.jpg": {
+    "public_id": "bluecube/brand/cover_reference",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596527/bluecube/brand/cover_reference.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/brand/cover_reference.jpg",
+    "bytes": 367077,
+    "format": "jpg",
+    "width": 1144,
+    "height": 1536
+  },
+  "commercial/comm-06-commercial-building.jpg": {
+    "public_id": "bluecube/commercial/comm-06-commercial-building",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596527/bluecube/commercial/comm-06-commercial-building.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-06-commercial-building.jpg",
+    "bytes": 97702,
+    "format": "jpg",
+    "width": 845,
+    "height": 550
+  },
+  "commercial/hero.jpg": {
+    "public_id": "bluecube/commercial/hero",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596528/bluecube/commercial/hero.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/hero.jpg",
+    "bytes": 137480,
+    "format": "jpg",
+    "width": 1119,
+    "height": 495
+  },
+  "commercial/comm-07-vgn-commercial-building.jpg": {
+    "public_id": "bluecube/commercial/comm-07-vgn-commercial-building",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596530/bluecube/commercial/comm-07-vgn-commercial-building.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-07-vgn-commercial-building.jpg",
+    "bytes": 79108,
+    "format": "jpg",
+    "width": 613,
+    "height": 632
+  },
+  "commercial/comm-02-commercial-building.jpg": {
+    "public_id": "bluecube/commercial/comm-02-commercial-building",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596531/bluecube/commercial/comm-02-commercial-building.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg",
+    "bytes": 880685,
+    "format": "jpg",
+    "width": 1600,
+    "height": 1754
+  },
+  "commercial/comm-03-joyalukkas-jewellers.jpg": {
+    "public_id": "bluecube/commercial/comm-03-joyalukkas-jewellers",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596532/bluecube/commercial/comm-03-joyalukkas-jewellers.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-03-joyalukkas-jewellers.jpg",
+    "bytes": 97702,
+    "format": "jpg",
+    "width": 845,
+    "height": 550
+  },
+  "commercial/comm-01-kun-capital-kia-showroom.jpg": {
+    "public_id": "bluecube/commercial/comm-01-kun-capital-kia-showroom",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596533/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg",
+    "bytes": 137480,
+    "format": "jpg",
+    "width": 1119,
+    "height": 495
+  },
+  "commercial/comm-05-joyalukkas-jewellers.jpg": {
+    "public_id": "bluecube/commercial/comm-05-joyalukkas-jewellers",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596536/bluecube/commercial/comm-05-joyalukkas-jewellers.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-05-joyalukkas-jewellers.jpg",
+    "bytes": 571561,
+    "format": "jpg",
+    "width": 1910,
+    "height": 1754
+  },
+  "commercial/comm-04-the-southern-tools-building.jpg": {
+    "public_id": "bluecube/commercial/comm-04-the-southern-tools-building",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596537/bluecube/commercial/comm-04-the-southern-tools-building.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg",
+    "bytes": 1298165,
+    "format": "jpg",
+    "width": 2670,
+    "height": 1754
+  },
+  "commercial/comm-09-shanthi-arcade.jpg": {
+    "public_id": "bluecube/commercial/comm-09-shanthi-arcade",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596537/bluecube/commercial/comm-09-shanthi-arcade.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-09-shanthi-arcade.jpg",
+    "bytes": 89339,
+    "format": "jpg",
+    "width": 890,
+    "height": 570
+  },
+  "commercial/comm-04-vgn-commercial-building.jpg": {
+    "public_id": "bluecube/commercial/comm-04-vgn-commercial-building",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596539/bluecube/commercial/comm-04-vgn-commercial-building.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-vgn-commercial-building.jpg",
+    "bytes": 90781,
+    "format": "jpg",
+    "width": 650,
+    "height": 632
+  },
+  "commercial/comm-03-nac-jewellers.jpg": {
+    "public_id": "bluecube/commercial/comm-03-nac-jewellers",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596540/bluecube/commercial/comm-03-nac-jewellers.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-03-nac-jewellers.jpg",
+    "bytes": 60147,
+    "format": "jpg",
+    "width": 420,
+    "height": 610
+  },
+  "commercial/comm-02-nac-jewellers.jpg": {
+    "public_id": "bluecube/commercial/comm-02-nac-jewellers",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596543/bluecube/commercial/comm-02-nac-jewellers.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg",
+    "bytes": 1298165,
+    "format": "jpg",
+    "width": 2670,
+    "height": 1754
+  },
+  "commercial/comm-08-nac-stylori-commercial-building.jpg": {
+    "public_id": "bluecube/commercial/comm-08-nac-stylori-commercial-building",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596544/bluecube/commercial/comm-08-nac-stylori-commercial-building.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-08-nac-stylori-commercial-building.jpg",
+    "bytes": 90781,
+    "format": "jpg",
+    "width": 650,
+    "height": 632
+  },
+  "clients/armoraa-trans.png": {
+    "public_id": "bluecube/clients/armoraa-trans",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596544/bluecube/clients/armoraa-trans.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/clients/armoraa-trans.png",
+    "bytes": 69092,
+    "format": "png",
+    "width": 361,
+    "height": 280
+  },
+  "residential/res-07-contemporary-residence-arakkon.jpg": {
+    "public_id": "bluecube/residential/res-07-contemporary-residence-arakkon",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596545/bluecube/residential/res-07-contemporary-residence-arakkon.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-07-contemporary-residence-arakkon.jpg",
+    "bytes": 319548,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-20-traditional-residence-kumbakon.jpg": {
+    "public_id": "bluecube/residential/res-20-traditional-residence-kumbakon",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596545/bluecube/residential/res-20-traditional-residence-kumbakon.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-20-traditional-residence-kumbakon.jpg",
+    "bytes": 306061,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-18-contemporary-residence-pennada.jpg": {
+    "public_id": "bluecube/residential/res-18-contemporary-residence-pennada",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596546/bluecube/residential/res-18-contemporary-residence-pennada.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-18-contemporary-residence-pennada.jpg",
+    "bytes": 361704,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "disciplines/residential.jpg": {
+    "public_id": "bluecube/disciplines/residential",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596347/bluecube/disciplines/residential.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/disciplines/residential.jpg",
+    "bytes": 270217,
+    "format": "jpg",
+    "width": 800,
+    "height": 791
+  },
+  "residential/res-24-art-residence-chennai.jpg": {
+    "public_id": "bluecube/residential/res-24-art-residence-chennai",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596547/bluecube/residential/res-24-art-residence-chennai.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg",
+    "bytes": 246460,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1416
+  },
+  "residential/res-09-classical-residence-salem-tami.jpg": {
+    "public_id": "bluecube/residential/res-09-classical-residence-salem-tami",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596548/bluecube/residential/res-09-classical-residence-salem-tami.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-09-classical-residence-salem-tami.jpg",
+    "bytes": 445019,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-11-fusion-house-kotturpuram-chenn.jpg": {
+    "public_id": "bluecube/residential/res-11-fusion-house-kotturpuram-chenn",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596549/bluecube/residential/res-11-fusion-house-kotturpuram-chenn.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-11-fusion-house-kotturpuram-chenn.jpg",
+    "bytes": 339443,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/hero.jpg": {
+    "public_id": "bluecube/residential/hero",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596550/bluecube/residential/hero.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/hero.jpg",
+    "bytes": 530021,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-15-duplex-residence-maduravoyal-c.jpg": {
+    "public_id": "bluecube/residential/res-15-duplex-residence-maduravoyal-c",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596551/bluecube/residential/res-15-duplex-residence-maduravoyal-c.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-15-duplex-residence-maduravoyal-c.jpg",
+    "bytes": 349923,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-22-contemporary-residence-r-a-pur.jpg": {
+    "public_id": "bluecube/residential/res-22-contemporary-residence-r-a-pur",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596551/bluecube/residential/res-22-contemporary-residence-r-a-pur.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-22-contemporary-residence-r-a-pur.jpg",
+    "bytes": 379426,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-23-contemporary-penthouse-radial-.jpg": {
+    "public_id": "bluecube/residential/res-23-contemporary-penthouse-radial-",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596552/bluecube/residential/res-23-contemporary-penthouse-radial-.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-23-contemporary-penthouse-radial-.jpg",
+    "bytes": 488817,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-16-fusion-residence-ambattur-chen.jpg": {
+    "public_id": "bluecube/residential/res-16-fusion-residence-ambattur-chen",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596552/bluecube/residential/res-16-fusion-residence-ambattur-chen.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-16-fusion-residence-ambattur-chen.jpg",
+    "bytes": 376996,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1416
+  },
+  "residential/res-19-modern-residence-pannaiyur-tam.jpg": {
+    "public_id": "bluecube/residential/res-19-modern-residence-pannaiyur-tam",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596554/bluecube/residential/res-19-modern-residence-pannaiyur-tam.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-19-modern-residence-pannaiyur-tam.jpg",
+    "bytes": 237728,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-05-contemporary-residence-pallava.jpg": {
+    "public_id": "bluecube/residential/res-05-contemporary-residence-pallava",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596554/bluecube/residential/res-05-contemporary-residence-pallava.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-05-contemporary-residence-pallava.jpg",
+    "bytes": 447720,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/approach.jpg": {
+    "public_id": "bluecube/residential/approach",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596554/bluecube/residential/approach.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/approach.jpg",
+    "bytes": 48260,
+    "format": "jpg",
+    "width": 380,
+    "height": 306
+  },
+  "residential/res-10-traditional-residence-chidamba.jpg": {
+    "public_id": "bluecube/residential/res-10-traditional-residence-chidamba",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596555/bluecube/residential/res-10-traditional-residence-chidamba.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-10-traditional-residence-chidamba.jpg",
+    "bytes": 345306,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-12-contemporary-residence-arakkon.jpg": {
+    "public_id": "bluecube/residential/res-12-contemporary-residence-arakkon",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596556/bluecube/residential/res-12-contemporary-residence-arakkon.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-12-contemporary-residence-arakkon.jpg",
+    "bytes": 368800,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-25-fusion-residence-vadapalani-ch.jpg": {
+    "public_id": "bluecube/residential/res-25-fusion-residence-vadapalani-ch",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596557/bluecube/residential/res-25-fusion-residence-vadapalani-ch.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-25-fusion-residence-vadapalani-ch.jpg",
+    "bytes": 317657,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-17-spanish-villa-akkarai-chennai.jpg": {
+    "public_id": "bluecube/residential/res-17-spanish-villa-akkarai-chennai",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596557/bluecube/residential/res-17-spanish-villa-akkarai-chennai.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-17-spanish-villa-akkarai-chennai.jpg",
+    "bytes": 307190,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-21-modern-residence-anna-nagar-ch.jpg": {
+    "public_id": "bluecube/residential/res-21-modern-residence-anna-nagar-ch",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596558/bluecube/residential/res-21-modern-residence-anna-nagar-ch.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-21-modern-residence-anna-nagar-ch.jpg",
+    "bytes": 239100,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-06-modern-residence-perungalathur.jpg": {
+    "public_id": "bluecube/residential/res-06-modern-residence-perungalathur",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596558/bluecube/residential/res-06-modern-residence-perungalathur.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-06-modern-residence-perungalathur.jpg",
+    "bytes": 477894,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-03-gruham-residence-cuddalore-tam.jpg": {
+    "public_id": "bluecube/residential/res-03-gruham-residence-cuddalore-tam",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596560/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg",
+    "bytes": 506990,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-04-classical-residence-ecr-chenna.jpg": {
+    "public_id": "bluecube/residential/res-04-classical-residence-ecr-chenna",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596561/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg",
+    "bytes": 477365,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-01-floating-tree-residence-anna-n.jpg": {
+    "public_id": "bluecube/residential/res-01-floating-tree-residence-anna-n",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596561/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg",
+    "bytes": 530021,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-13-contemporary-residence-mayilad.jpg": {
+    "public_id": "bluecube/residential/res-13-contemporary-residence-mayilad",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596561/bluecube/residential/res-13-contemporary-residence-mayilad.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-13-contemporary-residence-mayilad.jpg",
+    "bytes": 367828,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-08-contemporary-residence-nellore.jpg": {
+    "public_id": "bluecube/residential/res-08-contemporary-residence-nellore",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596562/bluecube/residential/res-08-contemporary-residence-nellore.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-08-contemporary-residence-nellore.jpg",
+    "bytes": 403477,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "interiors/boutiques/boutiques-03.jpg": {
+    "public_id": "bluecube/interiors/boutiques/boutiques-03",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596565/bluecube/interiors/boutiques/boutiques-03.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-03.jpg",
+    "bytes": 26474,
+    "format": "jpg",
+    "width": 428,
+    "height": 310
+  },
+  "residential/res-26-classical-villa-kodaikanal-tam.jpg": {
+    "public_id": "bluecube/residential/res-26-classical-villa-kodaikanal-tam",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596565/bluecube/residential/res-26-classical-villa-kodaikanal-tam.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-26-classical-villa-kodaikanal-tam.jpg",
+    "bytes": 556497,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "interiors/boutiques/boutiques-02.jpg": {
+    "public_id": "bluecube/interiors/boutiques/boutiques-02",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596566/bluecube/interiors/boutiques/boutiques-02.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-02.jpg",
+    "bytes": 29244,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "residential/res-02-ava-group-residence-anna-nagar.jpg": {
+    "public_id": "bluecube/residential/res-02-ava-group-residence-anna-nagar",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596566/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg",
+    "bytes": 386256,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "residential/res-14-contemporary-residence-mogappa.jpg": {
+    "public_id": "bluecube/residential/res-14-contemporary-residence-mogappa",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596566/bluecube/residential/res-14-contemporary-residence-mogappa.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-14-contemporary-residence-mogappa.jpg",
+    "bytes": 479123,
+    "format": "jpg",
+    "width": 1430,
+    "height": 1415
+  },
+  "interiors/boutiques/boutiques-01.jpg": {
+    "public_id": "bluecube/interiors/boutiques/boutiques-01",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596567/bluecube/interiors/boutiques/boutiques-01.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-01.jpg",
+    "bytes": 38176,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "interiors/boutiques/boutiques-04.jpg": {
+    "public_id": "bluecube/interiors/boutiques/boutiques-04",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596567/bluecube/interiors/boutiques/boutiques-04.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-04.jpg",
+    "bytes": 34375,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "interiors/boutiques/boutiques-05.jpg": {
+    "public_id": "bluecube/interiors/boutiques/boutiques-05",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596567/bluecube/interiors/boutiques/boutiques-05.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-05.jpg",
+    "bytes": 48577,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "interiors/restaurants/restaurants-04.jpg": {
+    "public_id": "bluecube/interiors/restaurants/restaurants-04",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596568/bluecube/interiors/restaurants/restaurants-04.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg",
+    "bytes": 38126,
+    "format": "jpg",
+    "width": 428,
+    "height": 650
+  },
+  "interiors/boutiques/boutiques-06.jpg": {
+    "public_id": "bluecube/interiors/boutiques/boutiques-06",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596567/bluecube/interiors/boutiques/boutiques-06.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-06.jpg",
+    "bytes": 22120,
+    "format": "jpg",
+    "width": 428,
+    "height": 310
+  },
+  "interiors/restaurants/restaurants-05.jpg": {
+    "public_id": "bluecube/interiors/restaurants/restaurants-05",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596568/bluecube/interiors/restaurants/restaurants-05.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-05.jpg",
+    "bytes": 30282,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "interiors/restaurants/restaurants-06.jpg": {
+    "public_id": "bluecube/interiors/restaurants/restaurants-06",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596569/bluecube/interiors/restaurants/restaurants-06.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-06.jpg",
+    "bytes": 59190,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "interiors/restaurants/restaurants-03.jpg": {
+    "public_id": "bluecube/interiors/restaurants/restaurants-03",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596569/bluecube/interiors/restaurants/restaurants-03.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-03.jpg",
+    "bytes": 18604,
+    "format": "jpg",
+    "width": 428,
+    "height": 310
+  },
+  "interiors/restaurants/restaurants-02.jpg": {
+    "public_id": "bluecube/interiors/restaurants/restaurants-02",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596569/bluecube/interiors/restaurants/restaurants-02.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-02.jpg",
+    "bytes": 47947,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "interiors/restaurants/restaurants-01.jpg": {
+    "public_id": "bluecube/interiors/restaurants/restaurants-01",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596569/bluecube/interiors/restaurants/restaurants-01.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-01.jpg",
+    "bytes": 27782,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "interiors/healthcare/healthcare-04.jpg": {
+    "public_id": "bluecube/interiors/healthcare/healthcare-04",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596570/bluecube/interiors/healthcare/healthcare-04.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-04.jpg",
+    "bytes": 126463,
+    "format": "jpg",
+    "width": 1200,
+    "height": 1800
+  },
+  "interiors/healthcare/healthcare-05.jpg": {
+    "public_id": "bluecube/interiors/healthcare/healthcare-05",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596571/bluecube/interiors/healthcare/healthcare-05.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-05.jpg",
+    "bytes": 167494,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1200
+  },
+  "interiors/healthcare/healthcare-02.jpg": {
+    "public_id": "bluecube/interiors/healthcare/healthcare-02",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596572/bluecube/interiors/healthcare/healthcare-02.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-02.jpg",
+    "bytes": 139481,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1200
+  },
+  "interiors/healthcare/healthcare-06.jpg": {
+    "public_id": "bluecube/interiors/healthcare/healthcare-06",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596572/bluecube/interiors/healthcare/healthcare-06.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-06.jpg",
+    "bytes": 147697,
+    "format": "jpg",
+    "width": 1200,
+    "height": 1800
+  },
+  "interiors/healthcare/healthcare-01.jpg": {
+    "public_id": "bluecube/interiors/healthcare/healthcare-01",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596573/bluecube/interiors/healthcare/healthcare-01.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-01.jpg",
+    "bytes": 133232,
+    "format": "jpg",
+    "width": 1223,
+    "height": 1800
+  },
+  "interiors/bar_and_spa/bar_and_spa-03.jpg": {
+    "public_id": "bluecube/interiors/bar_and_spa/bar_and_spa-03",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596573/bluecube/interiors/bar_and_spa/bar_and_spa-03.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/bar_and_spa/bar_and_spa-03.jpg",
+    "bytes": 25124,
+    "format": "jpg",
+    "width": 428,
+    "height": 310
+  },
+  "interiors/bar_and_spa/bar_and_spa-02.jpg": {
+    "public_id": "bluecube/interiors/bar_and_spa/bar_and_spa-02",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596573/bluecube/interiors/bar_and_spa/bar_and_spa-02.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/bar_and_spa/bar_and_spa-02.jpg",
+    "bytes": 33012,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "interiors/healthcare/healthcare-03.jpg": {
+    "public_id": "bluecube/interiors/healthcare/healthcare-03",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596573/bluecube/interiors/healthcare/healthcare-03.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg",
+    "bytes": 136205,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1208
+  },
+  "interiors/bar_and_spa/bar_and_spa-05.jpg": {
+    "public_id": "bluecube/interiors/bar_and_spa/bar_and_spa-05",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596574/bluecube/interiors/bar_and_spa/bar_and_spa-05.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/bar_and_spa/bar_and_spa-05.jpg",
+    "bytes": 23910,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "interiors/corporate_office/corporate_office-02.jpg": {
+    "public_id": "bluecube/interiors/corporate_office/corporate_office-02",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596576/bluecube/interiors/corporate_office/corporate_office-02.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-02.jpg",
+    "bytes": 286673,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1352
+  },
+  "interiors/corporate_office/corporate_office-03.jpg": {
+    "public_id": "bluecube/interiors/corporate_office/corporate_office-03",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596577/bluecube/interiors/corporate_office/corporate_office-03.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg",
+    "bytes": 203497,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1352
+  },
+  "interiors/corporate_office/corporate_office-01.jpg": {
+    "public_id": "bluecube/interiors/corporate_office/corporate_office-01",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596579/bluecube/interiors/corporate_office/corporate_office-01.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg",
+    "bytes": 260218,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1352
+  },
+  "interiors/corporate_office/corporate_office-04.jpg": {
+    "public_id": "bluecube/interiors/corporate_office/corporate_office-04",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596580/bluecube/interiors/corporate_office/corporate_office-04.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-04.jpg",
+    "bytes": 243392,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1352
+  },
+  "interiors/corporate_office/corporate_office-06.png": {
+    "public_id": "bluecube/interiors/corporate_office/corporate_office-06",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596400/bluecube/interiors/corporate_office/corporate_office-06.png",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-06.png",
+    "bytes": 3632357,
+    "format": "png",
+    "width": 4496,
+    "height": 3000
+  },
+  "containers/container-10.jpg": {
+    "public_id": "bluecube/containers/container-10",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596590/bluecube/containers/container-10.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-10.jpg",
+    "bytes": 46011,
+    "format": "jpg",
+    "width": 428,
+    "height": 310
+  },
+  "containers/container-04.jpg": {
+    "public_id": "bluecube/containers/container-04",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596592/bluecube/containers/container-04.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-04.jpg",
+    "bytes": 23070,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "containers/container-05.jpg": {
+    "public_id": "bluecube/containers/container-05",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596594/bluecube/containers/container-05.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-05.jpg",
+    "bytes": 30030,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "interiors/bar_and_spa/bar_and_spa-01.jpg": {
+    "public_id": "bluecube/interiors/bar_and_spa/bar_and_spa-01",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596596/bluecube/interiors/bar_and_spa/bar_and_spa-01.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/bar_and_spa/bar_and_spa-01.jpg",
+    "bytes": 32854,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "containers/container-07.jpg": {
+    "public_id": "bluecube/containers/container-07",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596596/bluecube/containers/container-07.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-07.jpg",
+    "bytes": 56629,
+    "format": "jpg",
+    "width": 428,
+    "height": 650
+  },
+  "interiors/bar_and_spa/bar_and_spa-04.jpg": {
+    "public_id": "bluecube/interiors/bar_and_spa/bar_and_spa-04",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596597/bluecube/interiors/bar_and_spa/bar_and_spa-04.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/bar_and_spa/bar_and_spa-04.jpg",
+    "bytes": 23781,
+    "format": "jpg",
+    "width": 428,
+    "height": 650
+  },
+  "interiors/bar_and_spa/bar_and_spa-06.jpg": {
+    "public_id": "bluecube/interiors/bar_and_spa/bar_and_spa-06",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596597/bluecube/interiors/bar_and_spa/bar_and_spa-06.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/bar_and_spa/bar_and_spa-06.jpg",
+    "bytes": 28459,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "containers/container-02.jpg": {
+    "public_id": "bluecube/containers/container-02",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596597/bluecube/containers/container-02.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-02.jpg",
+    "bytes": 30883,
+    "format": "jpg",
+    "width": 428,
+    "height": 310
+  },
+  "containers/container-06.jpg": {
+    "public_id": "bluecube/containers/container-06",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596597/bluecube/containers/container-06.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-06.jpg",
+    "bytes": 45043,
+    "format": "jpg",
+    "width": 428,
+    "height": 310
+  },
+  "containers/container-08.jpg": {
+    "public_id": "bluecube/containers/container-08",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596599/bluecube/containers/container-08.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-08.jpg",
+    "bytes": 57191,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "containers/container-01.jpg": {
+    "public_id": "bluecube/containers/container-01",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596599/bluecube/containers/container-01.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-01.jpg",
+    "bytes": 32575,
+    "format": "jpg",
+    "width": 428,
+    "height": 360
+  },
+  "containers/container-09.jpg": {
+    "public_id": "bluecube/containers/container-09",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596599/bluecube/containers/container-09.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-09.jpg",
+    "bytes": 54984,
+    "format": "jpg",
+    "width": 428,
+    "height": 490
+  },
+  "containers/container-03.jpg": {
+    "public_id": "bluecube/containers/container-03",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596599/bluecube/containers/container-03.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-03.jpg",
+    "bytes": 53712,
+    "format": "jpg",
+    "width": 428,
+    "height": 650
+  },
+  "instagram/curated/curated-04-modular-container.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-04-modular-container",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596603/bluecube/instagram/curated/curated-04-modular-container.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-04-modular-container.jpg",
+    "bytes": 442754,
+    "format": "jpg",
+    "width": 1440,
+    "height": 1440
+  },
+  "instagram/curated/curated-08-dermatology-suite.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-08-dermatology-suite",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596602/bluecube/instagram/curated/curated-08-dermatology-suite.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-08-dermatology-suite.jpg",
+    "bytes": 380655,
+    "format": "jpg",
+    "width": 1080,
+    "height": 1349
+  },
+  "instagram/curated/curated-12-shipping-container-cafe.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-12-shipping-container-cafe",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596603/bluecube/instagram/curated/curated-12-shipping-container-cafe.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-12-shipping-container-cafe.jpg",
+    "bytes": 324980,
+    "format": "jpg",
+    "width": 1440,
+    "height": 1440
+  },
+  "interiors/corporate_office/corporate_office-05.jpg": {
+    "public_id": "bluecube/interiors/corporate_office/corporate_office-05",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596604/bluecube/interiors/corporate_office/corporate_office-05.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-05.jpg",
+    "bytes": 264499,
+    "format": "jpg",
+    "width": 1800,
+    "height": 1352
+  },
+  "instagram/curated/curated-07-minimalist-dining.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-07-minimalist-dining",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596605/bluecube/instagram/curated/curated-07-minimalist-dining.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-07-minimalist-dining.jpg",
+    "bytes": 382771,
+    "format": "jpg",
+    "width": 1349,
+    "height": 1687
+  },
+  "instagram/curated/curated-01-bespoke-villa.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-01-bespoke-villa",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596606/bluecube/instagram/curated/curated-01-bespoke-villa.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-01-bespoke-villa.jpg",
+    "bytes": 672983,
+    "format": "jpg",
+    "width": 1440,
+    "height": 1440
+  },
+  "instagram/curated/curated-03-landscape-atrium.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-03-landscape-atrium",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596608/bluecube/instagram/curated/curated-03-landscape-atrium.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-03-landscape-atrium.jpg",
+    "bytes": 579534,
+    "format": "jpg",
+    "width": 1440,
+    "height": 1800
+  },
+  "instagram/curated/curated-06-contemporary-facade.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-06-contemporary-facade",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596608/bluecube/instagram/curated/curated-06-contemporary-facade.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-06-contemporary-facade.jpg",
+    "bytes": 408329,
+    "format": "jpg",
+    "width": 1080,
+    "height": 1350
+  },
+  "instagram/curated/curated-11-corporate-boardroom.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-11-corporate-boardroom",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596609/bluecube/instagram/curated/curated-11-corporate-boardroom.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-11-corporate-boardroom.jpg",
+    "bytes": 356677,
+    "format": "jpg",
+    "width": 1080,
+    "height": 1350
+  },
+  "instagram/curated/curated-05-luxury-suite.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-05-luxury-suite",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596610/bluecube/instagram/curated/curated-05-luxury-suite.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-05-luxury-suite.jpg",
+    "bytes": 437137,
+    "format": "jpg",
+    "width": 1080,
+    "height": 1349
+  },
+  "instagram/curated/curated-02-clinic-lounge.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-02-clinic-lounge",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596610/bluecube/instagram/curated/curated-02-clinic-lounge.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-02-clinic-lounge.jpg",
+    "bytes": 583029,
+    "format": "jpg",
+    "width": 1440,
+    "height": 1800
+  },
+  "instagram/curated/curated-09-structural-cantilever.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-09-structural-cantilever",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596611/bluecube/instagram/curated/curated-09-structural-cantilever.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-09-structural-cantilever.jpg",
+    "bytes": 369990,
+    "format": "jpg",
+    "width": 1440,
+    "height": 1800
+  },
+  "instagram/curated/curated-10-terrace-garden.jpg": {
+    "public_id": "bluecube/instagram/curated/curated-10-terrace-garden",
+    "secure_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/v1793596612/bluecube/instagram/curated/curated-10-terrace-garden.jpg",
+    "cdn_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-10-terrace-garden.jpg",
+    "bytes": 362085,
+    "format": "jpg",
+    "width": 1080,
+    "height": 1349
+  }
+}

@@ -27,6 +27,8 @@
     }
   }
   </script>
+  <!-- Cloudflare Turnstile Verification API -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -34,7 +36,7 @@
   <header class="site-nav">
     <div class="container nav-layout">
       <a href="../" class="brand-wrapper" aria-label="Blue Cube Architects - Est. 2000 Chennai">
-        <img src="../assets/images/brand/logo-dark.png" alt="Blue Cube Architects" class="brand-logo-img" width="240" height="30">
+        <img src="https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/brand/logo-dark.png" alt="Blue Cube Architects" class="brand-logo-img" width="240" height="30">
         <span class="brand-sub">Est. 2000 &bull; Chennai</span>
       </a>
 
@@ -199,6 +201,9 @@
               <textarea id="clientMessage" name="message" class="textarea-editorial" rows="4" placeholder="Location, estimated area, requirements..."></textarea>
             </div>
 
+            <!-- Cloudflare Turnstile Verification Widget -->
+            <div id="cfTurnstileWidget" class="cf-turnstile" data-sitekey="" style="margin: 16px 0;"></div>
+
             <button type="submit" class="btn-editorial" style="width: 100%; margin-top: 8px;">
               <span>Transmit Enquiry to Studio &rarr;</span>
             </button>
@@ -238,7 +243,7 @@
     <div class="container">
       <div class="footer-columns" data-stagger>
         <div>
-          <img src="../assets/images/brand/logo-white.png" alt="Blue Cube Architects" class="footer-logo-img" width="240" height="38">
+          <img src="https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/brand/logo-white.png" alt="Blue Cube Architects" class="footer-logo-img" width="240" height="38">
           <p class="footer-brand-p">
             Established at the wake of the Millennium. Headquartered in Chennai, India. Headed by Principal Architect Mr. G. Harish.
           </p>

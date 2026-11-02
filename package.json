@@ -1,0 +1,26 @@
+{
+  "name": "bluecube",
+  "version": "1.0.0",
+  "description": "> **Premier Architectural, Interior, & Container Architecture Practice**   > Established 2000 • Headquarters in Chennai, Tamil Nadu, India   > Principal Architect & Founder: **Mr. G. Harish**",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "build": "node scripts/build-content.mjs",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webpagebluecube/webpagebluecube.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/webpagebluecube/webpagebluecube/issues"
+  },
+  "homepage": "https://github.com/webpagebluecube/webpagebluecube#readme",
+  "devDependencies": {
+    "wrangler": "^4.156.1"
+  }
+}

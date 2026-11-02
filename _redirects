@@ -24,3 +24,15 @@
 /commercial.html                /projects/commercial/                301
 /residential.html               /projects/residential/               301
 
+# Dynamic detail page legacy URL redirect (Known limitation: Cloudflare Pages ignores query strings in _redirects)
+/projects/detail.html           /projects/                           301
+
+# Clean-URL handling (ensuring explicit .html or /index.html requests redirect to canonical directories)
+/about/index.html               /about/                              301
+/contact/index.html             /contact/                            301
+/projects/index.html            /projects/                           301
+/projects/architecture/index.html /projects/architecture/            301
+/projects/commercial/index.html   /projects/commercial/              301
+/projects/containers/index.html   /projects/containers/              301
+/projects/interior/index.html     /projects/interior/                301
+/projects/residential/index.html  /projects/residential/             301

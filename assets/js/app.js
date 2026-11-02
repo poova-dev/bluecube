@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const contactForm = document.getElementById('studioContactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       // Honeypot check
@@ -351,17 +351,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const successAlert = document.getElementById('formSuccessAlert');
       const errorAlert = document.getElementById('formErrorAlert');
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Transmit Enquiry to Studio &rarr;';
 
       // Validation
       const name = contactForm.querySelector('#clientName')?.value.trim();
       const email = contactForm.querySelector('#clientEmail')?.value.trim();
       const phone = contactForm.querySelector('#clientPhone')?.value.trim();
+      const type = contactForm.querySelector('#projectType')?.value.trim();
+      const message = contactForm.querySelector('#clientMessage')?.value.trim();
 
-      if (!name || !email || !phone) {
+      if (!name || !email || !phone || !type) {
         if (errorAlert) {
           errorAlert.style.display = 'block';
           errorAlert.classList.add('is-error');
-          errorAlert.textContent = 'Please fill in all required fields (Name, Email, Phone).';
+          errorAlert.textContent = 'Please fill in all required fields (Name, Email, Phone, Project Typology).';
         }
         if (successAlert) {
           successAlert.style.display = 'none';
@@ -370,15 +374,64 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Display success feedback
-      if (errorAlert) {
-        errorAlert.style.display = 'none';
-        errorAlert.classList.remove('is-error');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Transmitting Enquiry...</span>';
       }
-      if (successAlert) {
-        successAlert.style.display = 'block';
-        successAlert.classList.add('is-success');
-        contactForm.reset();
+
+      try {
+        const turnstileInput = contactForm.querySelector('[name="cf-turnstile-response"]');
+        const turnstileToken = turnstileInput?.value || (typeof window.turnstile?.getResponse === 'function' ? window.turnstile.getResponse() : '');
+
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            type,
+            message,
+            company_website_url: honeypot ? honeypot.value : '',
+            'cf-turnstile-response': turnstileToken
+          })
+        });
+
+        const result = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+          throw new Error(result.error || `Server responded with status ${res.status}`);
+        }
+
+        // Display success feedback
+        if (errorAlert) {
+          errorAlert.style.display = 'none';
+          errorAlert.classList.remove('is-error');
+        }
+        if (successAlert) {
+          successAlert.style.display = 'block';
+          successAlert.classList.add('is-success');
+          successAlert.textContent = result.message || 'Thank you for contacting Blue Cube Architects. Your inquiry has been routed to our studio team.';
+          contactForm.reset();
+        }
+      } catch (err) {
+        console.error('Contact form submission error:', err);
+        if (errorAlert) {
+          errorAlert.style.display = 'block';
+          errorAlert.classList.add('is-error');
+          errorAlert.textContent = err.message || 'Transmission failed. Please reach us directly via telephone or WhatsApp.';
+        }
+        if (successAlert) {
+          successAlert.style.display = 'none';
+          successAlert.classList.remove('is-success');
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
       }
     });
   }
