@@ -4,8 +4,9 @@
   "description": "> **Premier Architectural, Interior, & Container Architecture Practice**   > Established 2000 • Headquarters in Chennai, Tamil Nadu, India   > Principal Architect & Founder: **Mr. G. Harish**",
   "main": "index.js",
   "scripts": {
-    "dev": "wrangler pages dev .",
+    "dev": "wrangler dev",
     "build": "node scripts/build-content.mjs",
+    "deploy": "wrangler deploy",
     "test": "echo \"No test specified\" && exit 0"
   },
   "repository": {

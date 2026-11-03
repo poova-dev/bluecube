@@ -1,0 +1,15 @@
+# Assets Ignore List for Cloudflare Workers Static Assets
+.git/
+.github/
+node_modules/
+.dev.vars*
+*.py
+BLUECUBE WEB PAGE TREE.pdf
+package.json
+package-lock.json
+wrangler.json
+firestore*
+firebase.json
+functions/
+scripts/
+_worker.js
