@@ -1510,7 +1510,573 @@ textarea:focus-visible {
   transform: scale(1.03);
 }
 
-/* Project Detail Meta Bar */
+/* ==========================================================================
+   EDITORIAL PROJECT DETAIL SYSTEM (ADesignCo / High-End Architectural Style)
+   ========================================================================== */
+
+/* Section B — Cinematic Architectural Hero */
+.editorial-hero {
+  width: 100%;
+  padding-top: var(--nav-h);
+}
+
+.editorial-hero-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: clamp(16px, 2.5vw, 32px) var(--gutter) 0;
+}
+
+.editorial-hero-frame {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--stone-light);
+}
+
+.editorial-hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 82vh;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.editorial-hero-frame:hover .editorial-hero-img {
+  transform: scale(1.015);
+}
+
+/* Section C — Editorial Project Introduction */
+.editorial-intro-section {
+  padding: clamp(48px, 6vw, 96px) 0 clamp(40px, 5vw, 72px);
+}
+
+.editorial-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: start;
+}
+
+.editorial-intro-media {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--stone-light);
+}
+
+.editorial-intro-media img {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.editorial-intro-media:hover img {
+  transform: scale(1.02);
+}
+
+.editorial-intro-single {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.editorial-intro-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.editorial-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bark-medium);
+  margin-bottom: 12px;
+}
+
+.editorial-breadcrumb-link {
+  color: var(--bark-medium);
+  text-decoration: none;
+  transition: color var(--dur-fast);
+}
+
+.editorial-breadcrumb-link:hover {
+  color: var(--bark);
+}
+
+.editorial-breadcrumb-sep {
+  opacity: 0.5;
+}
+
+.editorial-project-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--bark);
+  letter-spacing: -0.01em;
+  margin: 0 0 4px 0;
+}
+
+/* Section D — Project Metadata */
+.editorial-meta-table {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--stone-deep);
+  border-bottom: 1px solid var(--stone-deep);
+  padding: 18px 0;
+  margin: 28px 0 32px;
+  gap: 12px;
+}
+
+.editorial-meta-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.editorial-meta-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bark-medium);
+}
+
+.editorial-meta-value {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--bark);
+  font-weight: 500;
+}
+
+/* Section F — Narrative */
+.editorial-narrative {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--bark);
+  font-weight: 300;
+}
+
+.editorial-narrative p + p {
+  margin-top: 16px;
+}
+
+/* Section E — Editorial Image Gallery Rhythm */
+.editorial-gallery-section {
+  padding: 0 0 clamp(64px, 8vw, 112px);
+}
+
+.editorial-gallery-stream {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+.gallery-full-bleed {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--stone-light);
+}
+
+.gallery-full-bleed img {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.gallery-full-bleed:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-two-up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.gallery-two-up-item {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--stone-light);
+}
+
+.gallery-two-up-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.gallery-two-up-item:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-asymmetric {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+
+.gallery-asymmetric.reverse {
+  grid-template-columns: 1fr 1.35fr;
+}
+
+.gallery-asymmetric-item {
+  overflow: hidden;
+  background-color: var(--stone-light);
+}
+
+.gallery-asymmetric-item img {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.gallery-asymmetric-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Section G — Previous and Next Projects Navigation */
+.project-pagination {
+  border-top: 1px solid var(--stone-deep);
+  border-bottom: 1px solid var(--stone-deep);
+  padding: clamp(24px, 4vw, 36px) 0;
+  margin: clamp(40px, 6vw, 72px) 0;
+}
+
+.project-pagination-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.pagination-link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  transition: opacity var(--dur-fast);
+}
+
+.pagination-link.next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.pagination-link.prev {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.pagination-link:hover {
+  opacity: 0.7;
+}
+
+.pagination-sub {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bark-medium);
+}
+
+.pagination-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  color: var(--bark);
+  font-weight: 500;
+}
+
+.pagination-center {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border: 1px solid var(--stone-deep);
+  color: var(--bark);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all var(--dur-fast);
+  white-space: nowrap;
+}
+
+.pagination-center:hover {
+  background-color: var(--bark);
+  color: var(--stone);
+  border-color: var(--bark);
+}
+
+/* Section H — Related Projects */
+.editorial-related-section {
+  padding: clamp(32px, 5vw, 64px) 0;
+  border-bottom: 1px solid var(--stone-deep);
+}
+
+.related-header {
+  margin-bottom: clamp(24px, 4vw, 36px);
+}
+
+.related-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: var(--bark);
+  margin-top: 6px;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.related-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--stone-light);
+  display: block;
+}
+
+.related-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-editorial);
+}
+
+.related-card:hover .related-card-media img {
+  transform: scale(1.03);
+}
+
+.related-card-body {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.related-card-meta {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bark-medium);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.related-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--bark);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.related-card-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-card-title a:hover {
+  color: var(--cube-blue);
+}
+
+.related-card-link {
+  margin-top: auto;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bark);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: gap var(--dur-fast);
+}
+
+.related-card-link:hover {
+  gap: 10px;
+  color: var(--cube-blue);
+}
+
+/* Section I — Project Enquiry */
+.editorial-enquiry-section {
+  padding: clamp(56px, 8vw, 96px) 0;
+}
+
+.editorial-enquiry-box {
+  background-color: rgba(255, 255, 255, 0.45);
+  border: 1px solid var(--stone-deep);
+  padding: clamp(36px, 6vw, 64px) clamp(24px, 5vw, 48px);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.enquiry-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  color: var(--bark);
+  margin: 10px 0 16px;
+}
+
+.enquiry-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--bark-medium);
+  max-width: 640px;
+  margin: 0 auto clamp(24px, 4vw, 36px);
+}
+
+.enquiry-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.enquiry-btn {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all var(--dur-fast);
+}
+
+.enquiry-btn.whatsapp-btn {
+  background-color: var(--bark);
+  color: var(--stone);
+  border: 1px solid var(--bark);
+}
+
+.enquiry-btn.whatsapp-btn:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.enquiry-btn.call-btn {
+  background-color: transparent;
+  color: var(--bark);
+  border: 1px solid var(--stone-deep);
+}
+
+.enquiry-btn.call-btn:hover {
+  border-color: var(--bark);
+  background-color: rgba(47, 34, 24, 0.06);
+}
+
+.enquiry-btn.form-btn {
+  background-color: transparent;
+  color: var(--bark);
+  border: 1px solid var(--bark);
+}
+
+.enquiry-btn.form-btn:hover {
+  background-color: var(--bark);
+  color: var(--stone);
+}
+
+/* Responsive Overrides for Editorial Detail System */
+@media (max-width: 900px) {
+  .editorial-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 860px) {
+  .related-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-two-up,
+  .gallery-asymmetric,
+  .gallery-asymmetric.reverse {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .project-pagination-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .pagination-link.prev,
+  .pagination-link.next {
+    align-items: center;
+    text-align: center;
+  }
+  .pagination-center {
+    order: -1;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .editorial-meta-row {
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+  }
+  .enquiry-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .enquiry-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Legacy Project Detail Meta Bar (kept for compatibility) */
 .project-meta-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

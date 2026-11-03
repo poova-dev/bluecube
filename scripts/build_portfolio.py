@@ -297,45 +297,242 @@ def generate_project_pages():
             "Container Architecture": "../../projects/containers/"
         }
         back_cat_url = cat_links.get(p["category"], "../../projects/")
-        
-        # Gallery markup
-        gallery_html = ""
-        gallery = p.get("gallery_urls", [])
-        if len(gallery) > 1:
-            gallery_html += """      <!-- Project Editorial Visual Stream -->
-      <div class="gallery-editorial-stream" style="margin-top: 48px;">"""
-            for g_idx, g_url in enumerate(gallery[1:], start=2):
-                gallery_html += f"""
-        <div class="rhythm-full-bleed" data-reveal="image" style="margin-bottom: 32px;">
-          <img src="{g_url}" 
-               alt="{p['title']} &mdash; Architectural Perspective {g_idx}" 
-               data-lightbox-src="{g_url}"
-               loading="lazy" width="1440" height="900" style="border-radius: 4px;">
-        </div>"""
-            gallery_html += "\n      </div>"
 
-        # Related projects markup
+        # Gallery breakdown:
+        # gallery[0] = Hero
+        # gallery[1] = Intro portrait / detail image (if >= 2 images)
+        # gallery[2:] = Extra images for magazine-style editorial sequence
+        gallery = p.get("gallery_urls", [])
+        has_intro_image = len(gallery) >= 2
+        intro_img = gallery[1] if has_intro_image else None
+        extra_gallery = gallery[2:] if has_intro_image else []
+
+        # Breadcrumbs
+        breadcrumbs_html = f"""          <div class="editorial-breadcrumbs">
+            <a href="../../projects/" class="editorial-breadcrumb-link">Projects</a>
+            <span class="editorial-breadcrumb-sep">/</span>
+            <a href="{back_cat_url}" class="editorial-breadcrumb-link">{p['category']}</a>
+            <span class="editorial-breadcrumb-sep">/</span>
+            <span>{p.get('subcategory', p['category'])}</span>
+          </div>"""
+
+        # Section D: Clean Editorial Metadata (verified fields only, no empty/placeholders)
+        meta_items = []
+        if p.get("location"):
+            meta_items.append(("Location", p["location"]))
+
+        cat_display = p.get("category", "")
+        if p.get("subcategory") and p["subcategory"] != cat_display:
+            cat_display = f"{cat_display} &bull; {p['subcategory']}"
+        if cat_display:
+            meta_items.append(("Category", cat_display))
+
+        if p.get("typology") and p["typology"] != p.get("subcategory"):
+            meta_items.append(("Typology", p["typology"]))
+
+        if p.get("area") and p["area"].strip() not in ["", "Completed", "N/A", "Archive"]:
+            meta_items.append(("Built-up Area", p["area"]))
+
+        if p.get("year") and p["year"].strip() not in ["", "Completed", "Archive", "Blue Cube Archive"]:
+            meta_items.append(("Year", p["year"]))
+
+        if p.get("client") and p["client"].strip() not in ["", "Private Client", "Private Residence", "Client"]:
+            meta_items.append(("Client", p["client"]))
+
+        meta_rows_html = ""
+        for label, val in meta_items:
+            meta_rows_html += f"""            <div class="editorial-meta-row">
+              <dt class="editorial-meta-label">{label}</dt>
+              <dd class="editorial-meta-value">{val}</dd>
+            </div>\n"""
+        meta_table_html = f"""          <dl class="editorial-meta-table">
+{meta_rows_html}          </dl>""" if meta_items else ""
+
+        # Section F: Verified Narrative (no fake/invented specifications)
+        desc_paragraphs = [para.strip() for para in p.get("description", "").split("\n") if para.strip()]
+        narrative_html = ""
+        if desc_paragraphs:
+            narrative_html = '          <div class="editorial-narrative">\n'
+            for para in desc_paragraphs:
+                narrative_html += f'            <p>{para}</p>\n'
+            narrative_html += '          </div>'
+
+        # Section C: Editorial Introduction (Two-column if intro image exists, single column if 1 photo)
+        if has_intro_image:
+            intro_section_html = f"""    <!-- Section C & D & F: Editorial Project Introduction -->
+    <section class="editorial-intro-section">
+      <div class="container">
+        <div class="editorial-intro-grid">
+          <div class="editorial-intro-media" data-reveal="image">
+            <img src="{intro_img}" 
+                 alt="{p['title']} &mdash; Architectural Perspective" 
+                 data-lightbox-src="{intro_img}"
+                 loading="lazy" width="800" height="1050">
+          </div>
+          <div class="editorial-intro-content" data-reveal>
+{breadcrumbs_html}
+            <h1 class="editorial-project-title">{p['title']}</h1>
+{meta_table_html}
+{narrative_html}
+          </div>
+        </div>
+      </div>
+    </section>"""
+        else:
+            intro_section_html = f"""    <!-- Section C & D & F: Editorial Project Introduction -->
+    <section class="editorial-intro-section">
+      <div class="container">
+        <div class="editorial-intro-single" data-reveal>
+{breadcrumbs_html}
+          <h1 class="editorial-project-title">{p['title']}</h1>
+{meta_table_html}
+{narrative_html}
+        </div>
+      </div>
+    </section>"""
+
+        # Section E: Editorial Gallery Stream (Magazine-style sequence for extra images)
+        gallery_section_html = ""
+        if extra_gallery:
+            gallery_items = []
+            i = 0
+            pattern_idx = 0
+            while i < len(extra_gallery):
+                rem = len(extra_gallery) - i
+                if rem == 1:
+                    gallery_items.append(f"""        <div class="gallery-full-bleed" data-reveal="image">
+          <img src="{extra_gallery[i]}" 
+               alt="{p['title']} &mdash; Architectural Perspective" 
+               data-lightbox-src="{extra_gallery[i]}" 
+               loading="lazy" width="1600" height="1000">
+        </div>""")
+                    i += 1
+                elif rem == 2:
+                    gallery_items.append(f"""        <div class="gallery-two-up" data-reveal="image">
+          <div class="gallery-two-up-item">
+            <img src="{extra_gallery[i]}" alt="{p['title']} &mdash; Architectural View 1" data-lightbox-src="{extra_gallery[i]}" loading="lazy">
+          </div>
+          <div class="gallery-two-up-item">
+            <img src="{extra_gallery[i+1]}" alt="{p['title']} &mdash; Architectural View 2" data-lightbox-src="{extra_gallery[i+1]}" loading="lazy">
+          </div>
+        </div>""")
+                    i += 2
+                else:
+                    if pattern_idx % 2 == 0:
+                        gallery_items.append(f"""        <div class="gallery-full-bleed" data-reveal="image">
+          <img src="{extra_gallery[i]}" 
+               alt="{p['title']} &mdash; Architectural Perspective" 
+               data-lightbox-src="{extra_gallery[i]}" 
+               loading="lazy" width="1600" height="1000">
+        </div>""")
+                        i += 1
+                    else:
+                        gallery_items.append(f"""        <div class="gallery-two-up" data-reveal="image">
+          <div class="gallery-two-up-item">
+            <img src="{extra_gallery[i]}" alt="{p['title']} &mdash; Architectural View 1" data-lightbox-src="{extra_gallery[i]}" loading="lazy">
+          </div>
+          <div class="gallery-two-up-item">
+            <img src="{extra_gallery[i+1]}" alt="{p['title']} &mdash; Architectural View 2" data-lightbox-src="{extra_gallery[i+1]}" loading="lazy">
+          </div>
+        </div>""")
+                        i += 2
+                    pattern_idx += 1
+
+            gallery_section_html = f"""    <!-- Section E: Editorial Image Gallery -->
+    <section class="editorial-gallery-section">
+      <div class="container">
+        <div class="editorial-gallery-stream">
+{chr(10).join(gallery_items)}
+        </div>
+      </div>
+    </section>"""
+
+        # Section G: Previous and Next Projects Navigation
+        pagination_html = f"""    <!-- Section G: Previous and Next Projects Navigation -->
+    <nav class="project-pagination" aria-label="Project pagination">
+      <div class="container project-pagination-inner">
+        <a href="../../projects/{prev_p['slug']}/" class="pagination-link prev" aria-label="Previous project: {prev_p['title']}">
+          <span class="pagination-sub">&larr; Previous Project</span>
+          <span class="pagination-title">{prev_p['title']}</span>
+        </a>
+        <a href="{back_cat_url}" class="pagination-center" aria-label="Return to {p['category']} portfolio">
+          <span>{p['category']} Archive</span>
+        </a>
+        <a href="../../projects/{next_p['slug']}/" class="pagination-link next" aria-label="Next project: {next_p['title']}">
+          <span class="pagination-sub">Next Project &rarr;</span>
+          <span class="pagination-title">{next_p['title']}</span>
+        </a>
+      </div>
+    </nav>"""
+
+        # Section H: Related Projects
         related_cards_html = ""
         for rel in p.get("related_projects", []):
-            related_cards_html += f"""        <article class="portfolio-card">
-          <a href="../../projects/{rel['slug']}/" class="portfolio-card-media" aria-label="View {rel['title']}">
-            <span class="portfolio-card-badge">{rel['subcategory']}</span>
-            <img src="{rel['featured_image_url']}" alt="{rel['title']}" class="portfolio-card-img" loading="lazy" width="600" height="375">
+            related_cards_html += f"""        <article class="related-card">
+          <a href="../../projects/{rel['slug']}/" class="related-card-media" aria-label="View {rel['title']}">
+            <img src="{rel['featured_image_url']}" alt="{rel['title']} &bull; {rel['location']}" loading="lazy" width="600" height="375">
           </a>
-          <div class="portfolio-card-info">
-            <div class="portfolio-card-meta">
+          <div class="related-card-body">
+            <div class="related-card-meta">
+              <span>{rel['subcategory']}</span>
+              <span>&bull;</span>
               <span>{rel['location']}</span>
             </div>
-            <h4 class="portfolio-card-title">
+            <h4 class="related-card-title">
               <a href="../../projects/{rel['slug']}/">{rel['title']}</a>
             </h4>
-            <a href="../../projects/{rel['slug']}/" class="portfolio-card-action">View Project &rarr;</a>
+            <a href="../../projects/{rel['slug']}/" class="related-card-link">
+              <span>View Dossier</span> &rarr;
+            </a>
           </div>
         </article>\n"""
 
-        # Project enquiry URL
-        enquiry_url = f"../../contact/?project={p['title'].replace(' ', '+')}"
-        whatsapp_url = f"https://wa.me/919962108988?text=Hello%20Blue%20Cube%20Architects%2C%20I%20would%20like%20to%20discuss%20{p['title'].replace(' ', '%20')}."
+        related_section_html = f"""    <!-- Section H: Related Projects -->
+    <section class="editorial-related-section">
+      <div class="container">
+        <div class="related-header" data-reveal>
+          <span class="editorial-meta-label">Selected Works</span>
+          <h3 class="related-title">Related Projects</h3>
+        </div>
+        <div class="related-grid" data-stagger>
+{related_cards_html}        </div>
+      </div>
+    </section>"""
+
+        # Section I: Project Enquiry CTA
+        whatsapp_title = p['title'].replace(' ', '%20')
+        enquiry_project = p['title'].replace(' ', '+')
+        enquiry_section_html = f"""    <!-- Section I: Project Enquiry CTA -->
+    <section class="editorial-enquiry-section">
+      <div class="container">
+        <div class="editorial-enquiry-box" data-reveal>
+          <span class="editorial-meta-label">Project Consultation</span>
+          <h3 class="enquiry-heading">Have a similar project in mind?</h3>
+          <p class="enquiry-text">
+            Bluecube Architects provides bespoke architectural planning, interior styling, and structural execution across Tamil Nadu and South India.
+          </p>
+          <div class="enquiry-actions">
+            <a href="https://wa.me/919962108988?text=Hello%20Blue%20Cube%20Architects%2C%20I%20would%20like%20to%20discuss%20a%20project%20similar%20to%20{whatsapp_title}." target="_blank" rel="noopener" class="enquiry-btn whatsapp-btn" aria-label="Chat with Bluecube on WhatsApp">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 6.91C9.36 6.91 9.07 6.97 8.83 7.23C8.59 7.49 7.9 8.14 7.9 9.47C7.9 10.8 8.87 12.08 9.01 12.27C9.14 12.46 10.9 15.19 13.62 16.36C14.27 16.64 14.77 16.81 15.17 16.94C15.82 17.15 16.42 17.12 16.89 17.05C17.41 16.97 18.49 16.39 18.72 15.75C18.95 15.11 18.95 14.56 18.88 14.45C18.81 14.34 18.63 14.27 18.36 14.14C18.09 14 16.76 13.34 16.51 13.25C16.26 13.16 16.08 13.12 15.9 13.39C15.72 13.66 15.2 14.27 15.04 14.45C14.88 14.63 14.72 14.65 14.45 14.51C14.18 14.37 13.31 14.09 12.28 13.17C11.47 12.45 10.93 11.56 10.77 11.29C10.61 11.02 10.75 10.87 10.89 10.73C11.01 10.61 11.16 10.41 11.3 10.25C11.44 10.09 11.49 9.97 11.58 9.79C11.67 9.61 11.62 9.45 11.55 9.32C11.48 9.19 10.95 7.89 10.73 7.36C10.51 6.84 10.29 6.91 10.13 6.91H9.53Z"/>
+              </svg>
+              <span>WhatsApp Studio</span>
+            </a>
+            <a href="tel:+919962108988" class="enquiry-btn call-btn" aria-label="Call Bluecube Architects">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>+91 99621 08988</span>
+            </a>
+            <a href="../../contact/?project={enquiry_project}" class="enquiry-btn form-btn">
+              <span>Project Enquiry &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>"""
+
+        clean_desc = p.get('description', '').replace('"', '&quot;').strip()
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -343,13 +540,13 @@ def generate_project_pages():
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{p['title']} | Blue Cube Architects Chennai</title>
-  <meta name="description" content="{p['title']} ({p.get('location')}) designed by Blue Cube Architects Chennai. {p['description'][:150]}...">
+  <meta name="description" content="{p['title']} ({p.get('location')}) designed by Blue Cube Architects Chennai. {clean_desc[:150]}...">
   <link rel="canonical" href="{BASE_URL}/projects/{slug}/">
   <meta property="og:title" content="{p['title']} | Blue Cube Architects">
-  <meta property="og:description" content="{p['description'][:200]}">
+  <meta property="og:description" content="{clean_desc[:200]}">
   <meta property="og:image" content="{p['featured_image_url']}">
   <meta property="og:type" content="article">
-  <link rel="stylesheet" href="../../assets/css/main.css?v=6">
+  <link rel="stylesheet" href="../../assets/css/main.css?v=7">
 
   <!-- Schema.org Structural Metadata -->
   <script type="application/ld+json">
@@ -358,7 +555,7 @@ def generate_project_pages():
     "@type": "CreativeWork",
     "name": "{p['title']}",
     "headline": "{p['title']} by Blue Cube Architects",
-    "description": "{p['description']}",
+    "description": "{clean_desc}",
     "image": "{p['featured_image_url']}",
     "creator": {{
       "@type": "Organization",
@@ -377,102 +574,30 @@ def generate_project_pages():
 {render_nav(depth=2)}
 
   <main id="mainContent">
-    <!-- Project Header Hero -->
-    <section class="page-hero" style="padding-bottom: 24px;">
-      <div class="container">
-        <div style="margin-bottom: 16px;">
-          <a href="{back_cat_url}" class="text-link" style="font-family: var(--font-tech); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.08em;">&larr; Back to {p['category']} Portfolio</a>
+    <!-- Section B: Full-Width Cinematic Architectural Hero -->
+    <section class="editorial-hero">
+      <div class="editorial-hero-container">
+        <div class="editorial-hero-frame" data-reveal="image">
+          <img src="{p['featured_image_url']}" 
+               alt="{p['title']} &mdash; {p.get('location')} Architectural View" 
+               data-lightbox-src="{p['featured_image_url']}"
+               class="editorial-hero-img" 
+               width="1920" height="1080"
+               fetchpriority="high"
+               loading="eager">
         </div>
-        <span class="label-eyebrow" data-reveal style="--i:0;">{p['category']} &bull; {p['subcategory']}</span>
-        <h1 class="heading-display" data-split>{p['title']}</h1>
-        <p class="p-editorial" data-reveal style="--i:1; margin-top: 12px; font-size: 1.15rem; max-width: 860px;">
-          {p.get('location')} &bull; Designed by Blue Cube Architects Chennai
-        </p>
       </div>
     </section>
 
-    <!-- Large Architectural Hero Photograph -->
-    <section class="container" style="margin-bottom: 40px;">
-      <div class="rhythm-full-bleed" data-reveal="image">
-        <img src="{p['featured_image_url']}" 
-             alt="{p['title']} &mdash; {p.get('location')} Architectural View" 
-             data-lightbox-src="{p['featured_image_url']}"
-             class="hero-large-img" width="1440" height="900" style="width: 100%; max-height: 80vh; object-fit: cover; border-radius: 4px; box-shadow: 0 12px 36px rgba(47, 34, 24, 0.1);">
-      </div>
-    </section>
+{intro_section_html}
 
-    <!-- Meta Bar & Narrative Section -->
-    <section class="container">
-      <div class="project-meta-bar" data-stagger>
-        <div>
-          <p class="meta-field-label">Location</p>
-          <p class="meta-field-value">{p.get('location', 'Chennai, Tamil Nadu')}</p>
-        </div>
+{gallery_section_html}
 
-        <div>
-          <p class="meta-field-label">Typology</p>
-          <p class="meta-field-value">{p.get('typology', p['subcategory'])}</p>
-        </div>
+{pagination_html}
 
-        <div>
-          <p class="meta-field-label">Client</p>
-          <p class="meta-field-value">{p.get('client', 'Private Client')}</p>
-        </div>
+{related_section_html}
 
-        <div>
-          <p class="meta-field-label">Scale / Year</p>
-          <p class="meta-field-value">{p.get('area', 'Completed')} &bull; {p.get('year', 'Blue Cube Archive')}</p>
-        </div>
-      </div>
-
-      <!-- Architectural Narrative -->
-      <div style="max-width: 860px; margin: 48px 0 clamp(48px, 6vw, 64px);">
-        <span class="label-eyebrow" data-reveal style="--i:0;">Architectural Narrative</span>
-        <p class="p-editorial" data-reveal style="--i:1; font-size: 1.15rem; line-height: 1.8; margin-top: 12px;">
-          {p['description']}
-        </p>
-        <p class="p-editorial" data-reveal style="--i:2; font-size: 1.05rem; line-height: 1.75; color: var(--bark-medium); margin-top: 16px;">
-          Every joint, louver profile, and volumetric transition is coordinated through Blue Cube's six specialized in-house departments (Drafting, Design, Development, Execution, 3D Visualization, and PMC), ensuring flawless fidelity between initial concept and finished physical reality.
-        </p>
-      </div>
-
-{gallery_html}
-
-      <!-- Project Inquiry & CTA Bar -->
-      <div style="background: rgba(255, 255, 255, 0.4); border: 1px solid var(--stone-deep); border-radius: 6px; padding: clamp(28px, 5vw, 48px); margin: 64px 0; text-align: center;" data-reveal>
-        <span class="label-eyebrow">Project Consultation</span>
-        <h3 class="heading-section" style="margin: 12px 0 16px 0;">Interested in a similar development?</h3>
-        <p class="p-editorial" style="max-width: 680px; margin: 0 auto 28px auto;">
-          Blue Cube Architects provides end-to-end bespoke architectural planning, interior styling, and structural execution across Tamil Nadu and South India.
-        </p>
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <a href="{whatsapp_url}" target="_blank" rel="noopener" class="drawer-whatsapp-btn" style="background: #25D366; color: #FFFFFF; padding: 12px 24px; border-radius: 999px;">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 6.91C9.36 6.91 9.07 6.97 8.83 7.23C8.59 7.49 7.9 8.14 7.9 9.47C7.9 10.8 8.87 12.08 9.01 12.27C9.14 12.46 10.9 15.19 13.62 16.36C14.27 16.64 14.77 16.81 15.17 16.94C15.82 17.15 16.42 17.12 16.89 17.05C17.41 16.97 18.49 16.39 18.72 15.75C18.95 15.11 18.95 14.56 18.88 14.45C18.81 14.34 18.63 14.27 18.36 14.14C18.09 14 16.76 13.34 16.51 13.25C16.26 13.16 16.08 13.12 15.9 13.39C15.72 13.66 15.2 14.27 15.04 14.45C14.88 14.63 14.72 14.65 14.45 14.51C14.18 14.37 13.31 14.09 12.28 13.17C11.47 12.45 10.93 11.56 10.77 11.29C10.61 11.02 10.75 10.87 10.89 10.73C11.01 10.61 11.16 10.41 11.3 10.25C11.44 10.09 11.49 9.97 11.58 9.79C11.67 9.61 11.62 9.45 11.55 9.32C11.48 9.19 10.95 7.89 10.73 7.36C10.51 6.84 10.29 6.91 10.13 6.91H9.53Z"/>
-            </svg>
-            <span>WhatsApp Architect Direct</span>
-          </a>
-          <a href="{enquiry_url}" class="nav-enquire-link" style="padding: 12px 28px;">
-            <span>Project Inquiry Form &rarr;</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Related Projects Section -->
-      <div class="related-projects-section" data-stagger>
-        <span class="label-eyebrow">Works in Category</span>
-        <h3 class="heading-section">Related Projects</h3>
-        <div class="related-projects-grid">
-{related_cards_html}        </div>
-      </div>
-
-      <!-- Prev / Next Navigation -->
-      <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--stone-deep); padding: 32px 0 64px 0; margin-top: 48px;">
-        <a href="../../projects/{prev_p['slug']}/" class="text-link">&larr; {prev_p['title']}</a>
-        <a href="{back_cat_url}" class="portfolio-tab-link" style="font-size: 0.75rem;">View All {p['category']}</a>
-        <a href="../../projects/{next_p['slug']}/" class="text-link">{next_p['title']} &rarr;</a>
-      </div>
-    </section>
+{enquiry_section_html}
   </main>
 
 {render_footer(depth=2)}
@@ -806,17 +931,20 @@ ROOT_ALIASES = [
     ("residential.html", "projects/residential/"),
     ("commercial.html", "projects/commercial/"),
     ("interiors.html", "projects/interior/"),
-    ("container-architecture.html", "projects/containers/")
+    ("container-architecture.html", "projects/containers/"),
+    ("projects/kun-capital-kia-showroom-kovilambakkam/index.html", "../kia-showroom-kovilambakkam/"),
+    ("projects/gruham-cuddalore/index.html", "../gruham-residence-cuddalore/")
 ]
 
 for alias_file, target_route in ROOT_ALIASES:
+    os.makedirs(os.path.dirname(alias_file) if os.path.dirname(alias_file) else ".", exist_ok=True)
     html_redirect = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url={target_route}">
   <title>Redirecting to {target_route} | Blue Cube Architects</title>
-  <link rel="canonical" href="{BASE_URL}/{target_route}">
+  <link rel="canonical" href="{BASE_URL}/{target_route.replace('../', 'projects/')}">
 </head>
 <body style="background: #CAC5BA; color: #2F2218; font-family: sans-serif; text-align: center; padding-top: 20vh;">
   <p>Redirecting to <a href="{target_route}" style="color: #1F3A5F; font-weight: bold;">{target_route}</a>...</p>
@@ -824,7 +952,7 @@ for alias_file, target_route in ROOT_ALIASES:
 </html>"""
     with open(alias_file, "w", encoding="utf-8") as f:
         f.write(html_redirect)
-    print(f"Updated root alias redirect: {alias_file} -> {target_route}")
+    print(f"Updated alias redirect: {alias_file} -> {target_route}")
 
 # =========================================================================
 # 5. GENERATE COMPREHENSIVE SITEMAP (sitemap.xml)

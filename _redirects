@@ -28,6 +28,8 @@
 /projects/detail.html           /projects/                           301
 
 # Clean-URL handling (ensuring explicit .html or /index.html requests redirect to canonical directories)
+/projects/kun-capital-kia-showroom-kovilambakkam/ /projects/kia-showroom-kovilambakkam/ 301
+/projects/gruham-cuddalore/           /projects/gruham-residence-cuddalore/ 301
 /about/index.html               /about/                              301
 /contact/index.html             /contact/                            301
 /projects/index.html            /projects/                           301
