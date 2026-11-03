@@ -244,24 +244,27 @@
     </div>
   </footer>
 
-  <script src="../assets/js/app.js?v=5"></script>
+  <script src="../assets/js/projects-data.js?v=6"></script>
+  <script src="../assets/js/app.js?v=6"></script>
   <script>
-    // Project Parameter Adapter
+    // Project Parameter Adapter & Canonical Redirect
     const urlParams = new URLSearchParams(window.location.search);
-    const pid = urlParams.get('id');
+    const param = (urlParams.get('slug') || urlParams.get('id') || '').toLowerCase();
 
-    if (pid === 'floating-tree') {
-      document.title = "Floating Tree Residence | Blue Cube Architects";
-      document.getElementById('projCategoryLabel').textContent = "Bespoke Residence • Anna Nagar";
-      document.getElementById('projTitle').textContent = "Floating Tree Residence";
-      document.getElementById('projHeroImg').src = "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg";
-      document.getElementById('projLocation').textContent = "Anna Nagar, Chennai";
-      document.getElementById('projTypology').textContent = "Private Villa";
-      document.getElementById('projClient').textContent = "Private Client";
-      document.getElementById('projNarrative').textContent = "An urban tropical sanctuary harmonizing cantilevering structural volumes with preserved mature flora, natural airflow corridors, and intimate private courtyards in the heart of Anna Nagar.";
-      document.getElementById('projRhythmImg1').src = "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg";
-      document.getElementById('projRhythmImg2').src = "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg";
-      document.getElementById('projRhythmImg3').src = "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg";
+    if (param && window.BLUECUBE_PORTFOLIO) {
+      const match = window.BLUECUBE_PORTFOLIO.find(p => 
+        p.slug.toLowerCase() === param || 
+        p.id.toLowerCase() === param ||
+        p.slug.toLowerCase().includes(param) ||
+        p.id.toLowerCase().includes(param)
+      );
+      if (match) {
+        window.location.replace('../projects/' + match.slug + '/');
+      } else {
+        window.location.replace('../projects/');
+      }
+    } else {
+      window.location.replace('../projects/');
     }
   </script>
 
