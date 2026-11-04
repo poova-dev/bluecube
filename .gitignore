@@ -32,6 +32,11 @@ ui-debug.log*
 *service-account*.json
 *.pem
 *.key
+admin/firebase-config.js
+!admin/firebase-config.example.js
+
+# Data backups
+data/backups/
 
 # Legacy Vercel
 .vercel/

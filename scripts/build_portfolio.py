@@ -11,6 +11,7 @@ import sys
 import json
 import re
 import urllib.parse
+import urllib.request
 from datetime import datetime
 
 # Import project inventory
@@ -225,13 +226,90 @@ NEXTGEN_PROJECT_OVERRIDES = {
     },
 }
 
-# Combine all 140 projects
-ALL_PROJECTS = (
-    pdata.RESIDENTIAL_PROJECTS +
-    pdata.COMMERCIAL_PROJECTS +
-    pdata.CONTAINER_PROJECTS +
-    pdata.INTERIOR_PROJECTS
-)
+# Combine all projects: Live from Firestore (if populated) with graceful fallback to local registry
+def parse_firestore_field(f):
+    if not isinstance(f, dict):
+        return f
+    if "stringValue" in f:
+        return f["stringValue"]
+    if "booleanValue" in f:
+        return f["booleanValue"]
+    if "integerValue" in f:
+        return int(f["integerValue"])
+    if "doubleValue" in f:
+        return float(f["doubleValue"])
+    if "arrayValue" in f:
+        return [parse_firestore_field(x) for x in f["arrayValue"].get("values", [])]
+    if "mapValue" in f:
+        return {k: parse_firestore_field(v) for k, v in f["mapValue"].get("fields", {}).items()}
+    return None
+
+def get_env_var(name, default=""):
+    val = os.environ.get(name)
+    if val:
+        return val
+    dev_vars_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".dev.vars")
+    if os.path.exists(dev_vars_path):
+        try:
+            with open(dev_vars_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith(f"{name}="):
+                        return line.split("=", 1)[1].strip().strip('"').strip("'")
+        except Exception:
+            pass
+    return default
+
+def fetch_firestore_projects():
+    project_id = get_env_var("FIREBASE_PROJECT_ID", "bluecube-49ae8")
+    api_key = get_env_var("FIREBASE_API_KEY", "")
+    if not api_key:
+        return None
+    url = f"https://firestore.googleapis.com/v1/projects/{project_id}/databases/(default)/documents/projects?pageSize=300&key={api_key}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "BluecubeBuilder/1.0"})
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            data = json.loads(resp.read().decode())
+            docs = data.get("documents", [])
+            if not docs:
+                return None
+            results = []
+            for doc in docs:
+                fields = doc.get("fields", {})
+                item = {k: parse_firestore_field(v) for k, v in fields.items()}
+                # Ensure essential fields
+                hero = item.get("heroImage")
+                if isinstance(hero, dict) and hero.get("secureUrl"):
+                    item["featured_image_url"] = hero["secureUrl"]
+                elif not item.get("featured_image_url"):
+                    item["featured_image_url"] = get_cdn_url(item.get("image_file"))
+
+                gallery = item.get("gallery")
+                if isinstance(gallery, list) and gallery and isinstance(gallery[0], dict):
+                    item["gallery_urls"] = [g.get("secureUrl") for g in gallery if g.get("secureUrl")]
+                elif not item.get("gallery_urls"):
+                    item["gallery_urls"] = [get_cdn_url(g) for g in item.get("gallery", [])]
+
+                if item.get("published", True):
+                    results.append(item)
+            if results:
+                results.sort(key=lambda x: x.get("order", 0))
+                return results
+    except Exception as e:
+        print(f"[Build Note] Firestore live sync skipped ({e}); using static registry.")
+    return None
+
+fs_projects = fetch_firestore_projects()
+if fs_projects:
+    print(f"Loaded {len(fs_projects)} live published projects from Cloud Firestore.")
+    ALL_PROJECTS = fs_projects
+else:
+    ALL_PROJECTS = (
+        pdata.RESIDENTIAL_PROJECTS +
+        pdata.COMMERCIAL_PROJECTS +
+        pdata.CONTAINER_PROJECTS +
+        pdata.INTERIOR_PROJECTS
+    )
 
 # Pass 1: Apply authentic NextGen imagery & assign URLs
 for p in ALL_PROJECTS:

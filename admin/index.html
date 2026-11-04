@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin · Blue Cube Architects</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="admin.css">
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     AUTH SCREEN — shown before login
+══════════════════════════════════════════════════════════════════════════════ -->
+<div id="auth-screen">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div class="auth-logo-mark">BC</div>
+      <div class="auth-logo-text">
+        <span class="auth-logo-name">Blue Cube Architects</span>
+        <span class="auth-logo-sub">Studio Admin</span>
+      </div>
+    </div>
+    <h1 class="auth-title">Sign in</h1>
+    <p class="auth-sub">Access restricted to authorised administrators.</p>
+
+    <div id="auth-error" class="auth-error" role="alert"></div>
+
+    <form class="auth-form" id="login-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="auth-email">Email address</label>
+        <input class="form-input" type="email" id="auth-email" autocomplete="email" required placeholder="admin@bluecube.co.in">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="auth-password">Password</label>
+        <input class="form-input" type="password" id="auth-password" autocomplete="current-password" required placeholder="••••••••">
+      </div>
+      <button class="btn-primary" type="submit" id="login-btn">
+        <span id="login-btn-text">Sign in</span>
+        <span class="spinner" id="login-spinner" style="display:none"></span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     APP SCREEN — shown after successful admin login
+══════════════════════════════════════════════════════════════════════════════ -->
+<div id="app-screen">
+
+  <!-- Mobile sidebar toggle -->
+  <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Open menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ── Sidebar nav ───────────────────────────────────────────────────────── -->
+  <aside class="admin-sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-mark">BC</div>
+        <div class="sidebar-logo-text">
+          <span class="sidebar-logo-name">Bluecube</span>
+          <span class="sidebar-logo-sub">Studio Admin</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Admin navigation">
+      <div class="nav-section-label">Overview</div>
+      <button class="nav-link active" data-panel="dashboard">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </button>
+
+      <div class="nav-section-label">Content</div>
+      <button class="nav-link" data-panel="projects">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Projects
+      </button>
+      <button class="nav-link" data-panel="site-content">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Site Content
+      </button>
+      <button class="nav-link" data-panel="enquiries">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Enquiries
+        <span class="nav-badge" id="enquiry-badge" style="display:none">0</span>
+      </button>
+
+      <div class="nav-section-label">Settings</div>
+      <button class="nav-link" data-panel="admin-settings">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Admin Settings
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="sidebar-user-avatar" id="user-avatar">A</div>
+        <span class="sidebar-user-email" id="user-email">—</span>
+      </div>
+      <button class="btn-signout" id="signout-btn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Sign out
+      </button>
+    </div>
+  </aside>
+
+  <!-- ── Main area ─────────────────────────────────────────────────────────── -->
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <span class="topbar-title" id="topbar-title">Dashboard</span>
+      <div class="topbar-actions">
+        <a href="/" target="_blank" class="btn-secondary" title="View public site">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View Site
+        </a>
+        <button class="btn-publish" id="publish-btn" title="Regenerate static pages from Firestore">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+          Publish
+        </button>
+      </div>
+    </div>
+
+    <div class="admin-content">
+
+      <!-- ── Dashboard Panel ─────────────────────────────────────────────── -->
+      <section class="panel active" id="panel-dashboard">
+        <div class="stats-grid" id="stats-grid">
+          <div class="stat-card"><div class="stat-label">Total Projects</div><div class="stat-value" id="stat-total">—</div></div>
+          <div class="stat-card"><div class="stat-label">Residential</div><div class="stat-value" id="stat-res">—</div></div>
+          <div class="stat-card"><div class="stat-label">Commercial</div><div class="stat-value" id="stat-com">—</div></div>
+          <div class="stat-card"><div class="stat-label">Interiors</div><div class="stat-value" id="stat-int">—</div></div>
+          <div class="stat-card"><div class="stat-label">Container Arch.</div><div class="stat-value" id="stat-con">—</div></div>
+          <div class="stat-card"><div class="stat-label">Featured</div><div class="stat-value" id="stat-feat">—</div></div>
+          <div class="stat-card"><div class="stat-label">New Enquiries</div><div class="stat-value" id="stat-enq">—</div></div>
+        </div>
+        <div class="dashboard-grid">
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Recent Project Updates</span>
+              <button class="btn-secondary text-sm" data-panel="projects">View all →</button>
+            </div>
+            <div class="card-body" id="recent-projects-list">
+              <div class="text-muted text-sm">Loading…</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Recent Enquiries</span>
+              <button class="btn-secondary text-sm" data-panel="enquiries">View all →</button>
+            </div>
+            <div class="card-body" id="recent-enquiries-list">
+              <div class="text-muted text-sm">Loading…</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Projects Panel ──────────────────────────────────────────────── -->
+      <section class="panel" id="panel-projects">
+        <div class="toolbar">
+          <input class="search-input" type="search" id="project-search" placeholder="Search projects…" aria-label="Search projects">
+          <select class="filter-select" id="project-category-filter" aria-label="Filter by category">
+            <option value="">All Categories</option>
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Interiors">Interiors</option>
+            <option value="Container Architecture">Container Architecture</option>
+          </select>
+          <select class="filter-select" id="project-status-filter" aria-label="Filter by status">
+            <option value="">All Statuses</option>
+            <option value="published">Published</option>
+            <option value="draft">Draft</option>
+            <option value="featured">Featured</option>
+          </select>
+          <span class="spacer"></span>
+          <button class="btn-primary" id="new-project-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            New Project
+          </button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table" aria-label="Projects table">
+            <thead>
+              <tr>
+                <th style="width:60px">Image</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th style="width:70px">Year</th>
+                <th>Status</th>
+                <th style="width:110px; text-align:right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="projects-table-body">
+              <tr><td colspan="7"><div class="empty-state">
+                <div class="spinner" style="margin:0 auto 12px"></div>
+                <p>Loading projects from Firestore…</p>
+              </div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ── Project Editor Panel ────────────────────────────────────────── -->
+      <section class="panel" id="panel-editor">
+        <div class="toolbar" style="margin-bottom:20px">
+          <button class="btn-secondary" id="editor-back-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            Back to Projects
+          </button>
+          <span class="spacer"></span>
+          <span class="text-muted text-sm" id="editor-save-status"></span>
+          <button class="btn-secondary" id="editor-preview-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Preview
+          </button>
+          <button class="btn-primary" id="editor-save-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Save Project
+          </button>
+        </div>
+
+        <div class="editor-layout">
+          <!-- Left column: main fields -->
+          <div class="editor-main">
+
+            <!-- Core info -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <span class="editor-section-title">Project Information</span>
+              </div>
+              <div class="editor-section-body">
+                <div class="form-grid" style="margin-bottom:16px">
+                  <div class="form-field span-2">
+                    <label class="field-label" for="f-title">Title <span class="required">*</span></label>
+                    <input class="field-input" type="text" id="f-title" placeholder="e.g. Floating Tree Residence" maxlength="200">
+                    <span class="field-error" id="e-title"></span>
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-slug">URL Slug <span class="required">*</span></label>
+                    <input class="field-input" type="text" id="f-slug" placeholder="floating-tree-residence-anna-nagar" maxlength="120">
+                    <span class="field-hint">Used in the project URL. Lowercase, hyphens only.</span>
+                    <span class="field-error" id="e-slug"></span>
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-category">Category <span class="required">*</span></label>
+                    <select class="field-select" id="f-category">
+                      <option value="">Select…</option>
+                      <option value="Residential">Residential</option>
+                      <option value="Commercial">Commercial</option>
+                      <option value="Interiors">Interiors</option>
+                      <option value="Container Architecture">Container Architecture</option>
+                    </select>
+                    <span class="field-error" id="e-category"></span>
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-subcategory">Subcategory</label>
+                    <input class="field-input" type="text" id="f-subcategory" placeholder="Bespoke Residences" maxlength="120">
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-location">Location</label>
+                    <input class="field-input" type="text" id="f-location" placeholder="Anna Nagar, Chennai" maxlength="200">
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-typology">Typology</label>
+                    <input class="field-input" type="text" id="f-typology" placeholder="Private Urban Sanctuary Villa" maxlength="200">
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-area">Built-up Area</label>
+                    <input class="field-input" type="text" id="f-area" placeholder="6,500 sq.ft" maxlength="60">
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-year">Completion Year</label>
+                    <input class="field-input" type="text" id="f-year" placeholder="2021" maxlength="20">
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-client">Client</label>
+                    <input class="field-input" type="text" id="f-client" placeholder="Private Residence" maxlength="200">
+                    <span class="field-hint">Omit if confidential. Only shown when meaningful.</span>
+                  </div>
+                  <div class="form-field span-2">
+                    <label class="field-label" for="f-description">Architectural Narrative</label>
+                    <textarea class="field-textarea" id="f-description" placeholder="Describe the project in architectural terms…" rows="5" maxlength="8000"></textarea>
+                    <span class="field-hint" id="desc-count">0 / 8000 characters</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero image -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <span class="editor-section-title">Hero Image</span>
+                <span class="text-muted text-sm">Displayed as the project cover</span>
+              </div>
+              <div class="editor-section-body">
+                <div class="hero-image-preview" id="hero-preview">
+                  <div class="hero-image-placeholder" id="hero-placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    <span>No hero image selected</span>
+                  </div>
+                  <img id="hero-img" src="" alt="" style="display:none">
+                </div>
+                <input type="hidden" id="f-hero-public-id">
+                <input type="hidden" id="f-hero-secure-url">
+                <input type="hidden" id="f-hero-width">
+                <input type="hidden" id="f-hero-height">
+                <div class="image-action-row">
+                  <button class="btn-primary" id="hero-upload-btn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+                    Upload / Select Hero
+                  </button>
+                  <button class="btn-secondary" id="hero-remove-btn" style="display:none">Remove</button>
+                </div>
+                <div class="form-field" style="margin-top:14px">
+                  <label class="field-label" for="f-hero-alt">Hero Image Alt Text</label>
+                  <input class="field-input" type="text" id="f-hero-alt" placeholder="Floating Tree Residence exterior elevation" maxlength="300">
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <span class="editor-section-title">Image Gallery</span>
+                <span class="text-muted text-sm">Drag to reorder</span>
+              </div>
+              <div class="editor-section-body">
+                <div class="gallery-grid" id="gallery-grid">
+                  <!-- gallery items injected dynamically -->
+                </div>
+                <button class="btn-secondary" id="gallery-add-btn" style="margin-bottom:16px">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Add Gallery Images
+                </button>
+                <div class="form-field">
+                  <label class="field-label" for="f-gallery-layout">Gallery Layout</label>
+                  <select class="field-select" id="f-gallery-layout" style="max-width:240px">
+                    <option value="editorial">Editorial (alternating)</option>
+                    <option value="masonry">Masonry grid</option>
+                    <option value="full-bleed">Full bleed</option>
+                    <option value="two-up">Two-up pairs</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- SEO -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <span class="editor-section-title">SEO</span>
+              </div>
+              <div class="editor-section-body">
+                <div class="form-grid full" style="gap:14px">
+                  <div class="form-field">
+                    <label class="field-label" for="f-seo-title">SEO Title</label>
+                    <input class="field-input" type="text" id="f-seo-title" placeholder="Leave blank to use project title" maxlength="80">
+                    <span class="field-hint" id="seo-title-count">0 / 80 characters</span>
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-seo-desc">Meta Description</label>
+                    <textarea class="field-textarea" id="f-seo-desc" rows="3" placeholder="Short description for search engines…" maxlength="300"></textarea>
+                    <span class="field-hint" id="seo-desc-count">0 / 300 characters</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /editor-main -->
+
+          <!-- Right column: status, related, etc. -->
+          <aside class="editor-sidebar-panel">
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <span class="editor-section-title">Status</span>
+              </div>
+              <div class="editor-section-body">
+                <div class="toggle-row">
+                  <div>
+                    <div class="toggle-label">Published</div>
+                    <div class="toggle-sub">Visible on the public website</div>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="f-published" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-row">
+                  <div>
+                    <div class="toggle-label">Featured</div>
+                    <div class="toggle-sub">Highlighted on homepage</div>
+                  </div>
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="f-featured">
+                    <span class="toggle-slider"></span>
+                  </label>
+                </div>
+                <div class="divider"></div>
+                <div class="form-field">
+                  <label class="field-label" for="f-order">Display Order</label>
+                  <input class="field-input" type="number" id="f-order" min="0" step="1" value="0" style="max-width:100px">
+                  <span class="field-hint">Lower = appears first within category</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related projects -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <span class="editor-section-title">Related Projects</span>
+              </div>
+              <div class="editor-section-body">
+                <div class="related-list" id="related-list"></div>
+                <div class="form-field" style="margin-bottom:10px">
+                  <label class="field-label" for="related-search">Add related project</label>
+                  <input class="field-input" type="search" id="related-search" placeholder="Search by title…" autocomplete="off">
+                </div>
+                <div id="related-suggestions" style="display:none; background:white; border:1.5px solid var(--stone-deep); border-radius:var(--radius); overflow:hidden; max-height:200px; overflow-y:auto; margin-top:4px;"></div>
+                <span class="field-hint">Up to 3 related projects shown on the detail page.</span>
+              </div>
+            </div>
+
+            <!-- Legacy ID -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <span class="editor-section-title">Advanced</span>
+              </div>
+              <div class="editor-section-body">
+                <div class="form-field">
+                  <label class="field-label" for="f-legacy-id">Legacy Registry ID</label>
+                  <input class="field-input" type="text" id="f-legacy-id" placeholder="res-floating-tree-anna-nagar" maxlength="120">
+                  <span class="field-hint">Original ID from projects_registry_data.py. Do not change after migration.</span>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+        </div><!-- /editor-layout -->
+      </section>
+
+      <!-- ── Site Content Panel ──────────────────────────────────────────── -->
+      <section class="panel" id="panel-site-content">
+        <div class="card" style="margin-bottom:20px">
+          <div class="card-header">
+            <span class="card-title">Site Content Editor</span>
+            <button class="btn-primary" id="content-save-btn">Save Changes</button>
+          </div>
+          <div class="card-body">
+            <div class="form-field" style="margin-bottom:16px">
+              <label class="field-label" for="content-page-select">Select page / section</label>
+              <select class="field-select" id="content-page-select" style="max-width:280px">
+                <option value="homepage">Homepage</option>
+                <option value="about">About Page</option>
+                <option value="services">Services</option>
+                <option value="contact">Contact Details</option>
+                <option value="footer">Footer</option>
+              </select>
+            </div>
+            <div id="content-editor-fields">
+              <div class="text-muted text-sm">Select a page above to edit its content.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Enquiries Panel ─────────────────────────────────────────────── -->
+      <section class="panel" id="panel-enquiries">
+        <div class="toolbar">
+          <select class="filter-select" id="enquiry-status-filter">
+            <option value="">All Statuses</option>
+            <option value="new">New</option>
+            <option value="read">Read</option>
+            <option value="followed">Followed Up</option>
+          </select>
+          <span class="spacer"></span>
+          <span class="text-muted text-sm" id="enquiry-count-label"></span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" aria-label="Enquiries table">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Project Type</th>
+                <th>Date</th>
+                <th style="width:80px; text-align:right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="enquiries-table-body">
+              <tr><td colspan="6"><div class="empty-state">
+                <div class="spinner" style="margin:0 auto 12px"></div>
+                <p>Loading enquiries…</p>
+              </div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ── Admin Settings Panel ────────────────────────────────────────── -->
+      <section class="panel" id="panel-admin-settings">
+        <div class="card" style="max-width:560px">
+          <div class="card-header"><span class="card-title">Admin User Management</span></div>
+          <div class="card-body">
+            <p class="text-muted text-sm" style="margin-bottom:16px">
+              Grant or revoke admin access for a Firebase user. The UID must be an existing Firebase Auth user.
+              Admin status is set via a custom claim on the server — no client-side path exists.
+            </p>
+            <div class="form-grid" style="margin-bottom:16px">
+              <div class="form-field">
+                <label class="field-label" for="admin-uid-input">Firebase User UID</label>
+                <input class="field-input" type="text" id="admin-uid-input" placeholder="abc123def456">
+              </div>
+              <div class="form-field">
+                <label class="field-label">Action</label>
+                <div class="flex-row" style="padding-top:4px">
+                  <label class="flex-row" style="gap:6px; cursor:pointer">
+                    <input type="radio" name="admin-action" value="grant" checked> Grant admin
+                  </label>
+                  <label class="flex-row" style="gap:6px; cursor:pointer">
+                    <input type="radio" name="admin-action" value="revoke"> Revoke admin
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button class="btn-primary" id="set-admin-btn">Apply</button>
+            <div id="admin-action-result" style="margin-top:14px; font-size:13px;"></div>
+          </div>
+        </div>
+
+        <div class="card" style="max-width:560px; margin-top:16px">
+          <div class="card-header"><span class="card-title">Portfolio Data Migration</span></div>
+          <div class="card-body">
+            <p class="text-muted text-sm" style="margin-bottom:12px">
+              Import 140 projects from the existing registry (<code>assets/data/projects.json</code>) into Cloud Firestore.
+              This operation is idempotent: it preserves slugs, validates fields, and does not create duplicate entries.
+            </p>
+            <button class="btn-primary" id="migrate-projects-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Migrate 140 Projects to Firestore
+            </button>
+            <div id="migration-progress" style="margin-top:14px; font-size:13px; display:none">
+              <div class="flex-row" style="gap:8px; margin-bottom:6px">
+                <span class="spinner" id="migration-spinner"></span>
+                <span id="migration-status-text">Migrating...</span>
+              </div>
+              <div style="background:var(--stone-light); height:6px; border-radius:3px; overflow:hidden">
+                <div id="migration-bar" style="background:var(--cube-blue); width:0%; height:100%; transition:width 100ms"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="max-width:560px; margin-top:16px">
+          <div class="card-header"><span class="card-title">Publish Workflow</span></div>
+          <div class="card-body">
+            <p class="text-muted text-sm" style="margin-bottom:12px">
+              Triggering a publish rebuilds all static project pages from Firestore data via a Cloudflare Pages deploy hook.
+              Publish is rate-limited to once per 60 seconds.
+            </p>
+            <button class="btn-publish" id="settings-publish-btn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+              Trigger Publish Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /admin-content -->
+  </main><!-- /admin-main -->
+</div><!-- /app-screen -->
+
+<!-- ══ Confirm Dialog ════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+  <div class="modal-box">
+    <h2 class="modal-title" id="confirm-title">Confirm action</h2>
+    <p class="modal-body" id="confirm-body"></p>
+    <div class="modal-actions">
+      <button class="btn-secondary" id="confirm-cancel">Cancel</button>
+      <button class="btn-danger" id="confirm-ok">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Enquiry Detail Modal ══════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="enquiry-modal" role="dialog" aria-modal="true">
+  <div class="modal-box" style="max-width:560px">
+    <h2 class="modal-title" id="enq-modal-name"></h2>
+    <table class="data-table" id="enq-modal-table" style="margin-bottom:16px; font-size:13px">
+      <tbody></tbody>
+    </table>
+    <div class="modal-actions">
+      <select class="filter-select" id="enq-status-select">
+        <option value="new">New</option>
+        <option value="read">Read</option>
+        <option value="followed">Followed Up</option>
+      </select>
+      <span class="spacer"></span>
+      <button class="btn-secondary" id="enq-modal-close">Close</button>
+      <button class="btn-primary" id="enq-modal-save">Update Status</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ Toast container ═══════════════════════════════════════════════════════ -->
+<div id="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+<!-- ══ Firebase + Admin JS ══════════════════════════════════════════════════ -->
+<!-- Firebase SDK (modular, CDN) -->
+<script type="module">
+  // ── CONFIG — Replace with your actual Firebase project values ─────────────
+  // These are public client-side values only. The secret is never here.
+  import { initializeApp }                               from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+  import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+  import {
+    getFirestore, collection, doc, getDocs, getDoc, setDoc, updateDoc,
+    deleteDoc, query, orderBy, where, limit, serverTimestamp, Timestamp
+  } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
+
+  // ── Load Firebase configuration (from git-ignored firebase-config.js or /api/firebase-config) ──
+  let fbCfg = window.__FIREBASE_CONFIG__;
+  if (!fbCfg || !fbCfg.apiKey || fbCfg.apiKey.includes('YOUR_FIREBASE_API_KEY')) {
+    try {
+      const res = await fetch('/api/firebase-config');
+      if (res.ok) fbCfg = await res.json();
+    } catch {}
+  }
+
+  const FIREBASE_CONFIG = fbCfg || {
+    apiKey:            window.__FIREBASE_API_KEY__ || '',
+    authDomain:        "bluecube-49ae8.firebaseapp.com",
+    projectId:         "bluecube-49ae8",
+    storageBucket:     "bluecube-49ae8.firebasestorage.app",
+    messagingSenderId: "1038722936154",
+    appId:             "1:1038722936154:web:e62e47c75f8af93247d763",
+    measurementId:     "G-N4VS2WR5YK"
+  };
+
+  const CLOUDINARY_CLOUD_NAME   = 'jvdlk3j0';
+  const CLOUDINARY_UPLOAD_PRESET = 'bluecube'; // unsigned preset (or signed via /api/cloudinary-sign)
+
+  // ── Bootstrap ─────────────────────────────────────────────────────────────
+  const app  = initializeApp(FIREBASE_CONFIG);
+  const auth = getAuth(app);
+  const db   = getFirestore(app);
+
+  // ── State ─────────────────────────────────────────────────────────────────
+  let currentUser     = null;
+  let idToken         = null;
+  let allProjects     = [];    // local cache from Firestore
+  let currentProject  = null;  // project being edited
+  let galleryItems    = [];    // gallery array for editor
+  let relatedIds      = [];    // selected related project IDs
+  let activePanel     = 'dashboard';
+  let unsavedChanges  = false;
+  let allEnquiries    = [];
+
+  // ── DOM refs ──────────────────────────────────────────────────────────────
+  const authScreen   = document.getElementById('auth-screen');
+  const appScreen    = document.getElementById('app-screen');
+  const loginForm    = document.getElementById('login-form');
+  const authError    = document.getElementById('auth-error');
+  const loginBtn     = document.getElementById('login-btn');
+  const loginBtnText = document.getElementById('login-btn-text');
+  const loginSpinner = document.getElementById('login-spinner');
+
+  // ── Auth state ────────────────────────────────────────────────────────────
+  onAuthStateChanged(auth, async user => {
+    if (!user) {
+      showAuth();
+      return;
+    }
+
+    // Force token refresh and check admin authorization (custom claim or authorized bootstrap email)
+    const tokenResult = await user.getIdTokenResult(true);
+    const AUTHORIZED_ADMIN_EMAILS = [
+      'admin@gmail.com',
+      'admin@bluecube.co.in',
+      'design@bluecube.co.in',
+      'editingonly2004@gmail.com'
+    ];
+    const isAdmin = tokenResult.claims.admin === true || AUTHORIZED_ADMIN_EMAILS.includes(user.email);
+    if (!isAdmin) {
+      showError('Your account does not have administrator access. Contact the studio to request access.');
+      await signOut(auth);
+      return;
+    }
+
+    currentUser = user;
+    idToken = tokenResult.token;
+    showApp();
+
+    // Refresh token before it expires (Firebase tokens expire after 1 hour)
+    setInterval(async () => {
+      idToken = await user.getIdToken(true);
+    }, 55 * 60 * 1000);
+  });
+
+  // ── Login ─────────────────────────────────────────────────────────────────
+  loginForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const email    = document.getElementById('auth-email').value.trim();
+    const password = document.getElementById('auth-password').value;
+
+    hideError();
+    loginBtnText.textContent = 'Signing in…';
+    loginSpinner.style.display = 'inline-block';
+    loginBtn.disabled = true;
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      // onAuthStateChanged handles the rest
+    } catch (err) {
+      const msgs = {
+        'auth/user-not-found':    'No account found for this email address.',
+        'auth/wrong-password':    'Incorrect password.',
+        'auth/invalid-email':     'Please enter a valid email address.',
+        'auth/too-many-requests': 'Too many attempts. Please wait a moment.',
+        'auth/invalid-credential': 'Invalid email or password.',
+      };
+      showError(msgs[err.code] || err.message);
+    } finally {
+      loginBtnText.textContent = 'Sign in';
+      loginSpinner.style.display = 'none';
+      loginBtn.disabled = false;
+    }
+  });
+
+  document.getElementById('signout-btn').addEventListener('click', async () => {
+    if (unsavedChanges && !await confirm('You have unsaved changes. Sign out anyway?')) return;
+    await signOut(auth);
+    unsavedChanges = false;
+  });
+
+  function showAuth() {
+    authScreen.style.display  = 'flex';
+    appScreen.style.display   = 'none';
+    appScreen.classList.remove('visible');
+  }
+  function showApp() {
+    authScreen.style.display = 'none';
+    appScreen.style.display  = 'flex';
+    appScreen.classList.add('visible');
+    document.getElementById('user-email').textContent  = currentUser.email;
+    document.getElementById('user-avatar').textContent = (currentUser.email || 'A')[0].toUpperCase();
+    navigateTo('dashboard');
+  }
+  function showError(msg) {
+    authError.textContent = msg;
+    authError.classList.add('visible');
+  }
+  function hideError() {
+    authError.classList.remove('visible');
+  }
+
+  // ── Navigation ────────────────────────────────────────────────────────────
+  function navigateTo(panel, data = null) {
+    if (unsavedChanges && panel !== 'editor' && activePanel === 'editor') {
+      if (!confirm('You have unsaved changes. Leave without saving?')) return;
+      unsavedChanges = false;
+    }
+    activePanel = panel;
+
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+
+    const panelEl = document.getElementById(`panel-${panel}`);
+    if (panelEl) panelEl.classList.add('active');
+
+    const navLink = document.querySelector(`.nav-link[data-panel="${panel}"]`);
+    if (navLink) navLink.classList.add('active');
+
+    const titles = {
+      dashboard: 'Dashboard', projects: 'Projects', editor: data ? (data._isNew ? 'New Project' : 'Edit Project') : 'Editor',
+      'site-content': 'Site Content', enquiries: 'Enquiries', 'admin-settings': 'Settings',
+    };
+    document.getElementById('topbar-title').textContent = titles[panel] || panel;
+
+    // Close mobile sidebar
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('visible');
+
+    // Load panel data
+    if (panel === 'dashboard')     loadDashboard();
+    if (panel === 'projects')      loadProjectsTable();
+    if (panel === 'enquiries')     loadEnquiries();
+    if (panel === 'editor' && data) openEditor(data);
+    if (panel === 'site-content')  loadSiteContent();
+  }
+
+  document.querySelectorAll('.nav-link, [data-panel]').forEach(el => {
+    el.addEventListener('click', () => {
+      const panel = el.dataset.panel;
+      if (panel) navigateTo(panel);
+    });
+  });
+
+  // Mobile sidebar
+  document.getElementById('sidebar-toggle').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebar-overlay').classList.toggle('visible');
+  });
+  document.getElementById('sidebar-overlay').addEventListener('click', () => {
+    document.getElementById('sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('visible');
+  });
+
+  // ── Publish ───────────────────────────────────────────────────────────────
+  async function triggerPublish() {
+    const btn = document.getElementById('publish-btn');
+    btn.disabled = true;
+    btn.innerHTML = `<span class="spinner"></span> Publishing…`;
+    try {
+      const freshToken = await currentUser.getIdToken();
+      const res = await fetch('/api/publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${freshToken}` },
+        body: JSON.stringify({ reason: 'Admin panel publish' }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        toast('Publish triggered. Changes go live in ~60s.', 'success');
+      } else {
+        toast(data.error || 'Publish failed', 'error');
+      }
+    } catch (err) {
+      toast('Could not trigger publish: ' + err.message, 'error');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg> Publish`;
+    }
+  }
+  document.getElementById('publish-btn').addEventListener('click', triggerPublish);
+  document.getElementById('settings-publish-btn').addEventListener('click', triggerPublish);
+
+  // ── DASHBOARD ─────────────────────────────────────────────────────────────
+  async function loadDashboard() {
+    try {
+      const snap = await getDocs(collection(db, 'projects'));
+      allProjects = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+
+      const byCategory = { Residential: 0, Commercial: 0, Interiors: 0, 'Container Architecture': 0 };
+      let featured = 0;
+      allProjects.forEach(p => {
+        if (byCategory[p.category] !== undefined) byCategory[p.category]++;
+        if (p.featured) featured++;
+      });
+
+      document.getElementById('stat-total').textContent = allProjects.length;
+      document.getElementById('stat-res').textContent   = byCategory.Residential;
+      document.getElementById('stat-com').textContent   = byCategory.Commercial;
+      document.getElementById('stat-int').textContent   = byCategory.Interiors;
+      document.getElementById('stat-con').textContent   = byCategory['Container Architecture'];
+      document.getElementById('stat-feat').textContent  = featured;
+
+      // Recent projects
+      const recent = [...allProjects].sort((a, b) => {
+        const ta = a.updatedAt?.seconds || 0;
+        const tb = b.updatedAt?.seconds || 0;
+        return tb - ta;
+      }).slice(0, 5);
+
+      document.getElementById('recent-projects-list').innerHTML = recent.length
+        ? recent.map(p => `
+          <div class="flex-row" style="padding:8px 0; border-bottom:1px solid var(--stone-light); gap:10px">
+            <div style="flex:1">
+              <div style="font-weight:600; font-size:13.5px">${escHtml(p.title)}</div>
+              <div class="text-muted text-sm">${escHtml(p.category)} · ${escHtml(p.location || '')}</div>
+            </div>
+            <span class="badge ${categoryBadge(p.category)}">${escHtml(p.category)}</span>
+          </div>`).join('')
+        : '<div class="text-muted text-sm">No projects yet.</div>';
+
+      // Load enquiry count
+      const enqSnap = await getDocs(query(collection(db, 'inquiries'), where('status', '==', 'new'), limit(50)));
+      const newEnq = enqSnap.size;
+      document.getElementById('stat-enq').textContent = newEnq;
+      const badge = document.getElementById('enquiry-badge');
+      if (newEnq > 0) { badge.textContent = newEnq; badge.style.display = ''; }
+
+      // Recent enquiries preview
+      const allEnqSnap = await getDocs(query(collection(db, 'inquiries'), orderBy('submittedAt', 'desc'), limit(5)));
+      allEnquiries = allEnqSnap.docs.map(d => ({ id: d.id, ...d.data() }));
+      document.getElementById('recent-enquiries-list').innerHTML = allEnquiries.length
+        ? allEnquiries.map(e => `
+          <div class="flex-row" style="padding:8px 0; border-bottom:1px solid var(--stone-light)">
+            <div class="status-dot ${e.status || 'new'}"></div>
+            <div style="flex:1">
+              <div style="font-weight:600; font-size:13px">${escHtml(e.name)}</div>
+              <div class="text-muted text-sm">${escHtml(e.type || '')} · ${formatDate(e.submittedAt)}</div>
+            </div>
+          </div>`).join('')
+        : '<div class="text-muted text-sm">No enquiries yet.</div>';
+
+    } catch (err) {
+      console.error('Dashboard load error:', err);
+      toast('Failed to load dashboard: ' + err.message, 'error');
+    }
+  }
+
+  // ── PROJECTS TABLE ────────────────────────────────────────────────────────
+  async function loadProjectsTable() {
+    if (!allProjects.length) {
+      const snap = await getDocs(collection(db, 'projects'));
+      allProjects = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    }
+    renderProjectsTable(allProjects);
+
+    // Filters
+    const search   = document.getElementById('project-search');
+    const catFil   = document.getElementById('project-category-filter');
+    const statFil  = document.getElementById('project-status-filter');
+    const filter = () => {
+      const q   = search.value.toLowerCase();
+      const cat = catFil.value;
+      const st  = statFil.value;
+      renderProjectsTable(allProjects.filter(p => {
+        if (cat && p.category !== cat) return false;
+        if (st === 'published' && !p.published) return false;
+        if (st === 'draft'     && p.published)  return false;
+        if (st === 'featured'  && !p.featured)  return false;
+        if (q && !((p.title || '').toLowerCase().includes(q) || (p.location || '').toLowerCase().includes(q))) return false;
+        return true;
+      }));
+    };
+    search.addEventListener('input', filter);
+    catFil.addEventListener('change', filter);
+    statFil.addEventListener('change', filter);
+  }
+
+  function renderProjectsTable(projects) {
+    const tbody = document.getElementById('projects-table-body');
+    if (!projects.length) {
+      tbody.innerHTML = `<tr><td colspan="7"><div class="empty-state">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <h3>No projects found</h3><p>Try adjusting your search or filters.</p>
+      </div></td></tr>`;
+      return;
+    }
+    tbody.innerHTML = projects.map(p => {
+      const imgUrl = p.heroImage?.secureUrl
+        ? `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/c_fill,w_104,h_72,f_auto,q_auto/${p.heroImage.publicId}`
+        : (p.heroImage?.secureUrl || '');
+      return `
+      <tr>
+        <td>
+          ${imgUrl
+            ? `<img class="project-thumb" src="${escHtml(imgUrl)}" alt="${escHtml(p.title)}" loading="lazy">`
+            : `<div class="project-thumb-placeholder">No img</div>`}
+        </td>
+        <td style="font-weight:600; max-width:220px">
+          <div>${escHtml(p.title)}</div>
+          <div class="text-muted text-sm">${escHtml(p.slug)}</div>
+        </td>
+        <td><span class="badge ${categoryBadge(p.category)}">${escHtml(p.category)}</span></td>
+        <td class="text-muted" style="max-width:160px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">${escHtml(p.location || '—')}</td>
+        <td>${escHtml(p.year || '—')}</td>
+        <td>
+          ${p.published
+            ? `<span class="badge badge-published">Published</span>`
+            : `<span class="badge badge-draft">Draft</span>`}
+          ${p.featured ? `<span class="badge badge-featured" style="margin-left:4px">★ Featured</span>` : ''}
+        </td>
+        <td>
+          <div class="row-actions" style="justify-content:flex-end">
+            <button class="btn-icon" title="Edit project" onclick="window._editProject('${p.id}')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </button>
+            <a class="btn-icon" href="/projects/${p.slug}/" target="_blank" title="Preview public page">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <button class="btn-icon danger" title="Delete project" onclick="window._deleteProject('${p.id}', '${escHtml(p.title).replace(/'/g, "\\'")}')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+            </button>
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+  }
+
+  document.getElementById('new-project-btn').addEventListener('click', () => navigateTo('editor', { _isNew: true }));
+
+  window._editProject = async (docId) => {
+    const docSnap = await getDoc(doc(db, 'projects', docId));
+    if (!docSnap.exists()) { toast('Project not found', 'error'); return; }
+    navigateTo('editor', { id: docId, ...docSnap.data() });
+  };
+
+  window._deleteProject = async (docId, title) => {
+    const confirmed = await showConfirm(
+      `Delete "${title}"?`,
+      'This will permanently remove the project from Firestore. The static page will be removed on next publish. This action cannot be undone.'
+    );
+    if (!confirmed) return;
+    try {
+      await deleteDoc(doc(db, 'projects', docId));
+      allProjects = allProjects.filter(p => p.id !== docId);
+      renderProjectsTable(allProjects);
+      toast('Project deleted.', 'success');
+    } catch (err) {
+      toast('Delete failed: ' + err.message, 'error');
+    }
+  };
+
+  // ── PROJECT EDITOR ─────────────────────────────────────────────────────────
+  function openEditor(project) {
+    currentProject = project;
+    galleryItems   = [...(project.gallery || [])];
+    relatedIds     = [...(project.relatedProjectIds || [])];
+    unsavedChanges = false;
+
+    // Fill fields
+    setValue('f-title',       project.title       || '');
+    setValue('f-slug',        project.slug        || '');
+    setSelect('f-category',   project.category    || '');
+    setValue('f-subcategory', project.subcategory || '');
+    setValue('f-location',    project.location    || '');
+    setValue('f-typology',    project.typology    || '');
+    setValue('f-area',        project.area        || '');
+    setValue('f-year',        project.year        || '');
+    setValue('f-client',      project.client      || '');
+    setValue('f-description', project.description || '');
+    setValue('f-seo-title',   project.seo?.title  || '');
+    setValue('f-seo-desc',    project.seo?.description || '');
+    setValue('f-legacy-id',   project.id          || '');
+    setValue('f-order',       project.order       ?? 0);
+    document.getElementById('f-published').checked = project.published !== false;
+    document.getElementById('f-featured').checked  = !!project.featured;
+    setSelect('f-gallery-layout', project.galleryLayout || 'editorial');
+
+    // Hero image
+    setHeroImage(project.heroImage || null);
+    setValue('f-hero-alt', project.heroImage?.alt || '');
+
+    // Gallery
+    renderGallery();
+
+    // Related projects
+    renderRelated();
+
+    // Char counters
+    updateCharCount('f-description', 'desc-count', 8000);
+    updateCharCount('f-seo-title',   'seo-title-count', 80);
+    updateCharCount('f-seo-desc',    'seo-desc-count', 300);
+
+    // Auto-generate slug from title
+    document.getElementById('f-title').addEventListener('input', () => {
+      if (project._isNew || !project.slug) {
+        const slugField = document.getElementById('f-slug');
+        slugField.value = slugify(document.getElementById('f-title').value);
+      }
+      markDirty();
+    });
+
+    document.querySelectorAll('.field-input, .field-select, .field-textarea, .toggle-switch input').forEach(el => {
+      el.addEventListener('change', markDirty);
+      el.addEventListener('input',  markDirty);
+    });
+  }
+
+  document.getElementById('editor-back-btn').addEventListener('click', () => navigateTo('projects'));
+  document.getElementById('editor-preview-btn').addEventListener('click', () => {
+    const slug = document.getElementById('f-slug').value;
+    if (slug) window.open(`/projects/${slug}/`, '_blank');
+    else toast('Set a URL slug first to preview.', 'warning');
+  });
+
+  document.getElementById('editor-save-btn').addEventListener('click', saveProject);
+
+  async function saveProject() {
+    // Validation
+    const errors = validateProjectForm();
+    if (errors.length) {
+      errors.forEach(([fieldId, msg]) => {
+        const el = document.getElementById(`e-${fieldId}`);
+        if (el) el.textContent = msg;
+        const inp = document.getElementById(`f-${fieldId}`);
+        if (inp) inp.classList.add('error');
+      });
+      toast('Please fix validation errors before saving.', 'error');
+      return;
+    }
+
+    clearErrors();
+
+    const saveBtn = document.getElementById('editor-save-btn');
+    saveBtn.disabled = true;
+    saveBtn.innerHTML = `<span class="spinner"></span> Saving…`;
+
+    const slug    = document.getElementById('f-slug').value.trim();
+    const heroAlt = document.getElementById('f-hero-alt').value.trim();
+
+    const heroImage = document.getElementById('f-hero-public-id').value
+      ? {
+          publicId:  document.getElementById('f-hero-public-id').value,
+          secureUrl: document.getElementById('f-hero-secure-url').value,
+          alt:       heroAlt,
+          width:     parseInt(document.getElementById('f-hero-width').value)  || null,
+          height:    parseInt(document.getElementById('f-hero-height').value) || null,
+        }
+      : null;
+
+    const docData = {
+      title:          document.getElementById('f-title').value.trim(),
+      slug,
+      category:       document.getElementById('f-category').value,
+      subcategory:    document.getElementById('f-subcategory').value.trim(),
+      location:       document.getElementById('f-location').value.trim(),
+      typology:       document.getElementById('f-typology').value.trim(),
+      area:           document.getElementById('f-area').value.trim(),
+      year:           document.getElementById('f-year').value.trim(),
+      client:         document.getElementById('f-client').value.trim(),
+      description:    document.getElementById('f-description').value.trim(),
+      heroImage,
+      gallery:        galleryItems,
+      galleryLayout:  document.getElementById('f-gallery-layout').value,
+      relatedProjectIds: relatedIds,
+      featured:       document.getElementById('f-featured').checked,
+      published:      document.getElementById('f-published').checked,
+      order:          parseInt(document.getElementById('f-order').value) || 0,
+      seo: {
+        title:       document.getElementById('f-seo-title').value.trim(),
+        description: document.getElementById('f-seo-desc').value.trim(),
+      },
+      id:             document.getElementById('f-legacy-id').value.trim() || slug,
+      updatedAt:      serverTimestamp(),
+    };
+
+    if (currentProject?._isNew) {
+      docData.createdAt = serverTimestamp();
+    }
+
+    try {
+      // Check slug uniqueness if new or slug changed
+      if (currentProject?._isNew || slug !== currentProject?.slug) {
+        const existing = await getDoc(doc(db, 'projects', slug));
+        if (existing.exists() && (!currentProject?._isNew)) {
+          toast('A project with this slug already exists.', 'error');
+          return;
+        }
+      }
+
+      await setDoc(doc(db, 'projects', slug), docData, { merge: !currentProject?._isNew });
+
+      // Update local cache
+      const idx = allProjects.findIndex(p => p.id === slug);
+      if (idx >= 0) allProjects[idx] = { id: slug, ...docData };
+      else allProjects.push({ id: slug, ...docData });
+
+      currentProject = { id: slug, ...docData };
+      unsavedChanges = false;
+      document.getElementById('editor-save-status').textContent = `Saved ${new Date().toLocaleTimeString()}`;
+      toast('Project saved successfully.', 'success');
+    } catch (err) {
+      toast('Save failed: ' + err.message, 'error');
+      console.error(err);
+    } finally {
+      saveBtn.disabled = false;
+      saveBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save Project`;
+    }
+  }
+
+  function validateProjectForm() {
+    const errors = [];
+    const title = document.getElementById('f-title').value.trim();
+    const slug  = document.getElementById('f-slug').value.trim();
+    const cat   = document.getElementById('f-category').value;
+
+    if (!title) errors.push(['title', 'Title is required.']);
+    if (!slug)  errors.push(['slug', 'URL slug is required.']);
+    else if (!/^[a-z0-9-]+$/.test(slug)) errors.push(['slug', 'Slug must be lowercase letters, numbers, and hyphens only.']);
+    if (!cat)   errors.push(['category', 'Category is required.']);
+    return errors;
+  }
+  function clearErrors() {
+    document.querySelectorAll('.field-error').forEach(el => el.textContent = '');
+    document.querySelectorAll('.field-input.error, .field-select.error').forEach(el => el.classList.remove('error'));
+  }
+  function markDirty() { unsavedChanges = true; document.getElementById('editor-save-status').textContent = 'Unsaved changes'; }
+
+  // ── Hero image ─────────────────────────────────────────────────────────────
+  function setHeroImage(heroData) {
+    const preview = document.getElementById('hero-preview');
+    const img     = document.getElementById('hero-img');
+    const ph      = document.getElementById('hero-placeholder');
+    const removeBtn = document.getElementById('hero-remove-btn');
+
+    if (heroData?.secureUrl) {
+      img.src = heroData.secureUrl;
+      img.style.display = 'block';
+      ph.style.display  = 'none';
+      removeBtn.style.display = '';
+      document.getElementById('f-hero-public-id').value  = heroData.publicId  || '';
+      document.getElementById('f-hero-secure-url').value = heroData.secureUrl || '';
+      document.getElementById('f-hero-width').value      = heroData.width     || '';
+      document.getElementById('f-hero-height').value     = heroData.height    || '';
+    } else {
+      img.src = '';
+      img.style.display = 'none';
+      ph.style.display  = 'flex';
+      removeBtn.style.display = 'none';
+      ['f-hero-public-id','f-hero-secure-url','f-hero-width','f-hero-height'].forEach(id => { document.getElementById(id).value = ''; });
+    }
+  }
+
+  document.getElementById('hero-upload-btn').addEventListener('click', () => {
+    openCloudinaryWidget({ maxFiles: 1 }, results => {
+      if (!results.length) return;
+      const r = results[0];
+      setHeroImage({ publicId: r.public_id, secureUrl: r.secure_url, width: r.width, height: r.height });
+      markDirty();
+    });
+  });
+  document.getElementById('hero-remove-btn').addEventListener('click', () => {
+    setHeroImage(null);
+    markDirty();
+  });
+
+  // ── Gallery ────────────────────────────────────────────────────────────────
+  function renderGallery() {
+    const grid = document.getElementById('gallery-grid');
+    grid.innerHTML = '';
+    galleryItems.forEach((item, i) => {
+      const thumb = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/c_fill,w_200,h_150,f_auto,q_auto/${item.publicId}`;
+      const div = document.createElement('div');
+      div.className = 'gallery-item';
+      div.draggable = true;
+      div.dataset.index = i;
+      div.innerHTML = `
+        <img src="${escHtml(thumb)}" alt="${escHtml(item.alt || '')}">
+        <div class="gallery-item-overlay">
+          <button class="gallery-item-remove" data-index="${i}" title="Remove image">×</button>
+        </div>`;
+      div.addEventListener('dragstart', onDragStart);
+      div.addEventListener('dragover',  onDragOver);
+      div.addEventListener('drop',      onDrop);
+      div.addEventListener('dragend',   onDragEnd);
+      div.querySelector('.gallery-item-remove').addEventListener('click', e => {
+        e.stopPropagation();
+        galleryItems.splice(parseInt(e.target.dataset.index), 1);
+        renderGallery();
+        markDirty();
+      });
+      grid.appendChild(div);
+    });
+  }
+
+  document.getElementById('gallery-add-btn').addEventListener('click', () => {
+    openCloudinaryWidget({ maxFiles: 20 }, results => {
+      results.forEach(r => {
+        galleryItems.push({ publicId: r.public_id, secureUrl: r.secure_url, alt: '', order: galleryItems.length, layout: 'full-bleed' });
+      });
+      renderGallery();
+      markDirty();
+    });
+  });
+
+  // Drag-and-drop reorder
+  let dragSrcIndex = null;
+  function onDragStart(e) { dragSrcIndex = parseInt(e.currentTarget.dataset.index); e.currentTarget.classList.add('dragging'); }
+  function onDragOver(e)  { e.preventDefault(); }
+  function onDrop(e)      {
+    e.preventDefault();
+    const destIndex = parseInt(e.currentTarget.dataset.index);
+    if (dragSrcIndex === null || dragSrcIndex === destIndex) return;
+    const [moved] = galleryItems.splice(dragSrcIndex, 1);
+    galleryItems.splice(destIndex, 0, moved);
+    renderGallery();
+    markDirty();
+  }
+  function onDragEnd(e)   { e.currentTarget.classList.remove('dragging'); dragSrcIndex = null; }
+
+  // ── Related projects ───────────────────────────────────────────────────────
+  function renderRelated() {
+    const list = document.getElementById('related-list');
+    list.innerHTML = relatedIds.map(slug => {
+      const p = allProjects.find(x => x.slug === slug || x.id === slug);
+      if (!p) return '';
+      const thumb = p.heroImage?.secureUrl
+        ? `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/c_fill,w_72,h_48,f_auto,q_auto/${p.heroImage.publicId}`
+        : '';
+      return `<div class="related-item">
+        ${thumb ? `<img src="${escHtml(thumb)}" alt="">` : ''}
+        <span class="related-item-title">${escHtml(p.title)}</span>
+        <button class="related-item-remove" data-slug="${escHtml(slug)}" title="Remove">×</button>
+      </div>`;
+    }).join('');
+    list.querySelectorAll('.related-item-remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        relatedIds = relatedIds.filter(s => s !== btn.dataset.slug);
+        renderRelated();
+        markDirty();
+      });
+    });
+  }
+
+  const relatedSearch = document.getElementById('related-search');
+  const relatedSugg   = document.getElementById('related-suggestions');
+  relatedSearch.addEventListener('input', () => {
+    const q = relatedSearch.value.toLowerCase();
+    if (!q) { relatedSugg.style.display = 'none'; return; }
+    const matches = allProjects.filter(p =>
+      p.slug !== currentProject?.slug &&
+      !relatedIds.includes(p.slug) &&
+      (p.title || '').toLowerCase().includes(q)
+    ).slice(0, 8);
+    if (!matches.length) { relatedSugg.style.display = 'none'; return; }
+    relatedSugg.innerHTML = matches.map(p =>
+      `<div class="related-suggestion" style="padding:9px 12px; cursor:pointer; border-bottom:1px solid var(--stone-light); font-size:13px; hover:background:var(--stone-pale)" data-slug="${escHtml(p.slug)}">
+        <strong>${escHtml(p.title)}</strong> <span class="text-muted" style="font-size:11px">${escHtml(p.category)}</span>
+      </div>`
+    ).join('');
+    relatedSugg.style.display = 'block';
+    relatedSugg.querySelectorAll('.related-suggestion').forEach(el => {
+      el.addEventListener('mouseenter', () => el.style.background = 'var(--stone-pale)');
+      el.addEventListener('mouseleave', () => el.style.background = '');
+      el.addEventListener('click', () => {
+        if (relatedIds.length >= 3) { toast('Maximum 3 related projects.', 'warning'); return; }
+        relatedIds.push(el.dataset.slug);
+        relatedSearch.value = '';
+        relatedSugg.style.display = 'none';
+        renderRelated();
+        markDirty();
+      });
+    });
+  });
+  document.addEventListener('click', e => {
+    if (!relatedSearch.contains(e.target) && !relatedSugg.contains(e.target)) {
+      relatedSugg.style.display = 'none';
+    }
+  });
+
+  // ── Cloudinary Widget ──────────────────────────────────────────────────────
+  function openCloudinaryWidget(opts, callback) {
+    if (typeof window.cloudinary === 'undefined') {
+      toast('Cloudinary widget not loaded. Check network connection.', 'error');
+      return;
+    }
+    const widget = window.cloudinary.createUploadWidget({
+      cloudName:    CLOUDINARY_CLOUD_NAME,
+      uploadPreset: CLOUDINARY_UPLOAD_PRESET,
+      folder:       'bluecube',
+      multiple:     opts.maxFiles > 1,
+      maxFiles:     opts.maxFiles,
+      sources:      ['local', 'url', 'camera'],
+      resourceType: 'image',
+      clientAllowedFormats: ['jpg', 'jpeg', 'png', 'webp'],
+      maxFileSize:  15000000,     // 15 MB
+      showPoweredBy: false,
+      styles: {
+        palette: { window: '#FAF9F6', sourceBg: '#EDEBE6', windowBorder: '#CAC5BA', tabIcon: '#2F2218', menuIcons: '#2F2218', textDark: '#2F2218', textLight: '#B3A898', link: '#1F3A5F', action: '#2F2218', inactiveTabIcon: '#B3A898', error: '#9B2335', inProgress: '#1F3A5F', complete: '#2D6A4F', sourceBg: '#EDEBE6' },
+        fonts: { default: null, "'Plus Jakarta Sans', sans-serif": { url: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap', active: true } }
+      }
+    }, (error, result) => {
+      if (error) { toast('Upload error: ' + error.message, 'error'); return; }
+      if (result.event === 'queues-end') {
+        const files = result.info.files.filter(f => f.uploadInfo).map(f => f.uploadInfo);
+        widget.close();
+        callback(files);
+      }
+    });
+    widget.open();
+  }
+
+  // ── ENQUIRIES ──────────────────────────────────────────────────────────────
+  async function loadEnquiries() {
+    const filter = document.getElementById('enquiry-status-filter').value;
+    let q = query(collection(db, 'inquiries'), orderBy('submittedAt', 'desc'), limit(100));
+    if (filter) q = query(collection(db, 'inquiries'), where('status', '==', filter), orderBy('submittedAt', 'desc'), limit(100));
+
+    try {
+      const snap = await getDocs(q);
+      allEnquiries = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      renderEnquiriesTable(allEnquiries);
+    } catch (err) {
+      toast('Could not load enquiries: ' + err.message, 'error');
+    }
+  }
+
+  document.getElementById('enquiry-status-filter').addEventListener('change', loadEnquiries);
+
+  function renderEnquiriesTable(enquiries) {
+    const tbody = document.getElementById('enquiries-table-body');
+    document.getElementById('enquiry-count-label').textContent = `${enquiries.length} enquir${enquiries.length === 1 ? 'y' : 'ies'}`;
+    if (!enquiries.length) {
+      tbody.innerHTML = `<tr><td colspan="6"><div class="empty-state"><h3>No enquiries</h3><p>Contact form submissions appear here.</p></div></td></tr>`;
+      return;
+    }
+    tbody.innerHTML = enquiries.map(e => `
+      <tr class="enquiry-row" onclick="window._openEnquiry('${e.id}')">
+        <td><div class="enquiry-status"><div class="status-dot ${e.status || 'new'}"></div>${escHtml(e.status || 'new')}</div></td>
+        <td style="font-weight:600">${escHtml(e.name)}</td>
+        <td>
+          <div>${escHtml(e.email)}</div>
+          <div class="text-muted text-sm">${escHtml(e.phone)}</div>
+        </td>
+        <td>${escHtml(e.type || '—')}</td>
+        <td class="text-muted text-sm">${formatDate(e.submittedAt)}</td>
+        <td style="text-align:right">
+          <a href="mailto:${escHtml(e.email)}" class="btn-icon" title="Reply by email" onclick="event.stopPropagation()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </td>
+      </tr>`).join('');
+  }
+
+  window._openEnquiry = async (id) => {
+    const e = allEnquiries.find(x => x.id === id);
+    if (!e) return;
+    document.getElementById('enq-modal-name').textContent = e.name;
+    document.getElementById('enq-status-select').value = e.status || 'new';
+    document.getElementById('enq-modal-table').querySelector('tbody').innerHTML = [
+      ['Email',   `<a href="mailto:${escHtml(e.email)}">${escHtml(e.email)}</a>`],
+      ['Phone',   escHtml(e.phone)],
+      ['Type',    escHtml(e.type || '—')],
+      ['Date',    formatDate(e.submittedAt)],
+      ['Message', `<div style="white-space:pre-wrap">${escHtml(e.message || '(none)')}</div>`],
+    ].map(([k, v]) => `<tr><td style="font-weight:600; white-space:nowrap; padding:8px 12px 8px 0; vertical-align:top">${k}</td><td style="padding:8px 0">${v}</td></tr>`).join('');
+    document.getElementById('enq-modal-save').dataset.id = id;
+    document.getElementById('enquiry-modal').classList.add('visible');
+
+    // Mark as read automatically
+    if ((e.status || 'new') === 'new') {
+      try {
+        await updateDoc(doc(db, 'inquiries', id), { status: 'read', updatedAt: serverTimestamp() });
+        e.status = 'read';
+        document.getElementById('enq-status-select').value = 'read';
+        renderEnquiriesTable(allEnquiries);
+      } catch {}
+    }
+  };
+
+  document.getElementById('enq-modal-close').addEventListener('click', () => {
+    document.getElementById('enquiry-modal').classList.remove('visible');
+  });
+  document.getElementById('enq-modal-save').addEventListener('click', async e => {
+    const id = e.target.dataset.id;
+    const status = document.getElementById('enq-status-select').value;
+    try {
+      await updateDoc(doc(db, 'inquiries', id), { status, updatedAt: serverTimestamp() });
+      const enq = allEnquiries.find(x => x.id === id);
+      if (enq) enq.status = status;
+      renderEnquiriesTable(allEnquiries);
+      document.getElementById('enquiry-modal').classList.remove('visible');
+      toast('Enquiry status updated.', 'success');
+    } catch (err) {
+      toast('Update failed: ' + err.message, 'error');
+    }
+  });
+
+  // ── SITE CONTENT ───────────────────────────────────────────────────────────
+  const contentPageFields = {
+    homepage: [
+      { id: 'hero_heading',       label: 'Hero Heading',           type: 'text' },
+      { id: 'hero_subheading',    label: 'Hero Subheading',        type: 'text' },
+      { id: 'hero_cta_label',     label: 'Hero CTA Button Label',  type: 'text' },
+      { id: 'hero_cta_url',       label: 'Hero CTA URL',           type: 'text' },
+      { id: 'intro_heading',      label: 'Studio Intro Heading',   type: 'text' },
+      { id: 'intro_body',         label: 'Studio Intro Text',      type: 'textarea' },
+      { id: 'stat_years',         label: 'Stat: Years in Practice',type: 'text' },
+      { id: 'stat_projects',      label: 'Stat: Projects',         type: 'text' },
+      { id: 'stat_clients',       label: 'Stat: Clients',          type: 'text' },
+    ],
+    about: [
+      { id: 'principal_name',     label: 'Principal Architect Name',   type: 'text' },
+      { id: 'principal_title',    label: 'Principal Architect Title',  type: 'text' },
+      { id: 'about_body',         label: 'About Studio Text',          type: 'textarea' },
+      { id: 'philosophy_heading', label: 'Philosophy Heading',         type: 'text' },
+      { id: 'philosophy_body',    label: 'Philosophy Text',            type: 'textarea' },
+    ],
+    contact: [
+      { id: 'address_line1',      label: 'Address Line 1',   type: 'text' },
+      { id: 'address_line2',      label: 'Address Line 2',   type: 'text' },
+      { id: 'city',               label: 'City, State, Pin', type: 'text' },
+      { id: 'phone_primary',      label: 'Phone (Primary)',  type: 'text' },
+      { id: 'phone_secondary',    label: 'Phone (Secondary)',type: 'text' },
+      { id: 'email_design',       label: 'Email (Design)',   type: 'text' },
+      { id: 'email_career',       label: 'Email (Career)',   type: 'text' },
+      { id: 'whatsapp_number',    label: 'WhatsApp Number (91XXXXXXXXXX)', type: 'text' },
+    ],
+    footer: [
+      { id: 'footer_tagline',     label: 'Footer Tagline',   type: 'textarea' },
+      { id: 'instagram_url',      label: 'Instagram URL',    type: 'text' },
+      { id: 'facebook_url',       label: 'Facebook URL',     type: 'text' },
+    ],
+  };
+
+  let currentContentData = {};
+  document.getElementById('content-page-select').addEventListener('change', loadSiteContent);
+
+  async function loadSiteContent() {
+    const page  = document.getElementById('content-page-select').value;
+    const fields = contentPageFields[page] || [];
+    const container = document.getElementById('content-editor-fields');
+
+    try {
+      const snap = await getDoc(doc(db, 'siteContent', page));
+      currentContentData = snap.exists() ? snap.data() : {};
+
+      container.innerHTML = `<div class="form-grid full" style="gap:14px">${fields.map(f => `
+        <div class="form-field">
+          <label class="field-label" for="cf-${f.id}">${escHtml(f.label)}</label>
+          ${f.type === 'textarea'
+            ? `<textarea class="field-textarea" id="cf-${f.id}" rows="4">${escHtml(currentContentData[f.id] || '')}</textarea>`
+            : `<input class="field-input" type="text" id="cf-${f.id}" value="${escHtml(currentContentData[f.id] || '')}">`}
+        </div>`).join('')}</div>`;
+    } catch (err) {
+      container.innerHTML = `<div class="text-muted text-sm">Error loading content: ${err.message}</div>`;
+    }
+  }
+
+  document.getElementById('content-save-btn').addEventListener('click', async () => {
+    const page   = document.getElementById('content-page-select').value;
+    const fields = contentPageFields[page] || [];
+    const data   = { updatedAt: serverTimestamp() };
+    fields.forEach(f => {
+      const el = document.getElementById(`cf-${f.id}`);
+      if (el) data[f.id] = el.value.trim();
+    });
+    try {
+      await setDoc(doc(db, 'siteContent', page), data, { merge: true });
+      toast('Site content saved.', 'success');
+    } catch (err) {
+      toast('Save failed: ' + err.message, 'error');
+    }
+  });
+
+  // ── ADMIN SETTINGS ─────────────────────────────────────────────────────────
+  document.getElementById('set-admin-btn').addEventListener('click', async () => {
+    const uid    = document.getElementById('admin-uid-input').value.trim();
+    const action = document.querySelector('input[name="admin-action"]:checked')?.value === 'grant';
+    const result = document.getElementById('admin-action-result');
+    if (!uid) { result.innerHTML = '<span class="text-danger">Enter a Firebase UID.</span>'; return; }
+
+    result.innerHTML = '<span class="spinner"></span> Applying…';
+    try {
+      const freshToken = await currentUser.getIdToken();
+      const res = await fetch('/api/set-admin-claim', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${freshToken}` },
+        body: JSON.stringify({ uid, admin: action }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        result.innerHTML = `<span style="color:var(--success)">✓ Admin ${action ? 'granted' : 'revoked'} for uid: ${escHtml(uid)}</span>`;
+        toast(`Admin ${action ? 'granted' : 'revoked'}.`, 'success');
+      } else {
+        result.innerHTML = `<span class="text-danger">Error: ${escHtml(data.error)}</span>`;
+      }
+    } catch (err) {
+      result.innerHTML = `<span class="text-danger">Request failed: ${escHtml(err.message)}</span>`;
+    }
+  });
+
+  // ── Portfolio Data Migration Handler ──
+  document.getElementById('migrate-projects-btn').addEventListener('click', async () => {
+    const confirmed = await showConfirm(
+      'Migrate 140 Projects to Firestore?',
+      'This will import all projects from assets/data/projects.json into the projects collection. Documents will be indexed by slug. Existing published slugs will be updated idempotently.'
+    );
+    if (!confirmed) return;
+
+    const btn = document.getElementById('migrate-projects-btn');
+    const progressEl = document.getElementById('migration-progress');
+    const bar = document.getElementById('migration-bar');
+    const statusText = document.getElementById('migration-status-text');
+
+    btn.disabled = true;
+    progressEl.style.display = 'block';
+    bar.style.width = '0%';
+    statusText.textContent = 'Loading source data...';
+
+    try {
+      const res = await fetch('/assets/data/projects.json');
+      if (!res.ok) throw new Error('Could not load assets/data/projects.json');
+      const rawProjects = await res.json();
+
+      let count = 0;
+      const total = rawProjects.length;
+
+      for (const p of rawProjects) {
+        const slug = p.slug;
+        const heroUrl = p.featured_image_url || '';
+        let publicId = heroUrl;
+        if (heroUrl.startsWith('https://res.cloudinary.com')) {
+          publicId = heroUrl.split('/bluecube/')[1] ? 'bluecube/' + heroUrl.split('/bluecube/')[1] : heroUrl;
+        }
+
+        const gallery = (p.gallery_urls || []).map((gUrl, idx) => ({
+          publicId: gUrl,
+          secureUrl: gUrl,
+          alt: `${p.title} — Gallery ${idx + 1}`,
+          order: idx,
+          layout: 'editorial'
+        }));
+
+        const relatedIds = (p.related_projects || []).map(r => r.slug).filter(Boolean).slice(0, 3);
+
+        const docData = {
+          id: p.id || slug,
+          slug: slug,
+          title: p.title || '',
+          category: p.category || 'Residential',
+          subcategory: p.subcategory || p.category || '',
+          location: p.location || '',
+          typology: p.typology || '',
+          area: p.area || '',
+          year: p.year || '',
+          client: p.client || '',
+          description: p.description || '',
+          heroImage: heroUrl ? {
+            publicId: publicId,
+            secureUrl: heroUrl,
+            alt: `${p.title} exterior elevation`,
+            width: 1600,
+            height: 1000
+          } : null,
+          gallery: gallery,
+          galleryLayout: 'editorial',
+          relatedProjectIds: relatedIds,
+          featured: false,
+          published: true,
+          order: count,
+          seo: {
+            title: `${p.title} | Blue Cube Architects`,
+            description: (p.description || '').slice(0, 155)
+          },
+          updatedAt: serverTimestamp(),
+          createdAt: serverTimestamp()
+        };
+
+        await setDoc(doc(db, 'projects', slug), docData, { merge: true });
+
+        count++;
+        const pct = Math.round((count / total) * 100);
+        bar.style.width = `${pct}%`;
+        statusText.textContent = `Imported ${count}/${total} projects (${pct}%)...`;
+      }
+
+      statusText.innerHTML = `<span style="color:var(--success)">✓ Successfully migrated all ${total} projects!</span>`;
+      toast(`Successfully migrated ${total} projects to Firestore.`, 'success');
+      loadDashboard();
+    } catch (err) {
+      statusText.innerHTML = `<span class="text-danger">Migration error: ${escHtml(err.message)}</span>`;
+      toast('Migration failed: ' + err.message, 'error');
+    } finally {
+      btn.disabled = false;
+    }
+  });
+
+  // ── Confirm dialog ─────────────────────────────────────────────────────────
+  function showConfirm(title, body) {
+    return new Promise(resolve => {
+      document.getElementById('confirm-title').textContent = title;
+      document.getElementById('confirm-body').textContent  = body;
+      document.getElementById('confirm-modal').classList.add('visible');
+      const ok     = document.getElementById('confirm-ok');
+      const cancel = document.getElementById('confirm-cancel');
+      const cleanup = result => {
+        document.getElementById('confirm-modal').classList.remove('visible');
+        ok.removeEventListener('click', onOk);
+        cancel.removeEventListener('click', onCancel);
+        resolve(result);
+      };
+      const onOk     = () => cleanup(true);
+      const onCancel = () => cleanup(false);
+      ok.addEventListener('click', onOk);
+      cancel.addEventListener('click', onCancel);
+    });
+  }
+
+  // ── Toast ──────────────────────────────────────────────────────────────────
+  function toast(message, type = 'success') {
+    const container = document.getElementById('toast-container');
+    const el = document.createElement('div');
+    el.className = `toast ${type}`;
+    el.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        ${type === 'success' ? '<polyline points="20 6 9 17 4 12"/>'
+          : type === 'error' ? '<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>'
+          : '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>'}
+      </svg>
+      ${escHtml(message)}`;
+    container.appendChild(el);
+    setTimeout(() => {
+      el.classList.add('removing');
+      setTimeout(() => el.remove(), 260);
+    }, 4000);
+  }
+
+  // ── Char counters ──────────────────────────────────────────────────────────
+  function updateCharCount(inputId, countId, max) {
+    const input   = document.getElementById(inputId);
+    const counter = document.getElementById(countId);
+    if (!input || !counter) return;
+    const update = () => { counter.textContent = `${input.value.length} / ${max} characters`; };
+    update();
+    input.addEventListener('input', update);
+  }
+
+  // ── Utilities ──────────────────────────────────────────────────────────────
+  function escHtml(str) {
+    if (str == null) return '';
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  }
+  function slugify(str) {
+    return str.toLowerCase().trim()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
+  function setValue(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
+  function setSelect(id, val) { const el = document.getElementById(id); if (el) el.value = val; }
+  function categoryBadge(cat) {
+    const map = { Residential: 'badge-residential', Commercial: 'badge-commercial', Interiors: 'badge-interiors', 'Container Architecture': 'badge-container' };
+    return map[cat] || '';
+  }
+  function formatDate(ts) {
+    if (!ts) return '—';
+    const d = ts.toDate ? ts.toDate() : new Date(ts);
+    return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  // Unsaved changes warning on tab close
+  window.addEventListener('beforeunload', e => {
+    if (unsavedChanges) {
+      e.preventDefault();
+      e.returnValue = '';
+    }
+  });
+
+</script>
+
+<!-- Cloudinary Upload Widget -->
+<script src="https://upload-widget.cloudinary.com/global/all.js" defer></script>
+
+</body>
+</html>
+

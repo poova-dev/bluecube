@@ -11,7 +11,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret_here
 
 # Firebase Configuration
 # Plain variable:
-FIREBASE_PROJECT_ID=bluecube-studio
+FIREBASE_PROJECT_ID=bluecube-49ae8
 FIREBASE_API_KEY=your_firebase_web_api_key_here
 # Secret (Required for server-side Firestore RS256 token minting in Pages Functions):
 FIREBASE_SERVICE_ACCOUNT_JSON={"type":"service_account","project_id":"...","private_key_id":"...","private_key":"-----BEGIN PRIVATE KEY-----\\n...\\n-----END PRIVATE KEY-----\\n","client_email":"...","client_id":"...","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token"}

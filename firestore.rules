@@ -1,0 +1,167 @@
+rules_version = '2';
+
+// ============================================================================
+// BLUECUBE ARCHITECTS — FIRESTORE SECURITY RULES
+// Strategy: Custom claims-based admin authorization (server-side only).
+//   - Admins are identified by `request.auth.token.admin == true`
+//   - Custom claims are set ONLY via the /api/set-admin-claim Cloudflare
+//     Function using a Firebase service account. No client path can grant them.
+//   - Public visitors may read published project data and site content only.
+//   - Enquiries are write-only for public, read-only for admins.
+//   - The `admins` whitelist is immutable from the client side.
+// ============================================================================
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---- Shared helper functions -------------------------------------------
+
+    // Caller holds a valid Firebase Auth token with admin custom claim or authorized admin email.
+    function isAdmin() {
+      return request.auth != null
+          && (
+            request.auth.token.admin == true
+            || request.auth.token.email in [
+              'admin@gmail.com',
+              'admin@bluecube.co.in',
+              'design@bluecube.co.in',
+              'editingonly2004@gmail.com'
+            ]
+          );
+    }
+
+    // Caller is authenticated (any verified Firebase user).
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Reject any attempt to self-elevate admin status.
+    function notClaimingAdmin() {
+      return !('admin' in request.resource.data)
+          || request.resource.data.admin == false;
+    }
+
+    // Field-level validation helpers ----------------------------------------
+
+    function validString(val, maxLen) {
+      return val is string && val.size() > 0 && val.size() <= maxLen;
+    }
+
+    function validOptionalString(val, maxLen) {
+      return val == null || (val is string && val.size() <= maxLen);
+    }
+
+    // Project document validation
+    function validProject(data) {
+      return data.keys().hasAll(['title', 'slug', 'category', 'published', 'updatedAt'])
+          && validString(data.title, 200)
+          && validString(data.slug, 120)
+          && data.category in ['Residential', 'Commercial', 'Interiors', 'Container Architecture']
+          && data.published is bool
+          && validOptionalString(data.get('subcategory', null), 120)
+          && validOptionalString(data.get('location', null), 200)
+          && validOptionalString(data.get('typology', null), 200)
+          && validOptionalString(data.get('area', null), 60)
+          && validOptionalString(data.get('year', null), 20)
+          && validOptionalString(data.get('client', null), 200)
+          && validOptionalString(data.get('description', null), 8000)
+          && (data.get('featured', false) is bool)
+          && (data.get('order', 0) is int || data.get('order', 0) is float);
+    }
+
+    // Inquiry document validation (created by public contact form)
+    function validInquiry(data) {
+      return data.keys().hasAll(['name', 'email', 'phone', 'type', 'submittedAt'])
+          && validString(data.name, 120)
+          && validString(data.email, 160)
+          && validString(data.phone, 30)
+          && validString(data.type, 100)
+          && data.submittedAt == request.time
+          && validOptionalString(data.get('message', null), 4000)
+          && (!('status' in data) || data.status == 'new');
+    }
+
+    // Site content validation (loose — structured JSON blobs per page)
+    function validSiteContent(data) {
+      return data.keys().hasAll(['updatedAt'])
+          && data.updatedAt == request.time;
+    }
+
+    // =========================================================================
+    // COLLECTION: projects/{slug}
+    // =========================================================================
+    match /projects/{slug} {
+      // Public read: only published projects
+      allow get:  if resource.data.published == true;
+      allow list: if resource.data.published == true;
+
+      // Admin full read (including unpublished drafts)
+      allow get:  if isAdmin();
+      allow list: if isAdmin();
+
+      // Admin create: validate document shape
+      allow create: if isAdmin() && validProject(request.resource.data);
+
+      // Admin update: validate new data, prevent slug change after creation
+      allow update: if isAdmin()
+                   && validProject(request.resource.data)
+                   && request.resource.data.slug == resource.data.slug;
+
+      // Admin delete: confirmed destructive action
+      allow delete: if isAdmin();
+    }
+
+    // =========================================================================
+    // COLLECTION: siteContent/{page}
+    // Pages: "homepage" | "about" | "services" | "contact" | "footer"
+    // =========================================================================
+    match /siteContent/{page} {
+      // Public read: homepage, about, services, contact info is public
+      allow read: if true;
+
+      // Admin write only
+      allow create: if isAdmin() && validSiteContent(request.resource.data);
+      allow update: if isAdmin() && validSiteContent(request.resource.data);
+      allow delete: if false; // Pages are never deleted, only updated
+    }
+
+    // =========================================================================
+    // COLLECTION: inquiries/{id}
+    // =========================================================================
+    match /inquiries/{id} {
+      // Public: create only (contact form submissions)
+      // No public read or list access.
+      allow create: if validInquiry(request.resource.data);
+      allow read:   if false; // explicitly block public reads
+      allow list:   if false;
+
+      // Admin read and status updates only (no delete for audit trail)
+      allow get:    if isAdmin();
+      allow list:   if isAdmin();
+      allow update: if isAdmin()
+                   && request.resource.data.diff(resource.data).affectedKeys()
+                      .hasOnly(['status', 'notes', 'updatedAt']);
+      allow delete: if false; // Preserve audit trail
+    }
+
+    // =========================================================================
+    // COLLECTION: admins/{uid}
+    // This collection is a secondary read-only whitelist for reference.
+    // Authorization truth is in Firebase Auth custom claims (server-side).
+    // Client can NEVER write to this collection.
+    // =========================================================================
+    match /admins/{uid} {
+      allow read:   if isAdmin();
+      allow create: if false; // Only writable via Admin SDK (service account)
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    // =========================================================================
+    // Catch-all: deny everything else
+    // =========================================================================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

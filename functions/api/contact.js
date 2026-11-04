@@ -1,8 +1,13 @@
 /**
  * Cloudflare Pages Function: /api/contact
  * Handles contact form submissions for Blue Cube Architects.
- * Replaces unreliable in-memory rate limiting with Cloudflare Turnstile + honeypot.
- * Dispatches studio email notification via Resend REST API.
+ * - Validates: honeypot, Turnstile, field constraints
+ * - Persists validated enquiry to Firestore (inquiries collection) via REST API
+ * - Dispatches studio email notification via Resend REST API
+ *
+ * Additional environment variables for Firestore persistence:
+ *   FIREBASE_PROJECT_ID           - plain variable (default: bluecube-49ae8)
+ *   FIREBASE_SERVICE_ACCOUNT_JSON - secret variable (service account JSON string)
  */
 
 function escapeHTML(str) {
@@ -250,6 +255,11 @@ Client IP: ${clientIp}
     console.info('[Notice] RESEND_API_KEY is not configured in environment. Skipping email dispatch.');
   }
 
+  // 8. Persist to Firestore (non-blocking — do not fail the response if this errors)
+  context.waitUntil
+    ? context.waitUntil(persistEnquiryToFirestore(env, { name, email, phone, type, message, clientIp, timestamp: Date.now() }))
+    : persistEnquiryToFirestore(env, { name, email, phone, type, message, clientIp, timestamp: Date.now() }).catch(() => {});
+
   return new Response(JSON.stringify({
     success: true,
     message: 'Thank you for contacting Blue Cube Architects. Your inquiry has been routed to our studio team.',
@@ -259,4 +269,119 @@ Client IP: ${clientIp}
     status: 200,
     headers: { 'Content-Type': 'application/json' }
   });
+}
+
+// ── Firestore persistence via REST API ────────────────────────────────────────
+// Writes the validated enquiry to Firestore (inquiries collection).
+// Requires FIREBASE_SERVICE_ACCOUNT_JSON and FIREBASE_PROJECT_ID env vars.
+async function persistEnquiryToFirestore(env, { name, email, phone, type, message, clientIp, timestamp }) {
+  const serviceAccountJson = env?.FIREBASE_SERVICE_ACCOUNT_JSON;
+  const projectId = env?.FIREBASE_PROJECT_ID || 'bluecube-49ae8';
+
+  if (!serviceAccountJson) return; // silently skip if not configured
+
+  let serviceAccount;
+  try {
+    serviceAccount = JSON.parse(serviceAccountJson);
+  } catch {
+    console.error('[contact] FIREBASE_SERVICE_ACCOUNT_JSON is not valid JSON');
+    return;
+  }
+
+  // Mint service account JWT
+  let accessToken;
+  try {
+    accessToken = await getServiceAccountAccessToken(serviceAccount);
+  } catch (err) {
+    console.error('[contact] Failed to get Firebase access token:', err);
+    return;
+  }
+
+  // Firestore REST document structure
+  const doc = {
+    fields: {
+      name:        { stringValue: name },
+      email:       { stringValue: email },
+      phone:       { stringValue: phone },
+      type:        { stringValue: type },
+      message:     { stringValue: message || '' },
+      status:      { stringValue: 'new' },
+      clientIp:    { stringValue: clientIp },
+      submittedAt: { timestampValue: new Date(timestamp).toISOString() },
+    }
+  };
+
+  const firestoreUrl =
+    `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/inquiries`;
+
+  try {
+    const res = await fetch(firestoreUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify(doc),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error('[contact] Firestore write failed:', res.status, errText);
+    } else {
+      console.info('[contact] Enquiry persisted to Firestore inquiries collection');
+    }
+  } catch (err) {
+    console.error('[contact] Firestore fetch error:', err);
+  }
+}
+
+async function getServiceAccountAccessToken(sa) {
+  const now = Math.floor(Date.now() / 1000);
+  const header  = { alg: 'RS256', typ: 'JWT' };
+  const payload = {
+    iss: sa.client_email,
+    scope: 'https://www.googleapis.com/auth/datastore',
+    aud: 'https://oauth2.googleapis.com/token',
+    iat: now,
+    exp: now + 3600,
+  };
+
+  const b64 = s => btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  const headerB64  = b64(JSON.stringify(header));
+  const payloadB64 = b64(JSON.stringify(payload));
+  const signingInput = `${headerB64}.${payloadB64}`;
+
+  const pem = sa.private_key
+    .replace(/-----BEGIN PRIVATE KEY-----/, '')
+    .replace(/-----END PRIVATE KEY-----/, '')
+    .replace(/\s+/g, '');
+  const keyBinary = atob(pem);
+  const keyBuffer = new Uint8Array(keyBinary.length);
+  for (let i = 0; i < keyBinary.length; i++) keyBuffer[i] = keyBinary.charCodeAt(i);
+
+  const cryptoKey = await crypto.subtle.importKey(
+    'pkcs8', keyBuffer.buffer,
+    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+    false, ['sign']
+  );
+
+  const sigBuffer = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', cryptoKey, new TextEncoder().encode(signingInput));
+  const sigBytes = new Uint8Array(sigBuffer);
+  let sigBinary = '';
+  for (const byte of sigBytes) sigBinary += String.fromCharCode(byte);
+  const sigB64 = b64(sigBinary);
+
+  const jwt = `${signingInput}.${sigB64}`;
+
+  const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
+      assertion: jwt,
+    }),
+  });
+
+  const data = await tokenRes.json();
+  return data.access_token;
 }
