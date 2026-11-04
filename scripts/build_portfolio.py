@@ -10,6 +10,7 @@ import os
 import sys
 import json
 import re
+import urllib.parse
 from datetime import datetime
 
 # Import project inventory
@@ -31,9 +32,198 @@ if os.path.exists(MANIFEST_FILE):
 def get_cdn_url(rel_path):
     if not rel_path:
         return f"{CDN_PREFIX}/brand/cover_reference.jpg"
+    if rel_path.startswith("assets/"):
+        return rel_path
+    if rel_path.startswith("http://") or rel_path.startswith("https://"):
+        return rel_path
     if rel_path in c_manifest:
         return c_manifest[rel_path].get("cdn_url", f"{CDN_PREFIX}/{rel_path}")
     return f"{CDN_PREFIX}/{rel_path}"
+
+def resolve_img_url(url, prefix=""):
+    if not url:
+        return ""
+    if url.startswith("http://") or url.startswith("https://"):
+        return url
+    clean_url = url.lstrip("/")
+    parts = clean_url.split("/")
+    encoded_parts = [urllib.parse.quote(part) for part in parts]
+    return f"{prefix}{'/'.join(encoded_parts)}"
+
+# Authentic NextGen Image Overrides discovered from local project archives
+NEXTGEN_PROJECT_OVERRIDES = {
+    "floating-tree-residence-anna-nagar": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg",
+        "gallery": [
+            "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/22.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/21.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/72.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/68.jpg",
+        ],
+    },
+    "mother-memorial-ar-rahman-iyerkandigai": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/B14C9751.jpg",
+        "gallery": [
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/B14C9751.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8972.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8815.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8816.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8781.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC88155.jpg",
+        ],
+    },
+    "masjid-community-architecture-kadapa": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Elevation 1.jpg",
+        "gallery": [
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Elevation 1.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Entrance Corridor.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Interior 1.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Interior 2.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Masjid View_03.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Ablution 2.jpg",
+        ],
+    },
+    "km-music-conservatory-auditorium-arumbakkam": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png",
+        "gallery": [
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/4cf35599-7b24-4280-aec1-ff42373b560a.png",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/6f4dcdda-857a-4cc4-a36e-95143fec68af.png",
+        ],
+    },
+    "just-salwar-boutique-velachery": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Just salwars Ext/PV_00438.jpg",
+        "gallery": [
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Just salwars Ext/PV_00438.jpg",
+            "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00430.jpg",
+            "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00481.jpg",
+            "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00521.jpg",
+            "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00565.jpg",
+            "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00577.jpg",
+        ],
+    },
+    "ai-office-interiors-ambattur": {
+        "featured": "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3316.JPG",
+        "gallery": [
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3316.JPG",
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3310.JPG",
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3322.JPG",
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3356.JPG",
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/c7ecdb89-e955-44f6-b2a4-89b81b30a294.png",
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/e769c39f-fc83-48ef-8f42-2e7e4f2f42ee.png",
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/0c69038a-fb90-4019-bc4b-32eeef70f807.png",
+            "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/241042ee-e9e5-4ae5-b16c-552f416b1d5b.png",
+        ],
+    },
+    "croyez-corporate-office-teynampet": {
+        "featured": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png",
+        "gallery": [
+            "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png",
+            "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7953e942-7c9c-4419-8447-fd55657d465b.png",
+            "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/add5ab0b-6544-4fa0-b586-7e22fdd53e1b.png",
+            "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/cf4d74d3-5164-429c-ad25-86791a643ad1.png",
+        ],
+    },
+    "container-yard-vijayan-perungudi": {
+        "featured": "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png",
+        "gallery": [
+            "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png",
+            "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/d6f57bf7-efb4-416d-8887-79022ab57aa3.png",
+            "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/e5549885-def5-48df-8559-5fe4846aace6.png",
+        ],
+    },
+    "hotel-rooms-estelle-hotels-ecr": {
+        "featured": "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg",
+        "gallery": [
+            "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg",
+            "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1727.JPG",
+            "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1729.JPG",
+            "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1870.JPG",
+            "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1895.JPG",
+            "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/s.jpg",
+        ],
+    },
+    "ava-residence-anna-nagar": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"],
+    },
+    "gruham-residence-cuddalore": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"],
+    },
+    "dr-ganesan-residence-ecr-chennai": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"],
+    },
+    "dr-ganesan-interiors-ecr-chennai": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"],
+    },
+    "kadapa-residence-cudappah": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg"],
+    },
+    "kadapa-residence-interiors-cudappah": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg"],
+    },
+    "gauthaman-residence-salem": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SALEM_RESIDENCY_Straight Cam_(13-03-2025).jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SALEM_RESIDENCY_Straight Cam_(13-03-2025).jpg"],
+    },
+    "residence-mr-sekar-perungalathur": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SEKAR_RESIDENCE_PERUNGALATHUR_OPT_C_12-09-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SEKAR_RESIDENCE_PERUNGALATHUR_OPT_C_12-09-2024.jpg"],
+    },
+    "level-up-residence-dr-aravind-mogappair": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"],
+    },
+    "dr-aravind-residence-interiors-anna-nagar": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"],
+    },
+    "commercial-building-ashok-nagar": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"],
+    },
+    "care-college-auditorium-trichy": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"],
+    },
+    "kia-showroom-kovilambakkam": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"],
+    },
+    "nac-jewellers-showroom-t-nagar": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"],
+    },
+    "apartments-vgn-koluthuvanchery": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg"],
+    },
+    "villa-143-vgn-koluthuvanchery": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"],
+    },
+    "chettinad-hospital-oncology-block": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"],
+    },
+    "dr-nandhini-birthing-studio-mylapore": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Render healthcare/VIDHAI_CLINIC_Dr.NANDINI_01_30-04-2025.jpg",
+        "gallery": [
+            "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Render healthcare/VIDHAI_CLINIC_Dr.NANDINI_01_30-04-2025.jpg",
+            "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VIDHAI_CLINIC_Dr.NANDINI_01_19-08-2024.jpg",
+        ],
+    },
+    "apartments-npsh-korattur": {
+        "featured": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/NPSH_RESIDENCE_17-02-2025.jpg",
+        "gallery": ["assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/NPSH_RESIDENCE_17-02-2025.jpg"],
+    },
+}
 
 # Combine all 140 projects
 ALL_PROJECTS = (
@@ -43,8 +233,12 @@ ALL_PROJECTS = (
     pdata.INTERIOR_PROJECTS
 )
 
-# Pass 1: Assign CDN URLs
+# Pass 1: Apply authentic NextGen imagery & assign URLs
 for p in ALL_PROJECTS:
+    slug = p["slug"]
+    if slug in NEXTGEN_PROJECT_OVERRIDES:
+        p["image_file"] = NEXTGEN_PROJECT_OVERRIDES[slug]["featured"]
+        p["gallery"] = NEXTGEN_PROJECT_OVERRIDES[slug]["gallery"]
     p["featured_image_url"] = get_cdn_url(p.get("image_file"))
     p["gallery_urls"] = [get_cdn_url(g) for g in p.get("gallery", [])]
 
@@ -251,7 +445,7 @@ def render_project_card(p, prefix="./"):
     title = p["title"]
     subcat = p.get("subcategory", p.get("category"))
     loc = p.get("location", "Tamil Nadu, India")
-    img_url = p.get("featured_image_url")
+    img_url = resolve_img_url(p.get("featured_image_url"), prefix)
     desc = p.get("description", "")
     
     return f"""        <article class="portfolio-card" data-category="{p['category'].lower()}" data-subcat="{subcat.lower()}">
@@ -358,14 +552,15 @@ def generate_project_pages():
 
         # Section C: Editorial Introduction (Two-column if intro image exists, single column if 1 photo)
         if has_intro_image:
+            intro_img_src = resolve_img_url(intro_img, "../../")
             intro_section_html = f"""    <!-- Section C & D & F: Editorial Project Introduction -->
     <section class="editorial-intro-section">
-      <div class="container">
+      <div class="container editorial-intro-container">
         <div class="editorial-intro-grid">
           <div class="editorial-intro-media" data-reveal="image">
-            <img src="{intro_img}" 
+            <img src="{intro_img_src}" 
                  alt="{p['title']} &mdash; Architectural Perspective" 
-                 data-lightbox-src="{intro_img}"
+                 data-lightbox-src="{intro_img_src}"
                  loading="lazy" width="800" height="1050">
           </div>
           <div class="editorial-intro-content" data-reveal>
@@ -380,7 +575,7 @@ def generate_project_pages():
         else:
             intro_section_html = f"""    <!-- Section C & D & F: Editorial Project Introduction -->
     <section class="editorial-intro-section">
-      <div class="container">
+      <div class="container editorial-intro-container">
         <div class="editorial-intro-single" data-reveal>
 {breadcrumbs_html}
           <h1 class="editorial-project-title">{p['title']}</h1>
@@ -399,39 +594,45 @@ def generate_project_pages():
             while i < len(extra_gallery):
                 rem = len(extra_gallery) - i
                 if rem == 1:
+                    img_u = resolve_img_url(extra_gallery[i], "../../")
                     gallery_items.append(f"""        <div class="gallery-full-bleed" data-reveal="image">
-          <img src="{extra_gallery[i]}" 
+          <img src="{img_u}" 
                alt="{p['title']} &mdash; Architectural Perspective" 
-               data-lightbox-src="{extra_gallery[i]}" 
+               data-lightbox-src="{img_u}" 
                loading="lazy" width="1600" height="1000">
         </div>""")
                     i += 1
                 elif rem == 2:
+                    img_u1 = resolve_img_url(extra_gallery[i], "../../")
+                    img_u2 = resolve_img_url(extra_gallery[i+1], "../../")
                     gallery_items.append(f"""        <div class="gallery-two-up" data-reveal="image">
           <div class="gallery-two-up-item">
-            <img src="{extra_gallery[i]}" alt="{p['title']} &mdash; Architectural View 1" data-lightbox-src="{extra_gallery[i]}" loading="lazy">
+            <img src="{img_u1}" alt="{p['title']} &mdash; Architectural View 1" data-lightbox-src="{img_u1}" loading="lazy">
           </div>
           <div class="gallery-two-up-item">
-            <img src="{extra_gallery[i+1]}" alt="{p['title']} &mdash; Architectural View 2" data-lightbox-src="{extra_gallery[i+1]}" loading="lazy">
+            <img src="{img_u2}" alt="{p['title']} &mdash; Architectural View 2" data-lightbox-src="{img_u2}" loading="lazy">
           </div>
         </div>""")
                     i += 2
                 else:
                     if pattern_idx % 2 == 0:
+                        img_u = resolve_img_url(extra_gallery[i], "../../")
                         gallery_items.append(f"""        <div class="gallery-full-bleed" data-reveal="image">
-          <img src="{extra_gallery[i]}" 
+          <img src="{img_u}" 
                alt="{p['title']} &mdash; Architectural Perspective" 
-               data-lightbox-src="{extra_gallery[i]}" 
+               data-lightbox-src="{img_u}" 
                loading="lazy" width="1600" height="1000">
         </div>""")
                         i += 1
                     else:
+                        img_u1 = resolve_img_url(extra_gallery[i], "../../")
+                        img_u2 = resolve_img_url(extra_gallery[i+1], "../../")
                         gallery_items.append(f"""        <div class="gallery-two-up" data-reveal="image">
           <div class="gallery-two-up-item">
-            <img src="{extra_gallery[i]}" alt="{p['title']} &mdash; Architectural View 1" data-lightbox-src="{extra_gallery[i]}" loading="lazy">
+            <img src="{img_u1}" alt="{p['title']} &mdash; Architectural View 1" data-lightbox-src="{img_u1}" loading="lazy">
           </div>
           <div class="gallery-two-up-item">
-            <img src="{extra_gallery[i+1]}" alt="{p['title']} &mdash; Architectural View 2" data-lightbox-src="{extra_gallery[i+1]}" loading="lazy">
+            <img src="{img_u2}" alt="{p['title']} &mdash; Architectural View 2" data-lightbox-src="{img_u2}" loading="lazy">
           </div>
         </div>""")
                         i += 2
@@ -439,10 +640,8 @@ def generate_project_pages():
 
             gallery_section_html = f"""    <!-- Section E: Editorial Image Gallery -->
     <section class="editorial-gallery-section">
-      <div class="container">
-        <div class="editorial-gallery-stream">
+      <div class="editorial-gallery-stream">
 {chr(10).join(gallery_items)}
-        </div>
       </div>
     </section>"""
 
@@ -467,9 +666,10 @@ def generate_project_pages():
         # Section H: Related Projects
         related_cards_html = ""
         for rel in p.get("related_projects", []):
+            rel_img = resolve_img_url(rel["featured_image_url"], "../../")
             related_cards_html += f"""        <article class="related-card">
           <a href="../../projects/{rel['slug']}/" class="related-card-media" aria-label="View {rel['title']}">
-            <img src="{rel['featured_image_url']}" alt="{rel['title']} &bull; {rel['location']}" loading="lazy" width="600" height="375">
+            <img src="{rel_img}" alt="{rel['title']} &bull; {rel['location']}" loading="lazy" width="600" height="375">
           </a>
           <div class="related-card-body">
             <div class="related-card-meta">
@@ -532,6 +732,8 @@ def generate_project_pages():
     </section>"""
 
         clean_desc = p.get('description', '').replace('"', '&quot;').strip()
+        hero_img_src = resolve_img_url(p['featured_image_url'], "../../")
+        schema_img_src = p['featured_image_url'] if p['featured_image_url'].startswith('http') else f"{BASE_URL}/{p['featured_image_url'].lstrip('/')}"
 
         html_content = f"""<!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -543,7 +745,7 @@ def generate_project_pages():
   <link rel="canonical" href="{BASE_URL}/projects/{slug}/">
   <meta property="og:title" content="{p['title']} | Blue Cube Architects">
   <meta property="og:description" content="{clean_desc[:200]}">
-  <meta property="og:image" content="{p['featured_image_url']}">
+  <meta property="og:image" content="{schema_img_src}">
   <meta property="og:type" content="article">
   <link rel="stylesheet" href="../../assets/css/main.css?v=7">
 
@@ -555,7 +757,7 @@ def generate_project_pages():
     "name": "{p['title']}",
     "headline": "{p['title']} by Blue Cube Architects",
     "description": "{clean_desc}",
-    "image": "{p['featured_image_url']}",
+    "image": "{schema_img_src}",
     "creator": {{
       "@type": "Organization",
       "name": "Blue Cube Architects",
@@ -575,16 +777,14 @@ def generate_project_pages():
   <main id="mainContent">
     <!-- Section B: Full-Width Cinematic Architectural Hero -->
     <section class="editorial-hero">
-      <div class="editorial-hero-container">
-        <div class="editorial-hero-frame" data-reveal="image">
-          <img src="{p['featured_image_url']}" 
-               alt="{p['title']} &mdash; {p.get('location')} Architectural View" 
-               data-lightbox-src="{p['featured_image_url']}"
-               class="editorial-hero-img" 
-               width="1920" height="1080"
-               fetchpriority="high"
-               loading="eager">
-        </div>
+      <div class="editorial-hero-frame" data-reveal="image">
+        <img src="{hero_img_src}" 
+             alt="{p['title']} &mdash; {p.get('location')} Architectural View" 
+             data-lightbox-src="{hero_img_src}"
+             class="editorial-hero-img" 
+             width="1920" height="1080"
+             fetchpriority="high"
+             loading="eager">
       </div>
     </section>
 

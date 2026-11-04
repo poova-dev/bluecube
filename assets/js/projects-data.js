@@ -1,5 +1,5 @@
 // Blue Cube Architects — Complete Portfolio Data Registry
-// Generated 2026-11-04T12:35:20.894968
+// Generated 2026-11-04T13:00:34.680205
 window.BLUECUBE_PORTFOLIO = [
   {
     "id": "res-floating-tree-anna-nagar",
@@ -17,18 +17,22 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "6,500 sq.ft",
     "year": "2021",
     "description": "An architectural synthesis of organic preservation and structural volume. Built around mature flora in Anna Nagar, Chennai, the home frames continuous interior-exterior sightlines, private verandas, and passive wind corridors.",
-    "image_file": "residential/res-01-floating-tree-residence-anna-n.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg",
     "gallery": [
-      "residential/res-01-floating-tree-residence-anna-n.jpg",
-      "residential/hero.jpg",
-      "residential/approach.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/22.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/21.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/72.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/68.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/hero.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/approach.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/22.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/21.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/72.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/68.jpg"
     ],
     "related_projects": [
       {
@@ -38,7 +42,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -47,7 +51,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       },
       {
         "id": "res-dr-ganesan-ecr",
@@ -56,7 +60,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "East Coast Road (ECR), Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"
       }
     ]
   },
@@ -77,16 +81,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "8,200 sq.ft",
     "year": "2020",
     "description": "A prestigious private residence for the AVA Group featuring expansive structural cantilevers, double-height light wells, and refined natural stone and teakwood interiors tailored for multi-generational living.",
-    "image_file": "residential/res-02-ava-group-residence-anna-nagar.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg",
     "gallery": [
-      "residential/res-02-ava-group-residence-anna-nagar.jpg",
-      "interiors/corporate_office/corporate_office-01.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
     ],
     "related_projects": [
       {
@@ -96,7 +98,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -105,7 +107,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       },
       {
         "id": "res-dr-ganesan-ecr",
@@ -114,7 +116,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "East Coast Road (ECR), Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"
       }
     ]
   },
@@ -134,14 +136,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "5,400 sq.ft",
     "year": "2019",
     "description": "Inspired by the classical vernacular courtyard house, Gruham reimagines traditional Tamil spatial hierarchy with contemporary monolithic massing, shaded verandahs, and passive climatic cooling.",
-    "image_file": "residential/res-03-gruham-residence-cuddalore-tam.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg",
     "gallery": [
-      "residential/res-03-gruham-residence-cuddalore-tam.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
     ],
     "related_projects": [
       {
@@ -151,7 +153,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -160,7 +162,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-dr-ganesan-ecr",
@@ -169,7 +171,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "East Coast Road (ECR), Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"
       }
     ]
   },
@@ -190,14 +192,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "7,800 sq.ft",
     "year": "2018",
     "description": "A refined coastal residence along the East Coast Road, designed to embrace sea breezes while shielding living spaces from intense tropical sun and saline coastal exposure.",
-    "image_file": "residential/res-04-classical-residence-ecr-chenna.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg",
     "gallery": [
-      "residential/res-04-classical-residence-ecr-chenna.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"
     ],
     "related_projects": [
       {
@@ -207,7 +209,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -216,7 +218,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -225,7 +227,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -262,7 +264,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -271,7 +273,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -280,7 +282,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -319,7 +321,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -328,7 +330,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -337,7 +339,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -358,14 +360,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "6,100 sq.ft",
     "year": "2019",
     "description": "Constructed in the arid climate of Kadapa, this residence incorporates deep recessed openings, thermal mass walls, and internal shaded courtyards.",
-    "image_file": "residential/res-08-contemporary-residence-nellore.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg",
     "gallery": [
-      "residential/res-08-contemporary-residence-nellore.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-08-contemporary-residence-nellore.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-08-contemporary-residence-nellore.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg"
     ],
     "related_projects": [
       {
@@ -375,7 +377,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -384,7 +386,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -393,7 +395,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -431,7 +433,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -440,7 +442,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -449,7 +451,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -469,14 +471,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "5,900 sq.ft",
     "year": "2017",
     "description": "A classical contemporary residence featuring disciplined symmetry, grand double-height portico, and refined masonry detailing in Salem.",
-    "image_file": "residential/res-09-classical-residence-salem-tami.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SALEM_RESIDENCY_Straight Cam_(13-03-2025).jpg",
     "gallery": [
-      "residential/res-09-classical-residence-salem-tami.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SALEM_RESIDENCY_Straight Cam_(13-03-2025).jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-09-classical-residence-salem-tami.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SALEM_RESIDENCY_Straight Cam_(13-03-2025).jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-09-classical-residence-salem-tami.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SALEM_RESIDENCY_Straight Cam_(13-03-2025).jpg"
     ],
     "related_projects": [
       {
@@ -486,7 +488,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -495,7 +497,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -504,7 +506,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -542,7 +544,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -551,7 +553,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -560,7 +562,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -597,7 +599,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -606,7 +608,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -615,7 +617,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -652,7 +654,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -661,7 +663,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -670,7 +672,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -716,7 +718,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Villas & Country Homes",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
       },
       {
         "id": "res-villa-194-vgn-koluthuvanchery",
@@ -745,14 +747,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "5,500 sq.ft",
     "year": "2021",
     "description": "An innovative split-level residence designed around vertical interconnections, cantilevered viewing decks, and integrated landscape pockets.",
-    "image_file": "residential/res-14-contemporary-residence-mogappa.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg",
     "gallery": [
-      "residential/res-14-contemporary-residence-mogappa.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-14-contemporary-residence-mogappa.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-14-contemporary-residence-mogappa.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
     ],
     "related_projects": [
       {
@@ -762,7 +764,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -771,7 +773,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -780,7 +782,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -817,7 +819,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -826,7 +828,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -835,7 +837,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -872,7 +874,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -881,7 +883,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -890,7 +892,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -927,7 +929,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -936,7 +938,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -945,7 +947,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -991,7 +993,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Villas & Country Homes",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
       },
       {
         "id": "res-villa-194-vgn-koluthuvanchery",
@@ -1037,7 +1039,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -1046,7 +1048,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -1055,7 +1057,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -1092,7 +1094,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -1101,7 +1103,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -1110,7 +1112,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -1147,7 +1149,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -1156,7 +1158,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -1165,7 +1167,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -1185,14 +1187,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "3,800 sq.ft",
     "year": "2019",
     "description": "One of Blue Cube's signature community villas designed for VGN Builders, featuring tailored spatial planning and distinct exterior volumetric articulation.",
-    "image_file": "residential/res-24-art-residence-chennai.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg",
     "gallery": [
-      "residential/res-24-art-residence-chennai.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
     ],
     "related_projects": [
       {
@@ -1275,7 +1277,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Villas & Country Homes",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
       }
     ]
   },
@@ -1330,7 +1332,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Villas & Country Homes",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
       }
     ]
   },
@@ -1385,7 +1387,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Apartment Buildings",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-vgn-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg"
       }
     ]
   },
@@ -1440,7 +1442,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Villas & Country Homes",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
       }
     ]
   },
@@ -1495,7 +1497,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Apartment Buildings",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-vgn-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg"
       }
     ]
   },
@@ -1550,7 +1552,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Apartment Buildings",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-vgn-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg"
       }
     ]
   },
@@ -1570,14 +1572,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "38,000 sq.ft",
     "year": "2020",
     "description": "An integrated multi-family residential enclave in Koluthuvanchery, emphasizing communal green open spaces and modular structural bays.",
-    "image_file": "commercial/comm-04-vgn-commercial-building.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg",
     "gallery": [
-      "commercial/comm-04-vgn-commercial-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-vgn-commercial-building.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-vgn-commercial-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_KOLATHUVANCHERI_Cam_A1.jpg"
     ],
     "related_projects": [
       {
@@ -1625,14 +1627,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "24,000 sq.ft",
     "year": "2019",
     "description": "Mid-rise residential apartment project in Korattur characterized by rhythmic balcony projections, durable materials, and thermal buffer zones.",
-    "image_file": "residential/res-23-contemporary-penthouse-radial-.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/NPSH_RESIDENCE_17-02-2025.jpg",
     "gallery": [
-      "residential/res-23-contemporary-penthouse-radial-.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/NPSH_RESIDENCE_17-02-2025.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-23-contemporary-penthouse-radial-.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/NPSH_RESIDENCE_17-02-2025.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-23-contemporary-penthouse-radial-.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/NPSH_RESIDENCE_17-02-2025.jpg"
     ],
     "related_projects": [
       {
@@ -1862,7 +1864,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -1871,7 +1873,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -1880,7 +1882,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -1900,14 +1902,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "4,300 sq.ft",
     "year": "2018",
     "description": "A contemporary suburban residence in Perungalathur featuring bold cantilevered balconies, sun louvers, and warm wooden ceiling accents.",
-    "image_file": "residential/res-06-modern-residence-perungalathur.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SEKAR_RESIDENCE_PERUNGALATHUR_OPT_C_12-09-2024.jpg",
     "gallery": [
-      "residential/res-06-modern-residence-perungalathur.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SEKAR_RESIDENCE_PERUNGALATHUR_OPT_C_12-09-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-06-modern-residence-perungalathur.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SEKAR_RESIDENCE_PERUNGALATHUR_OPT_C_12-09-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-06-modern-residence-perungalathur.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/SEKAR_RESIDENCE_PERUNGALATHUR_OPT_C_12-09-2024.jpg"
     ],
     "related_projects": [
       {
@@ -1917,7 +1919,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -1926,7 +1928,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -1935,7 +1937,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -1972,7 +1974,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Floating Tree/Exterior/62.jpg"
       },
       {
         "id": "res-ava-residence-anna-nagar",
@@ -1981,7 +1983,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-02-ava-group-residence-anna-nagar.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/AVA Elevation.jpeg"
       },
       {
         "id": "res-gruham-cuddalore",
@@ -1990,7 +1992,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Bespoke Residences",
         "location": "Cuddalore, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-03-gruham-residence-cuddalore-tam.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/CUDDALORE_RESIDENCE_OPT_N_CAM_A.jpg"
       }
     ]
   },
@@ -2045,7 +2047,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Residential",
         "subcategory": "Villas & Country Homes",
         "location": "Koluthuvanchery, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-24-art-residence-chennai.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VGN_VILLA_PLOT-43_26-12-2024.jpg"
       }
     ]
   },
@@ -2120,16 +2122,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "16,500 sq.ft",
     "year": "2020",
     "description": "A premier automotive retail destination defined by dynamic geometric facades, expansive high-clarity curtain wall glazing, and seamless indoor-outdoor customer journeys built to international brand guidelines.",
-    "image_file": "commercial/comm-01-kun-capital-kia-showroom.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg",
     "gallery": [
-      "commercial/comm-01-kun-capital-kia-showroom.jpg",
-      "commercial/comm-02-commercial-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
     ],
     "related_projects": [
       {
@@ -2139,7 +2139,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "T. Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
       },
       {
         "id": "comm-joy-alukkas-anna-nagar",
@@ -2177,16 +2177,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "24,000 sq.ft",
     "year": "2019",
     "description": "A striking modern commercial landmark in Ashok Nagar featuring rhythmically spaced solar fins, expansive glass corner bays, and high-efficiency floor plates for multi-tenanted retail and corporate offices.",
-    "image_file": "commercial/comm-02-commercial-building.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg",
     "gallery": [
-      "commercial/comm-02-commercial-building.jpg",
-      "commercial/comm-06-commercial-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-06-commercial-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
     ],
     "related_projects": [
       {
@@ -2234,16 +2232,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "18,000 sq.ft",
     "year": "2018",
     "description": "The flagship retail complex for iconic jeweller NAC in the retail capital of T. Nagar. Features an intricate brass-accented double facade, security-engineered entry atriums, and multi-tiered retail galleries.",
-    "image_file": "commercial/comm-02-nac-jewellers.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg",
     "gallery": [
-      "commercial/comm-02-nac-jewellers.jpg",
-      "commercial/comm-03-nac-jewellers.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-03-nac-jewellers.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
     ],
     "related_projects": [
       {
@@ -2253,7 +2249,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-joy-alukkas-anna-nagar",
@@ -2308,7 +2304,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-khader-nawaz-khan",
@@ -2365,7 +2361,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-nac-jewellers-t-nagar",
@@ -2374,7 +2370,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "T. Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
       },
       {
         "id": "comm-nac-stylori-anna-nagar",
@@ -2420,7 +2416,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -2477,7 +2473,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -2532,7 +2528,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -2587,7 +2583,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-nac-jewellers-t-nagar",
@@ -2596,7 +2592,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "T. Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
       },
       {
         "id": "comm-joy-alukkas-anna-nagar",
@@ -2642,7 +2638,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-nac-jewellers-t-nagar",
@@ -2651,7 +2647,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "T. Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
       },
       {
         "id": "comm-joy-alukkas-anna-nagar",
@@ -2697,7 +2693,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -2755,7 +2751,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -2834,7 +2830,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -2854,14 +2850,18 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "15,500 sq.ft",
     "year": "2017",
     "description": "State-of-the-art orchestral performance and recital hall engineered with variable reverberation acoustics, curved acoustic timber baffles, and seating for 450 attendees.",
-    "image_file": "interiors/restaurants/restaurants-04.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png",
     "gallery": [
-      "interiors/restaurants/restaurants-04.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/4cf35599-7b24-4280-aec1-ff42373b560a.png",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/6f4dcdda-857a-4cc4-a36e-95143fec68af.png"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/4cf35599-7b24-4280-aec1-ff42373b560a.png",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/6f4dcdda-857a-4cc4-a36e-95143fec68af.png"
     ],
     "related_projects": [
       {
@@ -2871,7 +2871,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Trichy, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"
       },
       {
         "id": "comm-shikshaa-school-hastinapuram",
@@ -2910,14 +2910,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "38,000 sq.ft",
     "year": "2019",
     "description": "A dedicated cancer therapy and clinical research pavilion in Kelambakkam designed for high patient comfort, clinical sterile flow, and daylight-rich chemotherapy lounges.",
-    "image_file": "interiors/healthcare/healthcare-03.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png",
     "gallery": [
-      "interiors/healthcare/healthcare-03.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
     ],
     "related_projects": [
       {
@@ -2982,7 +2982,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -3020,14 +3020,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "20,000 sq.ft",
     "year": "2018",
     "description": "An 800-seat academic and cultural auditorium building on the CARE campus in Trichy, featuring wide column-free sightlines and passive roof insulation.",
-    "image_file": "commercial/comm-04-the-southern-tools-building.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg",
     "gallery": [
-      "commercial/comm-04-the-southern-tools-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"
     ],
     "related_projects": [
       {
@@ -3037,7 +3037,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Arumbakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png"
       },
       {
         "id": "comm-shikshaa-school-hastinapuram",
@@ -3092,7 +3092,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -3147,7 +3147,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -3202,7 +3202,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-nac-jewellers-t-nagar",
@@ -3211,7 +3211,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "T. Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
       },
       {
         "id": "comm-joy-alukkas-anna-nagar",
@@ -3257,7 +3257,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Arumbakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png"
       },
       {
         "id": "comm-care-college-trichy",
@@ -3266,7 +3266,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Trichy, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"
       },
       {
         "id": "comm-vi-institute-sirukundram",
@@ -3321,7 +3321,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-ivf-hospital-archana-anna-nagar",
@@ -3368,7 +3368,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-nac-jewellers-t-nagar",
@@ -3377,7 +3377,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "T. Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
       },
       {
         "id": "comm-joy-alukkas-anna-nagar",
@@ -3423,7 +3423,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -3487,7 +3487,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -3516,14 +3516,24 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "14,000 sq.ft",
     "year": "2018",
     "description": "A tranquil sacred gathering space in Kadapa blending traditional Islamic geometric perforated screens (jaalis) with pure cubic geometric architecture and natural cooling breezes.",
-    "image_file": "commercial/comm-04-the-southern-tools-building.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Elevation 1.jpg",
     "gallery": [
-      "commercial/comm-04-the-southern-tools-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Elevation 1.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Entrance Corridor.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Interior 1.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Interior 2.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Masjid View_03.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Ablution 2.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Elevation 1.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Elevation 1.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Entrance Corridor.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Interior 1.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Interior 2.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Masjid View_03.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Ablution 2.jpg"
     ],
     "related_projects": [
       {
@@ -3533,7 +3543,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Community",
         "location": "Iyerkandigai, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-02.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/B14C9751.jpg"
       },
       {
         "id": "comm-kia-showroom-kovilambakkam",
@@ -3542,7 +3552,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-commercial-building-ashok-nagar",
@@ -3551,7 +3561,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       }
     ]
   },
@@ -3588,7 +3598,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-nac-jewellers-t-nagar",
@@ -3597,7 +3607,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "T. Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-nac-jewellers.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/NAC_T-NAGAR_WTL.jpg"
       },
       {
         "id": "comm-joy-alukkas-anna-nagar",
@@ -3626,14 +3636,24 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "8,500 sq.ft",
     "year": "2020",
     "description": "A contemplative memorial sanctuary designed for music maestro AR Rahman honoring his mother. Features serene reflecting water bodies, white sandstone pavilions, and tranquil natural landscaping.",
-    "image_file": "containers/container-02.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/B14C9751.jpg",
     "gallery": [
-      "containers/container-02.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/B14C9751.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8972.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8815.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8816.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8781.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC88155.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-02.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/B14C9751.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-02.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/B14C9751.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8972.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8815.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8816.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC8781.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/AR Rahman memorial/_DSC88155.jpg"
     ],
     "related_projects": [
       {
@@ -3643,7 +3663,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Community",
         "location": "Kadapa, Andhra Pradesh",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Masjid - Kadappa/Elevation 1.jpg"
       },
       {
         "id": "comm-kia-showroom-kovilambakkam",
@@ -3652,7 +3672,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       },
       {
         "id": "comm-commercial-building-ashok-nagar",
@@ -3661,7 +3681,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       }
     ]
   },
@@ -3719,7 +3739,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -3756,7 +3776,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -3831,7 +3851,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -3886,7 +3906,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -3941,7 +3961,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -3978,7 +3998,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Arumbakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png"
       },
       {
         "id": "comm-care-college-trichy",
@@ -3987,7 +4007,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Trichy, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"
       },
       {
         "id": "comm-shikshaa-school-hastinapuram",
@@ -4051,7 +4071,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -4071,14 +4091,16 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "7,800 sq.ft",
     "year": "2020",
     "description": "An intimate, boutique maternity and natural birthing sanctuary in Mylapore designed with home-like tranquility, sensory lighting, and water-birth suites.",
-    "image_file": "interiors/healthcare/healthcare-01.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Render healthcare/VIDHAI_CLINIC_Dr.NANDINI_01_30-04-2025.jpg",
     "gallery": [
-      "interiors/healthcare/healthcare-01.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Render healthcare/VIDHAI_CLINIC_Dr.NANDINI_01_30-04-2025.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VIDHAI_CLINIC_Dr.NANDINI_01_19-08-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-01.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Render healthcare/VIDHAI_CLINIC_Dr.NANDINI_01_30-04-2025.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-01.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Render healthcare/VIDHAI_CLINIC_Dr.NANDINI_01_30-04-2025.jpg",
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/VIDHAI_CLINIC_Dr.NANDINI_01_19-08-2024.jpg"
     ],
     "related_projects": [
       {
@@ -4097,7 +4119,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -4143,7 +4165,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Commercial Buildings",
         "location": "Ashok Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-02-commercial-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/ASHOK_PILLAR_COMMERCIAL_02.jpg"
       },
       {
         "id": "comm-southern-tools-guindy",
@@ -4216,7 +4238,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -4253,7 +4275,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Arumbakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png"
       },
       {
         "id": "comm-care-college-trichy",
@@ -4262,7 +4284,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Trichy, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"
       },
       {
         "id": "comm-shikshaa-school-hastinapuram",
@@ -4308,7 +4330,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Arumbakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/restaurants/restaurants-04.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/KM College of Music & Technology , Arumbakkam/22dac655-5357-486e-a759-043c8e88a538.png"
       },
       {
         "id": "comm-care-college-trichy",
@@ -4317,7 +4339,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Institutional & Education",
         "location": "Trichy, Tamil Nadu",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-04-the-southern-tools-building.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/CARE_AUDITORIUM_OPT_F.jpg"
       },
       {
         "id": "comm-shikshaa-school-hastinapuram",
@@ -4383,7 +4405,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Retail & Showrooms",
         "location": "Kovilambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Renders commercial/KIA_KOVILAMBAKKAM_(KUN_Capital)_02_18-09-2024.jpg"
       }
     ]
   },
@@ -4432,7 +4454,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -4493,7 +4515,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Container Architecture",
         "subcategory": "Container Hospitality",
         "location": "East Coast Road (ECR), Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-06.jpg"
+        "featured_image_url": "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg"
       },
       {
         "id": "cont-container-yard-vijayan-perungudi",
@@ -4502,7 +4524,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Container Architecture",
         "subcategory": "Container Yards & Logistics",
         "location": "Perungudi, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-04.jpg"
+        "featured_image_url": "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png"
       }
     ]
   },
@@ -4522,16 +4544,24 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "8,500 sq.ft (16 Keys)",
     "year": "2020",
     "description": "Rapid-assembly eco-luxury resort guest suites fabricated from repurposed marine shipping containers along the ECR coast, featuring private open-air sun decks, high-grade acoustic membranes, and plunge pools.",
-    "image_file": "containers/container-06.jpg",
+    "image_file": "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg",
     "gallery": [
-      "containers/container-06.jpg",
-      "containers/container-07.jpg"
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1727.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1729.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1870.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1895.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/s.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-06.jpg",
+    "featured_image_url": "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-06.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-07.jpg"
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1727.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1729.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1870.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1895.JPG",
+      "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/s.jpg"
     ],
     "related_projects": [
       {
@@ -4559,7 +4589,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Container Architecture",
         "subcategory": "Container Yards & Logistics",
         "location": "Perungudi, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-04.jpg"
+        "featured_image_url": "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png"
       }
     ]
   },
@@ -4607,7 +4637,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Container Architecture",
         "subcategory": "Container Hospitality",
         "location": "East Coast Road (ECR), Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-06.jpg"
+        "featured_image_url": "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg"
       },
       {
         "id": "cont-container-yard-vijayan-perungudi",
@@ -4616,7 +4646,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Container Architecture",
         "subcategory": "Container Yards & Logistics",
         "location": "Perungudi, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-04.jpg"
+        "featured_image_url": "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png"
       }
     ]
   },
@@ -4637,16 +4667,18 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "40,000 sq.ft",
     "year": "2018",
     "description": "A comprehensive container logistics terminal and modular double-stacked container office headquarters in Perungudi, featuring robust cantilevered gangways and climate-controlled dispatch offices.",
-    "image_file": "containers/container-04.jpg",
+    "image_file": "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png",
     "gallery": [
-      "containers/container-04.jpg",
-      "containers/container-05.jpg"
+      "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png",
+      "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/d6f57bf7-efb4-416d-8887-79022ab57aa3.png",
+      "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/e5549885-def5-48df-8559-5fe4846aace6.png"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-04.jpg",
+    "featured_image_url": "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-04.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-05.jpg"
+      "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/c4c6bdd5-354d-4259-acba-bd35e4a8ca2c.png",
+      "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/d6f57bf7-efb4-416d-8887-79022ab57aa3.png",
+      "assets/images/nextgen/CONTAINER/Kerry Indev Container Ext/e5549885-def5-48df-8559-5fe4846aace6.png"
     ],
     "related_projects": [
       {
@@ -4665,7 +4697,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Container Architecture",
         "subcategory": "Container Hospitality",
         "location": "East Coast Road (ECR), Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-06.jpg"
+        "featured_image_url": "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg"
       },
       {
         "id": "cont-naam-studio-t-nagar",
@@ -4720,7 +4752,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Container Architecture",
         "subcategory": "Container Hospitality",
         "location": "East Coast Road (ECR), Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-06.jpg"
+        "featured_image_url": "assets/images/nextgen/CONTAINER/Container Interior/YM Interior/_MG_1712E.jpg"
       },
       {
         "id": "cont-naam-studio-t-nagar",
@@ -4777,7 +4809,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Corporate Offices",
         "location": "Teynampet, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+        "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png"
       },
       {
         "id": "int-ve-cure-ambattur",
@@ -4834,7 +4866,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Corporate Offices",
         "location": "Teynampet, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+        "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png"
       },
       {
         "id": "int-ve-cure-ambattur",
@@ -4863,14 +4895,20 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "12,000 sq.ft",
     "year": "2020",
     "description": "A refined corporate consulting environment in Teynampet highlighted by smoked oak paneling, fluted glass partitions, and executive lounge hospitality.",
-    "image_file": "interiors/corporate_office/corporate_office-03.jpg",
+    "image_file": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png",
     "gallery": [
-      "interiors/corporate_office/corporate_office-03.jpg"
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png",
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7953e942-7c9c-4419-8447-fd55657d465b.png",
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/add5ab0b-6544-4fa0-b586-7e22fdd53e1b.png",
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/cf4d74d3-5164-429c-ad25-86791a643ad1.png"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg",
+    "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png",
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7953e942-7c9c-4419-8447-fd55657d465b.png",
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/add5ab0b-6544-4fa0-b586-7e22fdd53e1b.png",
+      "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/cf4d74d3-5164-429c-ad25-86791a643ad1.png"
     ],
     "related_projects": [
       {
@@ -4953,7 +4991,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Corporate Offices",
         "location": "Teynampet, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+        "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png"
       }
     ]
   },
@@ -4973,16 +5011,28 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "14,000 sq.ft",
     "year": "2021",
     "description": "Clean, minimalist workplace for artificial intelligence and data engineering teams featuring ambient perimeter lighting and open collaboration benches.",
-    "image_file": "interiors/corporate_office/corporate_office-05.jpg",
+    "image_file": "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3316.JPG",
     "gallery": [
-      "interiors/corporate_office/corporate_office-05.jpg",
-      "interiors/corporate_office/corporate_office-06.png"
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3316.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3310.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3322.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3356.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/c7ecdb89-e955-44f6-b2a4-89b81b30a294.png",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/e769c39f-fc83-48ef-8f42-2e7e4f2f42ee.png",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/0c69038a-fb90-4019-bc4b-32eeef70f807.png",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/241042ee-e9e5-4ae5-b16c-552f416b1d5b.png"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-05.jpg",
+    "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3316.JPG",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-05.jpg",
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-06.png"
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3316.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3310.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3322.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/DSC_3356.JPG",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/c7ecdb89-e955-44f6-b2a4-89b81b30a294.png",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/e769c39f-fc83-48ef-8f42-2e7e4f2f42ee.png",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/0c69038a-fb90-4019-bc4b-32eeef70f807.png",
+      "assets/images/nextgen/INTERIORS/Commercial/AI Office Interiors/241042ee-e9e5-4ae5-b16c-552f416b1d5b.png"
     ],
     "related_projects": [
       {
@@ -5010,7 +5060,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Corporate Offices",
         "location": "Teynampet, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+        "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png"
       }
     ]
   },
@@ -5401,7 +5451,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Corporate Offices",
         "location": "Teynampet, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+        "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png"
       }
     ]
   },
@@ -5450,7 +5500,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5505,7 +5555,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5560,7 +5610,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5615,7 +5665,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5670,7 +5720,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5725,7 +5775,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5780,7 +5830,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5836,7 +5886,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5892,7 +5942,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -5947,7 +5997,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -6002,7 +6052,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -6057,7 +6107,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Commercial",
         "subcategory": "Healthcare & Clinics",
         "location": "Kelambakkam, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-03.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/HEALTHCARE/Chettinad Hosp Ext/123b3837-c6a1-4641-a72f-5b1c617689b4.png"
       },
       {
         "id": "comm-kb-dental-anna-nagar",
@@ -6636,14 +6686,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "3,800 sq.ft",
     "year": "2020",
     "description": "Sophisticated urban apartment interior in Anna Nagar highlighted by customized fluted paneling, warm concealed cove lighting, and open gourmet show kitchen.",
-    "image_file": "interiors/corporate_office/corporate_office-01.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg",
     "gallery": [
-      "interiors/corporate_office/corporate_office-01.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
     ],
     "related_projects": [
       {
@@ -6708,7 +6758,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ravi-prasad-shenoy-nagar",
@@ -6819,7 +6869,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -6874,7 +6924,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -6930,7 +6980,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -6969,14 +7019,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "7,800 sq.ft",
     "year": "2018",
     "description": "Casual coastal luxury defined by bleached oak cabinetry, textured lime plaster walls, marine-grade bronze fittings, and panoramic terrace lounges.",
-    "image_file": "residential/res-04-classical-residence-ecr-chenna.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg",
     "gallery": [
-      "residential/res-04-classical-residence-ecr-chenna.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-04-classical-residence-ecr-chenna.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/Dr.P.Ganesan-Residence- ECR_CAM_B_MARBLE_23-10-2024.jpg"
     ],
     "related_projects": [
       {
@@ -6986,7 +7036,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -7041,7 +7091,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -7114,7 +7164,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Corporate Offices",
         "location": "Teynampet, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+        "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png"
       }
     ]
   },
@@ -7151,7 +7201,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -7206,7 +7256,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -7354,14 +7404,24 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "3,200 sq.ft",
     "year": "2018",
     "description": "An energetic, cheerful ethnic apparel store featuring open modular garment racks, illuminated fabric showcase niches, and fluid customer circulation.",
-    "image_file": "interiors/boutiques/boutiques-03.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Just salwars Ext/PV_00438.jpg",
     "gallery": [
-      "interiors/boutiques/boutiques-03.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Just salwars Ext/PV_00438.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00430.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00481.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00521.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00565.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00577.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-03.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Just salwars Ext/PV_00438.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/boutiques/boutiques-03.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/COMMERCIAL/Just salwars Ext/PV_00438.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00430.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00481.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00521.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00565.jpg",
+      "assets/images/nextgen/INTERIORS/Commercial/Just salwars Int/PV_00577.jpg"
     ],
     "related_projects": [
       {
@@ -7499,7 +7559,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Corporate Offices",
         "location": "Teynampet, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-03.jpg"
+        "featured_image_url": "assets/images/nextgen/INTERIORS/Commercial/FINTRIX and AI Office Interiors/7788632a-536e-41ec-b7e0-4763500e2576.png"
       }
     ]
   },
@@ -7579,14 +7639,14 @@ window.BLUECUBE_PORTFOLIO = [
     "area": "6,100 sq.ft",
     "year": "2019",
     "description": "Cooling limestone flooring, open-grain teakwood joinery, and shaded indoor greenery creating a soothing oasis in Kadapa's high-temperature climate.",
-    "image_file": "residential/res-08-contemporary-residence-nellore.jpg",
+    "image_file": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg",
     "gallery": [
-      "residential/res-08-contemporary-residence-nellore.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg"
     ],
     "image_status": "matched",
-    "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-08-contemporary-residence-nellore.jpg",
+    "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg",
     "gallery_urls": [
-      "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-08-contemporary-residence-nellore.jpg"
+      "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/KADAPA_RESIDENCE_INT_LIVINGROOM_25-11-2024.jpg"
     ],
     "related_projects": [
       {
@@ -7596,7 +7656,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -7652,7 +7712,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -7708,7 +7768,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
@@ -7763,7 +7823,7 @@ window.BLUECUBE_PORTFOLIO = [
         "category": "Interiors",
         "subcategory": "Residential Interiors",
         "location": "Anna Nagar, Chennai",
-        "featured_image_url": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/corporate_office/corporate_office-01.jpg"
+        "featured_image_url": "assets/images/nextgen/ARCHITECTURAL/RESIDENCE/Residence Renders/ARAVIND_RESIDENCE_Annanagar_23-11-2024.jpg"
       },
       {
         "id": "int-ceebros-143-santhome",
