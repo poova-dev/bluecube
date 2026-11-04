@@ -277,25 +277,9 @@ Client IP: ${clientIp}
 async function persistEnquiryToFirestore(env, { name, email, phone, type, message, clientIp, timestamp }) {
   const serviceAccountJson = env?.FIREBASE_SERVICE_ACCOUNT_JSON;
   const projectId = env?.FIREBASE_PROJECT_ID || 'bluecube-49ae8';
+  const apiKey = env?.FIREBASE_API_KEY;
 
-  if (!serviceAccountJson) return; // silently skip if not configured
-
-  let serviceAccount;
-  try {
-    serviceAccount = JSON.parse(serviceAccountJson);
-  } catch {
-    console.error('[contact] FIREBASE_SERVICE_ACCOUNT_JSON is not valid JSON');
-    return;
-  }
-
-  // Mint service account JWT
-  let accessToken;
-  try {
-    accessToken = await getServiceAccountAccessToken(serviceAccount);
-  } catch (err) {
-    console.error('[contact] Failed to get Firebase access token:', err);
-    return;
-  }
+  if (!serviceAccountJson && !apiKey) return;
 
   // Firestore REST document structure
   const doc = {
@@ -306,21 +290,36 @@ async function persistEnquiryToFirestore(env, { name, email, phone, type, messag
       type:        { stringValue: type },
       message:     { stringValue: message || '' },
       status:      { stringValue: 'new' },
-      clientIp:    { stringValue: clientIp },
+      clientIp:    { stringValue: clientIp || '' },
       submittedAt: { timestampValue: new Date(timestamp).toISOString() },
     }
   };
 
-  const firestoreUrl =
+  let firestoreUrl =
     `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/inquiries`;
+  const headers = { 'Content-Type': 'application/json' };
+
+  if (serviceAccountJson) {
+    try {
+      const serviceAccount = JSON.parse(serviceAccountJson);
+      const accessToken = await getServiceAccountAccessToken(serviceAccount);
+      headers['Authorization'] = `Bearer ${accessToken}`;
+    } catch (err) {
+      console.error('[contact] Failed to get Firebase access token from service account:', err);
+      if (apiKey) {
+        firestoreUrl += `?key=${apiKey}`;
+      } else {
+        return;
+      }
+    }
+  } else if (apiKey) {
+    firestoreUrl += `?key=${apiKey}`;
+  }
 
   try {
     const res = await fetch(firestoreUrl, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${accessToken}`,
-      },
+      headers,
       body: JSON.stringify(doc),
     });
 

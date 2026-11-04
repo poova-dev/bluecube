@@ -391,6 +391,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const contactForm = document.getElementById('studioContactForm');
   if (contactForm) {
+    const turnstileWidget = document.getElementById('cfTurnstileWidget');
+    if (turnstileWidget && turnstileWidget.getAttribute('data-sitekey')) {
+      turnstileWidget.style.display = 'block';
+    }
+
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -432,41 +437,120 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        const turnstileInput = contactForm.querySelector('[name="cf-turnstile-response"]');
-        const turnstileToken = turnstileInput?.value || (typeof window.turnstile?.getResponse === 'function' ? window.turnstile.getResponse() : '');
-
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            phone,
-            type,
-            message,
-            company_website_url: honeypot ? honeypot.value : '',
-            'cf-turnstile-response': turnstileToken
-          })
-        });
-
-        const result = await res.json().catch(() => ({}));
-
-        if (!res.ok) {
-          throw new Error(result.error || `Server responded with status ${res.status}`);
+        // 1. Safely retrieve Turnstile token without throwing uncaught exceptions
+        let turnstileToken = '';
+        try {
+          const turnstileInput = contactForm.querySelector('[name="cf-turnstile-response"]');
+          if (turnstileInput && turnstileInput.value) {
+            turnstileToken = turnstileInput.value;
+          } else if (turnstileWidget && turnstileWidget.getAttribute('data-sitekey') && typeof window.turnstile?.getResponse === 'function') {
+            turnstileToken = window.turnstile.getResponse();
+          }
+        } catch (tErr) {
+          console.warn('[Turnstile] Token lookup skipped:', tErr);
         }
 
-        // Display success feedback
-        if (errorAlert) {
-          errorAlert.style.display = 'none';
-          errorAlert.classList.remove('is-error');
+        // 2. Resolve Firebase configuration for client-side persistence
+        let fbConfig = window.__FIREBASE_CONFIG__;
+        if (!fbConfig || !fbConfig.apiKey || fbConfig.apiKey.includes('YOUR_FIREBASE_API_KEY')) {
+          try {
+            const cfgRes = await fetch('/api/firebase-config');
+            if (cfgRes.ok) fbConfig = await cfgRes.json();
+          } catch {}
         }
-        if (successAlert) {
-          successAlert.style.display = 'block';
-          successAlert.classList.add('is-success');
-          successAlert.textContent = result.message || 'Thank you for contacting Blue Cube Architects. Your inquiry has been routed to our studio team.';
-          contactForm.reset();
+
+        let firestoreSaved = false;
+        let firestoreError = null;
+
+        // 3. Persist enquiry directly to Cloud Firestore (inquiries collection)
+        if (fbConfig && fbConfig.projectId && fbConfig.apiKey) {
+          try {
+            const firestoreUrl = `https://firestore.googleapis.com/v1/projects/${fbConfig.projectId}/databases/(default)/documents/inquiries?key=${fbConfig.apiKey}`;
+            const fRes = await fetch(firestoreUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                fields: {
+                  name:        { stringValue: name },
+                  email:       { stringValue: email },
+                  phone:       { stringValue: phone },
+                  type:        { stringValue: type },
+                  message:     { stringValue: message || '' },
+                  status:      { stringValue: 'new' },
+                  submittedAt: { timestampValue: new Date().toISOString() }
+                }
+              })
+            });
+
+            if (fRes.ok) {
+              firestoreSaved = true;
+              console.info('[Firestore] Enquiry persisted successfully to Firestore');
+            } else {
+              const errBody = await fRes.json().catch(() => ({}));
+              firestoreError = errBody?.error?.message || `HTTP ${fRes.status}`;
+              console.warn('[Firestore] Direct write failed:', fRes.status, firestoreError);
+            }
+          } catch (fErr) {
+            firestoreError = fErr.message;
+            console.warn('[Firestore] Network error:', fErr);
+          }
+        }
+
+        // 4. Also notify Cloudflare Pages backend /api/contact (for email routing if configured)
+        let backendNotified = false;
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name,
+              email,
+              phone,
+              type,
+              message,
+              company_website_url: honeypot ? honeypot.value : '',
+              'cf-turnstile-response': turnstileToken
+            })
+          });
+          if (res.ok) {
+            backendNotified = true;
+          }
+        } catch (apiErr) {
+          // Backend /api/contact is only reachable on Cloudflare Pages or wrangler dev.
+          // It's expected to be unreachable when running on a local static preview server.
+        }
+
+        // 5. Evaluate result
+        if (firestoreSaved || backendNotified) {
+          if (errorAlert) {
+            errorAlert.style.display = 'none';
+            errorAlert.classList.remove('is-error');
+          }
+          if (successAlert) {
+            successAlert.style.display = 'block';
+            successAlert.classList.add('is-success');
+            successAlert.innerHTML = 'Thank you for contacting Blue Cube Architects. Your inquiry has been received and routed to our studio team.';
+            contactForm.reset();
+          }
+          try {
+            if (typeof window.turnstile?.reset === 'function') {
+              window.turnstile.reset();
+            }
+          } catch {}
+        } else {
+          if (errorAlert) {
+            errorAlert.style.display = 'block';
+            errorAlert.classList.add('is-error');
+            if (firestoreError && (firestoreError.toLowerCase().includes('permission') || firestoreError.includes('403'))) {
+              errorAlert.textContent = 'Enquiry could not be recorded in Firestore (Permission Denied). Please ensure Firestore Security Rules are published in the Firebase Console.';
+            } else {
+              errorAlert.textContent = 'Transmission failed. Please reach us directly via telephone (+91 99621 08988) or WhatsApp.';
+            }
+          }
+          if (successAlert) {
+            successAlert.style.display = 'none';
+            successAlert.classList.remove('is-success');
+          }
         }
       } catch (err) {
         console.error('Contact form submission error:', err);

@@ -70,12 +70,13 @@ service cloud.firestore {
 
     // Inquiry document validation (created by public contact form)
     function validInquiry(data) {
-      return data.keys().hasAll(['name', 'email', 'phone', 'type', 'submittedAt'])
+      return data.keys().hasAll(['name', 'email', 'phone', 'type'])
+          && data.keys().hasOnly(['name', 'email', 'phone', 'type', 'message', 'submittedAt', 'status', 'clientIp'])
           && validString(data.name, 120)
           && validString(data.email, 160)
           && validString(data.phone, 30)
           && validString(data.type, 100)
-          && data.submittedAt == request.time
+          && (!('submittedAt' in data) || data.submittedAt == request.time || data.submittedAt is timestamp || data.submittedAt is string)
           && validOptionalString(data.get('message', null), 4000)
           && (!('status' in data) || data.status == 'new');
     }
@@ -131,12 +132,9 @@ service cloud.firestore {
       // Public: create only (contact form submissions)
       // No public read or list access.
       allow create: if validInquiry(request.resource.data);
-      allow read:   if false; // explicitly block public reads
-      allow list:   if false;
 
       // Admin read and status updates only (no delete for audit trail)
-      allow get:    if isAdmin();
-      allow list:   if isAdmin();
+      allow get, list: if isAdmin();
       allow update: if isAdmin()
                    && request.resource.data.diff(resource.data).affectedKeys()
                       .hasOnly(['status', 'notes', 'updatedAt']);

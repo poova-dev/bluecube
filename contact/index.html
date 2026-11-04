@@ -27,6 +27,8 @@
     }
   }
   </script>
+  <!-- Firebase Client Config (Local ignored file or API fallback) -->
+  <script src="../admin/firebase-config.js"></script>
   <!-- Cloudflare Turnstile Verification API -->
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
@@ -201,8 +203,8 @@
               <textarea id="clientMessage" name="message" class="textarea-editorial" rows="4" placeholder="Location, estimated area, requirements..."></textarea>
             </div>
 
-            <!-- Cloudflare Turnstile Verification Widget -->
-            <div id="cfTurnstileWidget" class="cf-turnstile" data-sitekey="" style="margin: 16px 0;"></div>
+            <!-- Cloudflare Turnstile Verification Widget (active only when data-sitekey is configured) -->
+            <div id="cfTurnstileWidget" class="cf-turnstile" data-sitekey="" style="margin: 16px 0; display: none;"></div>
 
             <button type="submit" class="btn-editorial" style="width: 100%; margin-top: 8px;">
               <span>Transmit Enquiry to Studio &rarr;</span>
