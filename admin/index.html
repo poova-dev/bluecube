@@ -563,8 +563,13 @@
           <div class="card-body">
             <p class="text-muted text-sm" style="margin-bottom:12px">
               Triggering a publish rebuilds all static project pages from Firestore data via a Cloudflare Pages deploy hook.
-              Publish is rate-limited to once per 60 seconds.
+              On production Cloudflare deployments, this runs via <code>/api/publish</code>.
             </p>
+            <div class="form-field" style="margin-bottom:14px">
+              <label class="field-label" for="manual-deploy-hook-input">Deploy Hook URL (Optional for local testing)</label>
+              <input class="field-input" type="url" id="manual-deploy-hook-input" placeholder="https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/...">
+              <span class="field-hint">If provided, local dev servers (e.g. port 5501) can trigger your Cloudflare Deploy Hook directly.</span>
+            </div>
             <button class="btn-publish" id="settings-publish-btn">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
               Trigger Publish Now
@@ -813,20 +818,65 @@
   });
 
   // ── Publish ───────────────────────────────────────────────────────────────
+  const hookInput = document.getElementById('manual-deploy-hook-input');
+  if (hookInput) {
+    hookInput.value = localStorage.getItem('bluecube_deploy_hook_url') || '';
+    hookInput.addEventListener('change', () => {
+      localStorage.setItem('bluecube_deploy_hook_url', hookInput.value.trim());
+    });
+  }
+
   async function triggerPublish() {
     const btn = document.getElementById('publish-btn');
     btn.disabled = true;
     btn.innerHTML = `<span class="spinner"></span> Publishing…`;
+
+    const directHookUrl = (hookInput ? hookInput.value.trim() : '') || localStorage.getItem('bluecube_deploy_hook_url');
+
     try {
+      // 1. If running on local static server (e.g. Live Server on port 5500/5501) and a direct hook is configured:
+      const isLocalStatic = window.location.port === '5501' || window.location.port === '5500' || window.location.port === '8080';
+      if (isLocalStatic && directHookUrl) {
+        const hookRes = await fetch(directHookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ reason: 'Admin panel direct publish' })
+        });
+        if (hookRes.ok) {
+          toast('Deploy hook triggered successfully! Rebuild started.', 'success');
+          return;
+        }
+      }
+
+      // 2. Call backend /api/publish endpoint
       const freshToken = await currentUser.getIdToken();
       const res = await fetch('/api/publish', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${freshToken}` },
         body: JSON.stringify({ reason: 'Admin panel publish' }),
       });
-      const data = await res.json();
+
+      const rawText = await res.text();
+      let data = {};
+      try {
+        data = rawText ? JSON.parse(rawText) : {};
+      } catch (jsonErr) {
+        if (res.status === 404 || !rawText) {
+          throw new Error('Endpoint /api/publish is not available on this static dev server. To test publish locally, enter your Cloudflare Deploy Hook URL in the Settings tab, or run via `npm run dev` (Wrangler).');
+        }
+        throw new Error(`Server returned non-JSON response (${res.status}): ${rawText.slice(0, 100)}`);
+      }
+
+      if (!res.ok) {
+        throw new Error(data.error || `HTTP ${res.status}`);
+      }
+
       if (data.success) {
-        toast('Publish triggered. Changes go live in ~60s.', 'success');
+        if (data.warning) {
+          toast(data.warning, 'warning');
+        } else {
+          toast('Publish triggered! Cloudflare rebuild started. Changes will be live in ~60s.', 'success');
+        }
       } else {
         toast(data.error || 'Publish failed', 'error');
       }

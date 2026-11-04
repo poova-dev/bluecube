@@ -28,8 +28,25 @@ import { verifyFirebaseToken } from './_firebase-verify.js';
 export async function onRequestPost(context) {
   const { request, env } = context;
 
+  const origin = request.headers.get('Origin') || '';
+  const allowedOrigins = [
+    'https://www.bluecube.co.in',
+    'https://bluecube.co.in',
+    'http://localhost:8788',
+    'http://127.0.0.1:8788',
+    'http://localhost:5500',
+    'http://127.0.0.1:5500',
+    'http://localhost:5501',
+    'http://127.0.0.1:5501',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
+  ];
+  const isAllowed = allowedOrigins.includes(origin) || origin.endsWith('.pages.dev');
+  const corsOrigin = isAllowed ? origin : allowedOrigins[0];
   const corsHeaders = {
-    'Access-Control-Allow-Origin': 'https://www.bluecube.co.in',
+    'Access-Control-Allow-Origin': corsOrigin,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Bootstrap-Secret',
     'Vary': 'Origin',
   };
 
@@ -145,13 +162,15 @@ export async function onRequestPost(context) {
   });
 }
 
-export async function onRequestOptions() {
+export async function onRequestOptions(context) {
+  const origin = context?.request?.headers?.get('Origin') || '*';
   return new Response(null, {
     status: 204,
     headers: {
-      'Access-Control-Allow-Origin': 'https://www.bluecube.co.in',
+      'Access-Control-Allow-Origin': origin,
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Bootstrap-Secret',
+      'Vary': 'Origin',
     },
   });
 }
