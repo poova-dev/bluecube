@@ -256,7 +256,6 @@ def render_project_card(p, prefix="./"):
     
     return f"""        <article class="portfolio-card" data-category="{p['category'].lower()}" data-subcat="{subcat.lower()}">
           <a href="{prefix}projects/{slug}/" class="portfolio-card-media" aria-label="View dossier for {title}">
-            <span class="portfolio-card-badge">{subcat}</span>
             <img src="{img_url}" alt="{title} &bull; {loc}" class="portfolio-card-img" loading="lazy" width="600" height="375">
           </a>
           <div class="portfolio-card-info">

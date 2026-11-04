@@ -2756,19 +2756,30 @@ textarea:focus-visible {
 }
 
 .portfolio-card-badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 10px;
-  font-family: var(--font-tech);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background: rgba(47, 34, 24, 0.85);
-  backdrop-filter: blur(8px);
-  border-radius: 3px;
-  z-index: 2;
+  display: none !important;
+}
+
+/* ==========================================================================
+   LENIS SMOOTH SCROLLING STYLES
+   ========================================================================== */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 .portfolio-card-info {
