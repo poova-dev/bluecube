@@ -1257,6 +1257,7 @@ textarea:focus-visible {
   overflow: hidden;
   user-select: none;
   width: 100%;
+  gap: 20px;
 }
 
 .marquee-track {
@@ -1264,16 +1265,15 @@ textarea:focus-visible {
   flex-shrink: 0;
   gap: 20px;
   align-items: center;
-  min-width: 100%;
   will-change: transform;
 }
 
 .marquee-track-left {
-  animation: marquee-scroll-left 28s linear infinite;
+  animation: marquee-scroll-left 35s linear infinite;
 }
 
 .marquee-track-right {
-  animation: marquee-scroll-right 28s linear infinite;
+  animation: marquee-scroll-right 35s linear infinite;
 }
 
 .marquee-row:hover .marquee-track {
@@ -1281,13 +1281,21 @@ textarea:focus-visible {
 }
 
 @keyframes marquee-scroll-left {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-100% - 20px), 0, 0);
+  }
 }
 
 @keyframes marquee-scroll-right {
-  0% { transform: translate3d(-50%, 0, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+  0% {
+    transform: translate3d(calc(-100% - 20px), 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
