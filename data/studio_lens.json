@@ -1,0 +1,50 @@
+[
+  {
+    "id": "lens-1",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-01-bespoke-villa.jpg",
+    "tag": "Residential Architecture",
+    "title": "Bespoke Residence",
+    "meta": "Chennai, India • 2026",
+    "alt": "Bespoke Residence, Chennai by Blue Cube Architects"
+  },
+  {
+    "id": "lens-2",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-02-clinic-lounge.jpg",
+    "tag": "Healthcare Interior",
+    "title": "Ayla Luxe Dermatology",
+    "meta": "Clinical Suite • Chennai",
+    "alt": "Ayla Luxe Dermatology Clinic by Blue Cube Architects"
+  },
+  {
+    "id": "lens-3",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-03-landscape-atrium.jpg",
+    "tag": "Landscape Architecture",
+    "title": "Floating Courtyard",
+    "meta": "Anna Nagar • Biophilic Design",
+    "alt": "Floating Courtyard Residence by Blue Cube Architects"
+  },
+  {
+    "id": "lens-4",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-04-modular-container.jpg",
+    "tag": "Container Architecture",
+    "title": "Modular Innovation Hub",
+    "meta": "Rapid Steel Habitation",
+    "alt": "Modular Container Architecture by Blue Cube Architects"
+  },
+  {
+    "id": "lens-5",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-05-luxury-suite.jpg",
+    "tag": "Commercial Interior",
+    "title": "Executive Suite",
+    "meta": "Casagrand Collaboration",
+    "alt": "Executive Office Suite by Blue Cube Architects"
+  },
+  {
+    "id": "lens-6",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/instagram/curated/curated-09-structural-cantilever.jpg",
+    "tag": "Structural Engineering",
+    "title": "Cantilever Pavilion",
+    "meta": "ECR Coastal Villa",
+    "alt": "Structural Cantilevered Pavilion by Blue Cube Architects"
+  }
+]

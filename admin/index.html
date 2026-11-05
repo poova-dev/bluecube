@@ -319,9 +319,23 @@
                   </button>
                   <button class="btn-secondary" id="hero-remove-btn" style="display:none">Remove</button>
                 </div>
-                <div class="form-field" style="margin-top:14px">
-                  <label class="field-label" for="f-hero-alt">Hero Image Alt Text</label>
-                  <input class="field-input" type="text" id="f-hero-alt" placeholder="Floating Tree Residence exterior elevation" maxlength="300">
+                <div class="form-grid two" style="margin-top:14px">
+                  <div class="form-field">
+                    <label class="field-label" for="f-hero-alt">Hero Image Alt Text</label>
+                    <input class="field-input" type="text" id="f-hero-alt" placeholder="Floating Tree Residence exterior elevation" maxlength="300">
+                  </div>
+                  <div class="form-field">
+                    <label class="field-label" for="f-hero-layout">Hero Section Layout</label>
+                    <select class="field-select" id="f-hero-layout">
+                      <option value="full-fit">Full-Fit Hero Image (100% Width)</option>
+                      <option value="two-up">Two-Up Columns (Hero 2 Columns Width)</option>
+                      <option value="editorial-ratio">Editorial 1:3 Ratio (Content 1:3)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-field" style="display:flex; align-items:center; gap:10px; margin-top:8px">
+                  <input type="checkbox" id="f-featured-hero" style="width:16px; height:16px; accent-color:var(--cube-blue);">
+                  <label class="field-label" for="f-featured-hero" style="margin-bottom:0; cursor:pointer;">Prominently feature this project hero on Front Page</label>
                 </div>
               </div>
             </div>
@@ -450,21 +464,26 @@
         <div class="card" style="margin-bottom:20px">
           <div class="card-header">
             <span class="card-title">Site Content Editor</span>
-            <button class="btn-primary" id="content-save-btn">Save Changes</button>
+            <div style="display:flex; gap:10px;">
+              <button class="btn-primary" id="content-save-btn">Save Changes</button>
+            </div>
           </div>
           <div class="card-body">
             <div class="form-field" style="margin-bottom:16px">
-              <label class="field-label" for="content-page-select">Select page / section</label>
-              <select class="field-select" id="content-page-select" style="max-width:280px">
-                <option value="homepage">Homepage</option>
-                <option value="about">About Page</option>
+              <label class="field-label" for="content-page-select">Select Section / Manager</label>
+              <select class="field-select" id="content-page-select" style="max-width:360px">
+                <option value="carousel">★ Homepage Hero Carousel (4 Slides)</option>
+                <option value="studio-lens">★ Studio Lens & Commissions (6 Cards)</option>
+                <option value="clientele">★ Clientele & Private Patrons (Photos & Roster)</option>
+                <option value="homepage">Homepage Text & Stats</option>
+                <option value="about">About Studio</option>
                 <option value="services">Services</option>
                 <option value="contact">Contact Details</option>
                 <option value="footer">Footer</option>
               </select>
             </div>
             <div id="content-editor-fields">
-              <div class="text-muted text-sm">Select a page above to edit its content.</div>
+              <div class="text-muted text-sm">Select a section above to edit its content.</div>
             </div>
           </div>
         </div>
@@ -1088,6 +1107,9 @@
     // Hero image
     setHeroImage(project.heroImage || null);
     setValue('f-hero-alt', project.heroImage?.alt || '');
+    setSelect('f-hero-layout', project.heroLayout || 'full-fit');
+    const featHeroEl = document.getElementById('f-featured-hero');
+    if (featHeroEl) featHeroEl.checked = !!project.featuredHero;
 
     // Gallery
     renderGallery();
@@ -1169,6 +1191,8 @@
       client:         document.getElementById('f-client').value.trim(),
       description:    document.getElementById('f-description').value.trim(),
       heroImage,
+      heroLayout:     document.getElementById('f-hero-layout')?.value || 'full-fit',
+      featuredHero:   !!document.getElementById('f-featured-hero')?.checked,
       gallery:        galleryItems,
       galleryLayout:  document.getElementById('f-gallery-layout').value,
       relatedProjectIds: relatedIds,
@@ -1505,7 +1529,7 @@
     }
   });
 
-  // ── SITE CONTENT ───────────────────────────────────────────────────────────
+  // ── SITE CONTENT (CAROUSEL, STUDIO LENS, CLIENTELE, GENERAL) ─────────────
   const contentPageFields = {
     homepage: [
       { id: 'hero_heading',       label: 'Hero Heading',           type: 'text' },
@@ -1545,12 +1569,194 @@
   let currentContentData = {};
   document.getElementById('content-page-select').addEventListener('change', loadSiteContent);
 
+  // Global helper for Cloudinary uploads inside Site Content
+  window.triggerCloudinaryForInput = function(inputId, previewImgId) {
+    openCloudinaryWidget({ maxFiles: 1 }, results => {
+      if (results && results[0]) {
+        const url = results[0].secureUrl;
+        const inp = document.getElementById(inputId);
+        const img = document.getElementById(previewImgId);
+        if (inp) inp.value = url;
+        if (img) { img.src = url; img.style.display = 'block'; }
+        toast('Image uploaded successfully.', 'success');
+      }
+    });
+  };
+
   async function loadSiteContent() {
-    const page  = document.getElementById('content-page-select').value;
-    const fields = contentPageFields[page] || [];
+    const page      = document.getElementById('content-page-select').value;
     const container = document.getElementById('content-editor-fields');
+    container.innerHTML = '<div class="text-muted text-sm"><span class="spinner"></span> Loading content…</div>';
 
     try {
+      // 1. CAROUSEL EDITOR
+      if (page === 'carousel') {
+        let slides = [];
+        const snap = await getDoc(doc(db, 'siteContent', 'carousel'));
+        if (snap.exists() && snap.data().slides) {
+          slides = snap.data().slides;
+        } else {
+          try {
+            const res = await fetch('/data/homepage_carousel.json');
+            if (res.ok) slides = await res.json();
+          } catch {}
+        }
+
+        while (slides.length < 4) {
+          slides.push({ image: '', title: '', eyebrow: '', location: '', url: '' });
+        }
+
+        container.innerHTML = `
+          <div style="margin-bottom:16px;">
+            <p class="text-muted text-sm" style="margin:0;">
+              Manage the 4 primary slides in the Homepage Hero Carousel (Cursor). You can upload new images or paste direct URLs.
+            </p>
+          </div>
+          <div class="carousel-editor-grid">
+            ${slides.map((s, idx) => `
+              <div class="slide-edit-card" data-slide-index="${idx}">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="font-size:13px; letter-spacing:0.06em; text-transform:uppercase;">Slide ${idx + 1}</strong>
+                </div>
+                <div class="slide-preview-frame">
+                  <img id="carousel-prev-${idx}" src="${s.image || ''}" alt="Slide ${idx + 1}" onerror="this.style.opacity='0.2'">
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Image URL / Upload</label>
+                  <div style="display:flex; gap:8px;">
+                    <input class="field-input slide-img-input" type="text" id="carousel-url-${idx}" value="${escHtml(s.image || '')}" placeholder="https://..." oninput="document.getElementById('carousel-prev-${idx}').src = this.value; document.getElementById('carousel-prev-${idx}').style.opacity='1';">
+                    <button type="button" class="btn-secondary" onclick="triggerCloudinaryForInput('carousel-url-${idx}', 'carousel-prev-${idx}')" title="Upload via Cloudinary">Upload</button>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Eyebrow / Category Tag</label>
+                  <input class="field-input slide-eyebrow-input" type="text" value="${escHtml(s.eyebrow || '')}" placeholder="e.g. Signature Residential">
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Slide Title</label>
+                  <input class="field-input slide-title-input" type="text" value="${escHtml(s.title || '')}" placeholder="e.g. Floating Tree Residence">
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Location / Subtitle</label>
+                  <input class="field-input slide-loc-input" type="text" value="${escHtml(s.location || '')}" placeholder="e.g. Anna Nagar, Chennai">
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Project URL / Target Link</label>
+                  <input class="field-input slide-link-input" type="text" value="${escHtml(s.url || '')}" placeholder="projects/residential/">
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        return;
+      }
+
+      // 2. STUDIO LENS (6 CURATED COMMISSIONS)
+      if (page === 'studio-lens') {
+        let items = [];
+        const snap = await getDoc(doc(db, 'siteContent', 'studioLens'));
+        if (snap.exists() && snap.data().items) {
+          items = snap.data().items;
+        } else {
+          try {
+            const res = await fetch('/data/studio_lens.json');
+            if (res.ok) items = await res.json();
+          } catch {}
+        }
+
+        while (items.length < 6) {
+          items.push({ image: '', tag: '', title: '', meta: '' });
+        }
+
+        container.innerHTML = `
+          <div style="margin-bottom:16px;">
+            <p class="text-muted text-sm" style="margin:0;">
+              Manage the 6 curated architectural frames in the Studio Lens section on the Homepage.
+            </p>
+          </div>
+          <div class="studio-lens-grid">
+            ${items.map((item, idx) => `
+              <div class="lens-edit-card" data-lens-index="${idx}">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <strong style="font-size:13px; letter-spacing:0.06em; text-transform:uppercase;">Curated Frame ${idx + 1}</strong>
+                </div>
+                <div class="slide-preview-frame">
+                  <img id="lens-prev-${idx}" src="${item.image || ''}" alt="Frame ${idx + 1}" onerror="this.style.opacity='0.2'">
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Image URL / Upload</label>
+                  <div style="display:flex; gap:8px;">
+                    <input class="field-input lens-img-input" type="text" id="lens-url-${idx}" value="${escHtml(item.image || '')}" placeholder="https://..." oninput="document.getElementById('lens-prev-${idx}').src = this.value; document.getElementById('lens-prev-${idx}').style.opacity='1';">
+                    <button type="button" class="btn-secondary" onclick="triggerCloudinaryForInput('lens-url-${idx}', 'lens-prev-${idx}')" title="Upload via Cloudinary">Upload</button>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Discipline / Tag</label>
+                  <input class="field-input lens-tag-input" type="text" value="${escHtml(item.tag || '')}" placeholder="e.g. Residential Architecture">
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Commission Title</label>
+                  <input class="field-input lens-title-input" type="text" value="${escHtml(item.title || '')}" placeholder="e.g. Bespoke Residence">
+                </div>
+                <div class="form-field">
+                  <label class="field-label">Location / Context Meta</label>
+                  <input class="field-input lens-meta-input" type="text" value="${escHtml(item.meta || '')}" placeholder="e.g. Chennai, India • 2026">
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        return;
+      }
+
+      // 3. CLIENTELE & PRIVATE PATRONS (ROSTER + ADD 9TH, 10TH+)
+      if (page === 'clientele') {
+        let clients = [];
+        const snap = await getDoc(doc(db, 'siteContent', 'clientele'));
+        if (snap.exists() && snap.data().clients) {
+          clients = snap.data().clients;
+        } else {
+          try {
+            const res = await fetch('/data/clientele.json');
+            if (res.ok) clients = await res.json();
+          } catch {}
+        }
+
+        container.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+            <div>
+              <h3 style="font-size:15px; margin:0 0 4px; font-weight:600;">Clientele & Private Patrons</h3>
+              <p class="text-muted text-sm" style="margin:0;">
+                Currently displaying <span id="client-count-badge" style="font-weight:600; color:var(--text);">${clients.length}</span> patrons. Updating here automatically synchronizes both <strong>Homepage</strong> and <strong>About Page</strong>.
+              </p>
+            </div>
+            <button type="button" class="btn-primary" id="add-new-client-btn" style="display:inline-flex; align-items:center; gap:6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              + Add New Client
+            </button>
+          </div>
+
+          <div id="clients-roster-list" style="display:flex; flex-direction:column; gap:12px;">
+            ${clients.map((c, idx) => renderClientRowHtml(c, idx)).join('')}
+          </div>
+        `;
+
+        document.getElementById('add-new-client-btn').addEventListener('click', () => {
+          const list = document.getElementById('clients-roster-list');
+          const newIdx = list.children.length;
+          const newClient = { id: 'client-' + Date.now(), name: '', role: '', photo: '' };
+          const div = document.createElement('div');
+          div.innerHTML = renderClientRowHtml(newClient, newIdx);
+          list.appendChild(div.firstElementChild);
+          updateClientCount();
+          toast('New client slot added. Enter details and save.', 'info');
+        });
+
+        return;
+      }
+
+      // 4. STANDARD TEXT / FORM SECTIONS
+      const fields = contentPageFields[page] || [];
       const snap = await getDoc(doc(db, 'siteContent', page));
       currentContentData = snap.exists() ? snap.data() : {};
 
@@ -1561,24 +1767,133 @@
             ? `<textarea class="field-textarea" id="cf-${f.id}" rows="4">${escHtml(currentContentData[f.id] || '')}</textarea>`
             : `<input class="field-input" type="text" id="cf-${f.id}" value="${escHtml(currentContentData[f.id] || '')}">`}
         </div>`).join('')}</div>`;
+
     } catch (err) {
       container.innerHTML = `<div class="text-muted text-sm">Error loading content: ${err.message}</div>`;
     }
   }
 
+  function renderClientRowHtml(c, idx) {
+    const photo = c.photo || '';
+    return `
+      <div class="client-edit-card" data-client-id="${escHtml(c.id || 'c-' + idx)}">
+        <div class="client-thumb-circle">
+          <img id="c-prev-${idx}" src="${photo}" alt="${escHtml(c.name || 'Patron')}" onerror="this.src='/assets/images/brand/cover_reference.jpg'">
+        </div>
+        <div style="flex:1; display:grid; grid-template-columns: 1.2fr 1.2fr 1.5fr auto; gap:12px; align-items:center;">
+          <div class="form-field" style="margin:0;">
+            <label class="field-label" style="font-size:11px; margin-bottom:2px;">Full Name / Salutation</label>
+            <input class="field-input client-name-input" type="text" value="${escHtml(c.name || '')}" placeholder="e.g. Mr. Maniratnam">
+          </div>
+          <div class="form-field" style="margin:0;">
+            <label class="field-label" style="font-size:11px; margin-bottom:2px;">Role / Designation</label>
+            <input class="field-input client-role-input" type="text" value="${escHtml(c.role || '')}" placeholder="e.g. Film Director">
+          </div>
+          <div class="form-field" style="margin:0;">
+            <label class="field-label" style="font-size:11px; margin-bottom:2px;">Photo URL / Upload</label>
+            <div style="display:flex; gap:6px;">
+              <input class="field-input client-photo-input" type="text" id="c-photo-inp-${idx}" value="${escHtml(photo)}" placeholder="assets/... or https://..." oninput="document.getElementById('c-prev-${idx}').src = this.value;">
+              <button type="button" class="btn-secondary" style="padding:6px 10px;" onclick="triggerCloudinaryForInput('c-photo-inp-${idx}', 'c-prev-${idx}')" title="Upload Photo">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+              </button>
+            </div>
+          </div>
+          <button type="button" class="btn-secondary" style="color:var(--danger); border-color:rgba(180,50,50,0.3); padding:8px 10px; margin-top:16px;" onclick="removeClientCard(this)" title="Delete this client">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  window.removeClientCard = function(btn) {
+    const card = btn.closest('.client-edit-card');
+    if (card && confirm('Are you sure you want to remove this client?')) {
+      card.remove();
+      updateClientCount();
+      toast('Client removed from list.', 'info');
+    }
+  };
+
+  function updateClientCount() {
+    const badge = document.getElementById('client-count-badge');
+    const list = document.getElementById('clients-roster-list');
+    if (badge && list) badge.textContent = list.children.length;
+  }
+
+  // Save changes handler for all section types
   document.getElementById('content-save-btn').addEventListener('click', async () => {
-    const page   = document.getElementById('content-page-select').value;
-    const fields = contentPageFields[page] || [];
-    const data   = { updatedAt: serverTimestamp() };
-    fields.forEach(f => {
-      const el = document.getElementById(`cf-${f.id}`);
-      if (el) data[f.id] = el.value.trim();
-    });
+    const page = document.getElementById('content-page-select').value;
+    const saveBtn = document.getElementById('content-save-btn');
+    saveBtn.disabled = true;
+    saveBtn.innerHTML = `<span class="spinner"></span> Saving…`;
+
     try {
+      // 1. CAROUSEL SAVE
+      if (page === 'carousel') {
+        const cards = document.querySelectorAll('.slide-edit-card');
+        const slides = Array.from(cards).map((c, i) => ({
+          id: 'slide-' + (i + 1),
+          image:    c.querySelector('.slide-img-input')?.value.trim() || '',
+          eyebrow:  c.querySelector('.slide-eyebrow-input')?.value.trim() || '',
+          title:    c.querySelector('.slide-title-input')?.value.trim() || '',
+          location: c.querySelector('.slide-loc-input')?.value.trim() || '',
+          url:      c.querySelector('.slide-link-input')?.value.trim() || '',
+          alt:      (c.querySelector('.slide-title-input')?.value.trim() || 'Blue Cube Architecture') + ' by Blue Cube Architects'
+        }));
+
+        await setDoc(doc(db, 'siteContent', 'carousel'), { slides, updatedAt: serverTimestamp() }, { merge: true });
+        toast('Hero Carousel saved. Click Publish to regenerate public site.', 'success');
+        return;
+      }
+
+      // 2. STUDIO LENS SAVE
+      if (page === 'studio-lens') {
+        const cards = document.querySelectorAll('.lens-edit-card');
+        const items = Array.from(cards).map((c, i) => ({
+          id: 'lens-' + (i + 1),
+          image: c.querySelector('.lens-img-input')?.value.trim() || '',
+          tag:   c.querySelector('.lens-tag-input')?.value.trim() || '',
+          title: c.querySelector('.lens-title-input')?.value.trim() || '',
+          meta:  c.querySelector('.lens-meta-input')?.value.trim() || '',
+          alt:   (c.querySelector('.lens-title-input')?.value.trim() || 'Architecture Commission') + ' by Blue Cube Architects'
+        }));
+
+        await setDoc(doc(db, 'siteContent', 'studioLens'), { items, updatedAt: serverTimestamp() }, { merge: true });
+        toast('Studio Lens commissions saved. Click Publish to regenerate.', 'success');
+        return;
+      }
+
+      // 3. CLIENTELE SAVE
+      if (page === 'clientele') {
+        const cards = document.querySelectorAll('.client-edit-card');
+        const clients = Array.from(cards).map((c, i) => ({
+          id:    c.dataset.clientId || ('client-' + (i + 1)),
+          name:  c.querySelector('.client-name-input')?.value.trim() || '',
+          role:  c.querySelector('.client-role-input')?.value.trim() || '',
+          photo: c.querySelector('.client-photo-input')?.value.trim() || 'assets/images/clients/portraits/radhakrishnan.jpg',
+        })).filter(c => c.name);
+
+        await setDoc(doc(db, 'siteContent', 'clientele'), { clients, updatedAt: serverTimestamp() }, { merge: true });
+        toast(`Clientele roster (${clients.length} patrons) saved successfully. Click Publish to update site.`, 'success');
+        return;
+      }
+
+      // 4. STANDARD SECTIONS
+      const fields = contentPageFields[page] || [];
+      const data   = { updatedAt: serverTimestamp() };
+      fields.forEach(f => {
+        const el = document.getElementById(`cf-${f.id}`);
+        if (el) data[f.id] = el.value.trim();
+      });
       await setDoc(doc(db, 'siteContent', page), data, { merge: true });
-      toast('Site content saved.', 'success');
+      toast('Site content saved successfully.', 'success');
+
     } catch (err) {
       toast('Save failed: ' + err.message, 'error');
+    } finally {
+      saveBtn.disabled = false;
+      saveBtn.textContent = 'Save Changes';
     }
   });
 

@@ -1269,4 +1269,175 @@ def generate_sitemap():
     print(f"Generated comprehensive sitemap.xml with {len(static_urls) + len(ALL_PROJECTS)} URLs")
 
 generate_sitemap()
+
+# =========================================================================
+# 5. SYNC DYNAMIC SITE CONTENT (CLIENTELE, CAROUSEL, STUDIO LENS)
+# =========================================================================
+def sync_site_content():
+    """
+    Syncs data/clientele.json, data/homepage_carousel.json, and data/studio_lens.json
+    into index.html and about/index.html to ensure live changes in Admin CMS reflect seamlessly.
+    """
+    # 1. Sync Clientele into index.html and about/index.html
+    clientele_file = "data/clientele.json"
+    if os.path.exists(clientele_file):
+        with open(clientele_file, "r", encoding="utf-8") as f:
+            clients = json.load(f)
+
+        # For index.html
+        if os.path.exists("index.html"):
+            with open("index.html", "r", encoding="utf-8") as f:
+                content = f.read()
+
+            roster_html = []
+            for c in clients:
+                photo = c.get("photo", "assets/images/clients/portraits/radhakrishnan.jpg")
+                if not (photo.startswith("http://") or photo.startswith("https://")):
+                    photo = photo.lstrip("/")
+                name = c.get("name", "")
+                role = c.get("role", "")
+                roster_html.append(f"""          <div class="client-roster-row">
+            <div class="client-identity">
+              <div class="client-portrait-frame">
+                <img src="{photo}" alt="{name} Portrait" class="client-portrait-img" loading="lazy" width="56" height="56">
+              </div>
+              <span class="client-name">{name}</span>
+            </div>
+            <span class="client-role">{role}</span>
+          </div>""")
+
+            roster_block = '<div class="clientele-roster" data-stagger>\n' + "\n\n".join(roster_html) + "\n        </div>"
+            new_content = re.sub(
+                r'<div class="clientele-roster"[^>]*>[\s\S]*?</div>\s*</div>\s*</section>',
+                roster_block + "\n      </div>\n    </section>",
+                content,
+                count=1
+            )
+            if new_content != content:
+                with open("index.html", "w", encoding="utf-8") as f:
+                    f.write(new_content)
+                print(f"Synced {len(clients)} clientele into index.html")
+
+        # For about/index.html
+        if os.path.exists("about/index.html"):
+            with open("about/index.html", "r", encoding="utf-8") as f:
+                content = f.read()
+
+            roster_html = []
+            for c in clients:
+                photo = c.get("photo", "assets/images/clients/portraits/radhakrishnan.jpg")
+                if not (photo.startswith("http://") or photo.startswith("https://")):
+                    photo = "../" + photo.lstrip("/")
+                name = c.get("name", "")
+                role = c.get("role", "")
+                roster_html.append(f"""          <div class="client-roster-row">
+            <div class="client-identity">
+              <div class="client-portrait-frame">
+                <img src="{photo}" alt="{name} Portrait" class="client-portrait-img" loading="lazy" width="56" height="56">
+              </div>
+              <span class="client-name">{name}</span>
+            </div>
+            <span class="client-role">{role}</span>
+          </div>""")
+
+            roster_block = '<div class="clientele-roster" data-stagger>\n' + "\n\n".join(roster_html) + "\n        </div>"
+            new_content = re.sub(
+                r'<div class="clientele-roster"[^>]*>[\s\S]*?</div>\s*</div>\s*</section>',
+                roster_block + "\n      </div>\n    </section>",
+                content,
+                count=1
+            )
+            if new_content != content:
+                with open("about/index.html", "w", encoding="utf-8") as f:
+                    f.write(new_content)
+                print(f"Synced {len(clients)} clientele into about/index.html")
+
+    # 2. Sync Studio Lens into index.html
+    lens_file = "data/studio_lens.json"
+    if os.path.exists(lens_file) and os.path.exists("index.html"):
+        with open(lens_file, "r", encoding="utf-8") as f:
+            lens_items = json.load(f)
+        with open("index.html", "r", encoding="utf-8") as f:
+            content = f.read()
+
+        cards_html = []
+        for item in lens_items:
+            img = item.get("image", "")
+            alt = item.get("alt", item.get("title", ""))
+            tag = item.get("tag", "")
+            title = item.get("title", "")
+            meta = item.get("meta", "")
+            cards_html.append(f"""          <div class="insta-card" data-reveal="image">
+            <div class="insta-media-wrap">
+              <img src="{img}" alt="{alt}" loading="lazy" width="720" height="900">
+              <div class="insta-hover-overlay">
+                <span class="insta-tag">{tag}</span>
+                <h3 class="insta-title">{title}</h3>
+                <span class="insta-meta">{meta}</span>
+              </div>
+            </div>
+          </div>""")
+
+        lens_block = '<div class="instagram-curated-grid" data-stagger="image">\n' + "\n\n".join(cards_html) + "\n        </div>"
+        new_content = re.sub(
+            r'<div class="instagram-curated-grid"[^>]*>[\s\S]*?</div>\s*</div>\s*</section>',
+            lens_block + "\n      </div>\n    </section>",
+            content,
+            count=1
+        )
+        if new_content != content:
+            with open("index.html", "w", encoding="utf-8") as f:
+                f.write(new_content)
+            print(f"Synced {len(lens_items)} studio lens cards into index.html")
+
+    # 3. Sync Hero Carousel into index.html
+    carousel_file = "data/homepage_carousel.json"
+    if os.path.exists(carousel_file) and os.path.exists("index.html"):
+        with open(carousel_file, "r", encoding="utf-8") as f:
+            slides = json.load(f)
+        with open("index.html", "r", encoding="utf-8") as f:
+            content = f.read()
+
+        slides_html = []
+        indicators_html = []
+        for idx, s in enumerate(slides):
+            is_act = " is-active" if idx == 0 else ""
+            is_sel = "true" if idx == 0 else "false"
+            lazy = "" if idx == 0 else ' loading="lazy"'
+            img = s.get("image", "")
+            alt = s.get("alt", s.get("title", ""))
+            slides_html.append(f"""      <!-- Slide {idx + 1} -->
+      <div class="carousel-slide{is_act}">
+        <img src="{img}" alt="{alt}"{lazy} width="1920" height="1080">
+        <div class="carousel-overlay"></div>
+      </div>""")
+            indicators_html.append(f'            <button class="line-pill-btn{is_act}" role="tab" aria-selected="{is_sel}" aria-label="Slide {idx + 1}"></button>')
+
+        carousel_inner = "\n".join(slides_html) + """
+
+      <!-- Hero Captions & Line-Pill Indicators -->
+      <div class="hero-caption-area">
+        <div class="container hero-caption-layout">
+          <div class="hero-intro-tagline">
+            <span class="label-eyebrow" style="color: rgba(255,255,255,0.7);">Blue Cube Architects &bull; Two Decades</span>
+            <p class="hero-tagline">&ldquo;Everything you can imagine is real.&rdquo;</p>
+          </div>
+          <div class="carousel-indicators hero-intro-indicators" role="tablist" aria-label="Carousel navigation">
+""" + "\n".join(indicators_html) + """
+          </div>
+        </div>
+      </div>"""
+
+        new_content = re.sub(
+            r'<section class="hero-carousel"[^>]*>[\s\S]*?</section>',
+            f'<section class="hero-carousel" aria-label="Selected architectural works carousel">\n{carousel_inner}\n    </section>',
+            content,
+            count=1
+        )
+        if new_content != content:
+            with open("index.html", "w", encoding="utf-8") as f:
+                f.write(new_content)
+            print(f"Synced {len(slides)} hero carousel slides into index.html")
+
+sync_site_content()
 print("Master build complete.")

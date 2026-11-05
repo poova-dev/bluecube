@@ -1239,6 +1239,67 @@ textarea:focus-visible {
   margin-top: 36px;
 }
 
+/* ── Modern Infinite Dual Marquee (Bidirectional) ── */
+.trusted-marquee-container {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.marquee-row {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  gap: 20px;
+  align-items: center;
+  min-width: 100%;
+  will-change: transform;
+}
+
+.marquee-track-left {
+  animation: marquee-scroll-left 28s linear infinite;
+}
+
+.marquee-track-right {
+  animation: marquee-scroll-right 28s linear infinite;
+}
+
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marquee-scroll-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track-left,
+  .marquee-track-right {
+    animation: none;
+  }
+  .marquee-row {
+    overflow-x: auto;
+  }
+}
+
 .brand-card {
   border: 1px solid var(--stone-deep);
   background-color: var(--stone-light);
@@ -1248,12 +1309,20 @@ textarea:focus-visible {
   justify-content: space-between;
   align-items: center;
   min-height: 150px;
-  transition: border-color var(--dur-fast), background-color var(--dur-fast);
+  transition: border-color var(--dur-fast), background-color var(--dur-fast), transform var(--dur-fast);
+}
+
+.brand-card-marquee {
+  flex: 0 0 260px;
+  width: 260px;
+  min-height: 140px;
+  padding: 20px 18px;
 }
 
 .brand-card:hover {
   border-color: var(--cube-blue);
   background-color: #E2DDD3;
+  transform: translateY(-2px);
 }
 
 .brand-logo-frame {
@@ -1340,15 +1409,47 @@ textarea:focus-visible {
 }
 
 .client-roster-row {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
   border-top: 1px solid var(--stone-deep);
-  align-items: baseline;
+  gap: 20px;
+  transition: background-color var(--dur-fast), padding var(--dur-fast);
 }
 
 .client-roster-row:last-child {
   border-bottom: 1px solid var(--stone-deep);
+}
+
+.client-identity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.client-portrait-frame {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--stone-deep);
+  background: var(--stone-medium);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: border-color var(--dur-fast), transform var(--dur-fast);
+}
+
+.client-roster-row:hover .client-portrait-frame {
+  border-color: var(--cube-blue);
+  transform: scale(1.08);
+}
+
+.client-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .client-name {
@@ -1364,6 +1465,20 @@ textarea:focus-visible {
   font-size: 0.88rem;
   color: var(--bark-medium);
   letter-spacing: 0.04em;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .client-roster-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 14px 0;
+  }
+  .client-role {
+    text-align: left;
+    padding-left: 76px;
+  }
 }
 
 /* ==========================================================================

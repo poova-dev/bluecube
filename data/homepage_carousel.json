@@ -1,0 +1,38 @@
+[
+  {
+    "id": "slide-1",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/commercial/comm-01-kun-capital-kia-showroom.jpg",
+    "alt": "KUN Capital Kia Showroom by Blue Cube Architects",
+    "eyebrow": "Featured Commercial",
+    "title": "KUN Capital Kia Showroom",
+    "location": "Kovilambakkam, Chennai",
+    "url": "projects/kia-showroom-kovilambakkam/"
+  },
+  {
+    "id": "slide-2",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/residential/res-01-floating-tree-residence-anna-n.jpg",
+    "alt": "Floating Tree Residence by Blue Cube Architects",
+    "eyebrow": "Signature Residential",
+    "title": "Floating Tree Residence",
+    "location": "Anna Nagar, Chennai",
+    "url": "projects/floating-tree-residence-anna-nagar/"
+  },
+  {
+    "id": "slide-3",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/interiors/healthcare/healthcare-01.jpg",
+    "alt": "Luxe Dermatology Clinical Interior by Blue Cube Architects",
+    "eyebrow": "Specialized Healthcare",
+    "title": "Luxe Dermatology Clinical Interior",
+    "location": "Chennai",
+    "url": "projects/interior/"
+  },
+  {
+    "id": "slide-4",
+    "image": "https://res.cloudinary.com/jvdlk3j0/image/upload/f_auto,q_auto/bluecube/containers/container-01.jpg",
+    "alt": "Modular Container Architecture by Blue Cube Architects",
+    "eyebrow": "Modular Architecture",
+    "title": "Modular Container Habitation",
+    "location": "Perungudi & Beyond",
+    "url": "projects/containers/"
+  }
+]

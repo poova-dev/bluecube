@@ -1,0 +1,50 @@
+[
+  {
+    "id": "mani-ratnam",
+    "name": "Mr. Maniratnam",
+    "role": "Film Director",
+    "photo": "assets/images/clients/portraits/mani-ratnam.jpg"
+  },
+  {
+    "id": "suhasini-maniratnam",
+    "name": "Mrs. Suhasini Maniratnam",
+    "role": "Actor & Director",
+    "photo": "assets/images/clients/portraits/suhasini-maniratnam.jpg"
+  },
+  {
+    "id": "rajiv-menon",
+    "name": "Mr. Rajiv Menon",
+    "role": "Director & Cinematographer",
+    "photo": "assets/images/clients/portraits/rajiv-menon.jpg"
+  },
+  {
+    "id": "ravi-varman",
+    "name": "Mr. S. Ravi Varman",
+    "role": "Cinematographer",
+    "photo": "assets/images/clients/portraits/ravi-varman.jpg"
+  },
+  {
+    "id": "pc-duraisamy",
+    "name": "Mr. P.C. Duraisamy",
+    "role": "Managing Director, Sakthi Masala",
+    "photo": "assets/images/clients/portraits/pc-duraisamy.jpg"
+  },
+  {
+    "id": "renita-rajan",
+    "name": "Dr. Renita Rajan",
+    "role": "Dermatologist & Founder, Render Clinic",
+    "photo": "assets/images/clients/portraits/renita-rajan.jpg"
+  },
+  {
+    "id": "radhakrishnan",
+    "name": "Mr. Radhakrishnan",
+    "role": "Managing Director, News J",
+    "photo": "assets/images/clients/portraits/radhakrishnan.jpg"
+  },
+  {
+    "id": "carolin-praba-reddy",
+    "name": "Mrs. E. Carolin Praba Reddy",
+    "role": "Managing Director, V-Care",
+    "photo": "assets/images/clients/portraits/carolin-praba-reddy.jpg"
+  }
+]
