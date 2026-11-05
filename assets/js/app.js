@@ -444,7 +444,11 @@ document.addEventListener('DOMContentLoaded', () => {
           if (turnstileInput && turnstileInput.value) {
             turnstileToken = turnstileInput.value;
           } else if (turnstileWidget && turnstileWidget.getAttribute('data-sitekey') && typeof window.turnstile?.getResponse === 'function') {
-            turnstileToken = window.turnstile.getResponse();
+            try {
+              turnstileToken = window.turnstile.getResponse();
+            } catch (rErr) {
+              console.warn('[Turnstile] getResponse skipped:', rErr);
+            }
           }
         } catch (tErr) {
           console.warn('[Turnstile] Token lookup skipped:', tErr);
@@ -533,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.reset();
           }
           try {
-            if (typeof window.turnstile?.reset === 'function') {
+            if (turnstileWidget && turnstileWidget.getAttribute('data-sitekey') && typeof window.turnstile?.reset === 'function') {
               window.turnstile.reset();
             }
           } catch {}

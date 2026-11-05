@@ -29,8 +29,8 @@
   </script>
   <!-- Firebase Client Config (Local ignored file or API fallback) -->
   <script src="../admin/firebase-config.js"></script>
-  <!-- Cloudflare Turnstile Verification API -->
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <!-- Cloudflare Turnstile Verification API (Uncomment when TURNSTILE_SITE_KEY is provided) -->
+  <!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
 </head>
 <body>
 
@@ -204,7 +204,7 @@
             </div>
 
             <!-- Cloudflare Turnstile Verification Widget (active only when data-sitekey is configured) -->
-            <div id="cfTurnstileWidget" class="cf-turnstile" data-sitekey="" style="margin: 16px 0; display: none;"></div>
+            <div id="cfTurnstileWidget" data-sitekey="" style="margin: 16px 0; display: none;"></div>
 
             <button type="submit" class="btn-editorial" style="width: 100%; margin-top: 8px;">
               <span>Transmit Enquiry to Studio &rarr;</span>
@@ -308,6 +308,6 @@
     <span class="whatsapp-label">WhatsApp</span>
   </a>
 
-  <script src="../assets/js/app.js?v=5"></script>
+  <script src="../assets/js/app.js?v=7"></script>
 </body>
 </html>
