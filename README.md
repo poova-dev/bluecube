@@ -36,11 +36,11 @@ Blue Cube Architects is a two-decade-old premier Architecture and Interior Desig
 ```text
 ├── index.html                   # Home (Hero Carousel, Intro, Typology Portals, The Flow, Studio Lens, Clients)
 ├── about/                       # Practice Profile, Leadership, Team Structure, Philosophy
-├── projects/                    # Typographic Projects Index
-│   ├── architecture/            # Architecture Portfolio & Editorial Rhythm
+├── projects/                    # Typographic Projects Index (140 curated works)
+│   ├── residential/             # Residential Architecture Portfolio
+│   ├── commercial/              # Commercial Architecture Portfolio
 │   ├── interior/                # Interior Design Portfolio
-│   ├── containers/              # Modular Container Architecture Portfolio
-│   └── detail.html              # Dynamic Project Detail Template
+│   └── containers/              # Modular Container Architecture Portfolio
 ├── contact/                     # Studio Coordinates, Direct Enquiry & Map Card
 └── assets/
     ├── css/main.css             # Architectural Motion & Master Design System

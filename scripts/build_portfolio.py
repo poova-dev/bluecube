@@ -533,7 +533,6 @@ def render_project_card(p, prefix="./"):
           <div class="portfolio-card-info">
             <div class="portfolio-card-meta">
               <span>{loc}</span>
-              <span>{p.get('year', 'Completed')}</span>
             </div>
             <h3 class="portfolio-card-title">
               <a href="{prefix}projects/{slug}/">{title}</a>
@@ -603,9 +602,6 @@ def generate_project_pages():
 
         if p.get("area") and p["area"].strip() not in ["", "Completed", "N/A", "Archive"]:
             meta_items.append(("Built-up Area", p["area"]))
-
-        if p.get("year") and p["year"].strip() not in ["", "Completed", "Archive", "Blue Cube Archive"]:
-            meta_items.append(("Year", p["year"]))
 
         if p.get("client") and p["client"].strip() not in ["", "Private Client", "Private Residence", "Client"]:
             meta_items.append(("Client", p["client"]))
@@ -1203,17 +1199,13 @@ def generate_all_projects_index():
 
 generate_all_projects_index()
 
-# Also update root alias files to point cleanly
-ROOT_ALIASES = [
-    ("residential.html", "projects/residential/"),
-    ("commercial.html", "projects/commercial/"),
-    ("interiors.html", "projects/interior/"),
-    ("container-architecture.html", "projects/containers/"),
+# Also update legacy project alias files to point cleanly
+LEGACY_ALIASES = [
     ("projects/kun-capital-kia-showroom-kovilambakkam/index.html", "../kia-showroom-kovilambakkam/"),
     ("projects/gruham-cuddalore/index.html", "../gruham-residence-cuddalore/")
 ]
 
-for alias_file, target_route in ROOT_ALIASES:
+for alias_file, target_route in LEGACY_ALIASES:
     os.makedirs(os.path.dirname(alias_file) if os.path.dirname(alias_file) else ".", exist_ok=True)
     html_redirect = f"""<!DOCTYPE html>
 <html lang="en">
